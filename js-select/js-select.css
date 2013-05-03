@@ -1,0 +1,140 @@
+.js-sel {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    position: relative;
+    font-size: 14px;
+}
+
+.js-sel select {
+    display: none;
+}
+
+.js-sel__head {
+    min-width: 130px;
+    display: block;
+    padding: 0 44px 0 20px;
+    height: 36px;
+    line-height: 34px;
+    background: #b5b5b5;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    white-space: nowrap;
+    border-radius: 3px;
+    overflow: hidden;
+    zoom: 1;
+    word-wrap: break-word;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    -moz-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -ms-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+    -webkit-box-shadow: inset 0 -2px 0 #9a9a9a;
+    -moz-box-shadow: inset 0 -2px 0 #9a9a9a;
+    box-shadow: inset 0 -2px 0 #9a9a9a;
+}
+
+.js-sel__head .js-sel_arrow {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    background: transparent url('js-select.png') 50% 50% no-repeat;
+    border-left: 1px solid rgba(255,255,255,0.15);
+}
+
+.js-sel__body {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 1px;
+    background: #fff;
+    color: #000;
+    border: 1px solid #c9cbcc;
+    border-radius: 3px;
+    min-width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-height: 280px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.js-sel__body LI {
+    list-style: none;
+    padding: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    height: 34px;
+    padding: 0 20px;
+    line-height: 32px;
+}
+
+.js-sel__body LI:hover {
+    color: #000;
+    background: #f1f1f1;
+}
+
+.js-sel__body LI.cur {
+    display: none;
+}
+
+.js-sel_open {
+    z-index: 10;
+}
+
+.js-sel_open .js-sel__head {
+}
+
+.js-sel_open .js-sel__body {
+    display: block;
+}
+
+.js-sel_tiny .js-sel__head {
+    height: 32px;
+    line-height: 30px;
+}
+
+ .js-sel_tiny .js-sel_arrow {
+    width: 32px;
+    height: 32px;
+ }
+
+.js-sel_tiny .js-sel__body {
+    max-height: 240px;
+}
+
+.js-sel_tiny .js-sel__body LI {
+    height: 30px;
+    line-height: 30px;
+}
+
+.js-sel_wide {
+    display: block;
+}

@@ -1,0 +1,419 @@
+@import "base";
+
+.create {
+    @include border-radius(5px);
+    position: relative;
+    padding-top: 70px;
+    background: #fff;
+    .dev_menu {
+        background: #f1f1f1;
+    }
+    nav {
+        &.grids {
+            background: #e9e9e9;
+            .tab {
+                height: 110px;
+                .inner {height: 100%;}
+                i {
+                    height: 44px;
+                    width: 26px;
+                    margin: 33px 0 0;
+                }
+                &.active .inner {background: #67cdef;}
+            }
+        }
+    }
+    header {
+        @include clr;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        cursor: default;
+        .goback {
+            position: absolute;
+            top: 0;
+            left: 20px;
+        }
+    }
+    .dev_menu {
+        display: block;
+    }
+}
+
+.grid1 {@include sized-sprite($grid, "grid1");}
+.grid2 {@include sized-sprite($grid, "grid2");}
+.grid3 {@include sized-sprite($grid, "grid3");}
+.grid4 {@include sized-sprite($grid, "grid4");}
+.grid5 {@include sized-sprite($grid, "grid5");}
+.grid6 {@include sized-sprite($grid, "grid6");}
+.grid7 {@include sized-sprite($grid, "grid7");}
+.grid8 {@include sized-sprite($grid, "grid8");}
+.grid9 {@include sized-sprite($grid, "grid9");}
+.active .grid1 {@include sized-sprite($grid, "grid1-white");}
+.active .grid2 {@include sized-sprite($grid, "grid2-white");}
+.active .grid3 {@include sized-sprite($grid, "grid3-white");}
+.active .grid4 {@include sized-sprite($grid, "grid4-white");}
+.active .grid5 {@include sized-sprite($grid, "grid5-white");}
+.active .grid6 {@include sized-sprite($grid, "grid6-white");}
+.active .grid7 {@include sized-sprite($grid, "grid7-white");}
+.active .grid8 {@include sized-sprite($grid, "grid8-white");}
+.active .grid9 {@include sized-sprite($grid, "grid9-white");}
+
+.cc_iphone_white {@include sized-sprite($common, "cc_iphone_white");}
+.cc_iphone_black {@include sized-sprite($common, "cc_iphone_black");}
+
+.cc_ipad_white {@include sized-sprite($common, "cc_ipad_white");}
+.cc_ipad_black {@include sized-sprite($common, "cc_ipad_black");}
+
+.ico-preview {
+    @include sized-sprite($common, "ico-preview");
+    @include inline-block;
+}
+.ico-shuffle {
+    @include sized-sprite($common, "ico-shuffle");
+    @include inline-block;
+}
+
+.progress {
+    @include inline-block;
+    @include border-radius(14px);
+    padding: 0 5px;
+    background: #e8e8e8;
+    height: 28px;
+    line-height: 26px;
+    span {
+        font-family: "ProximaNova-Semibold", Arial, sans-serif;
+        color: #888;
+        float: left;
+        padding: 0 10px;
+    }
+    b {
+        @include sized-sprite($common, "rarr");
+        @include inline-block;
+        vertical-align: top;
+        margin-top: 9px;
+        position: relative;
+        right: -10px;
+    }
+    .done {
+        color: #29bbeb;
+        b {
+            @include sized-sprite($common, "rarr-blue");
+        }
+    }
+}
+
+.goback {
+    @include inline-block;
+    @include border-radius(14px);
+    padding: 0 10px 0 4px;
+    background: #e8e8e8;
+    height: 28px;
+    line-height: 26px;
+    color: #888;
+    i {
+        @include sized-sprite($common, "back");
+        @include inline-block;
+        vertical-align: top;
+        margin-top: 4px;
+        margin-right: 5px;
+    }
+    &:hover {
+        @include opacity(0.6);
+    }
+    &.done {
+        color: #29bbeb; 
+        i {
+            @include sized-sprite($common, "back-blue");
+        }
+    }
+}
+
+.step-layout {
+    h1 {
+        text-align: center;
+        padding: 0 0 20px!important;
+    }
+    footer {
+        text-align: center;
+        padding: 20px 0;
+    }
+}
+
+.step-done {
+    h1 {
+        text-align: center;
+        padding: 0 0 20px!important;
+    }
+    .options {
+        height: 540px;
+    }
+    footer {
+        text-align: right;
+        padding-right: 30px;
+    }
+}
+
+.prepare {
+    position: relative;
+    h1 {
+        height: 110px - 20px;
+        padding-top: 0;
+    }
+    .options {
+        @include border-radius(0 0 5px 5px);
+        overflow: hidden;
+        background: #f1f1f1;
+        height: 510px;
+        padding-top: 20px;
+    }
+    p {
+        padding-bottom: 20px;
+    }
+    .button.grey {
+        margin-right: 10px;
+        i {
+            margin: 0 5px 0 -10px;
+        }
+    }
+}
+
+.color_choose {
+    @include clr;
+    list-style: none;
+    margin-bottom: 20px;
+    li {
+        @include border-radius(3px);
+        float: left;
+        margin-right: 10px;
+        background: #b5b5b5;
+        &.active {
+            background: #29bbeb;
+        }
+    }
+    a {
+        display: block;
+        margin: 4px 3px 2px;
+    }
+}
+
+.images_choose {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    min-height: 150px;
+    @include border-radius(3px);
+    @include box-shadow(0 2px 1px rgba(0,0,0,0.1));
+    overflow: hidden;
+    .tabs {
+        display: table;
+        width: 100%;
+        li {
+            font-family: "ProximaNova-Semibold", Arial, sans-serif;
+            display: table-cell;
+            vertical-align: middle;
+            height: 37px;
+            padding: 0 12px;
+            border-bottom: 1px solid #d9d9d9;
+            border-right: 1px solid #d9d9d9;
+            a {
+                color: #777;
+            }
+            i {
+                @include inline-block;
+                margin-right: 8px;
+            }
+            &:last-child {
+                border-right: 0;
+                text-align: center;
+            }
+            &.active {
+                @include box-shadow(inset 0 2px 0 #9a9a9a);
+                background: #b5b5b5;
+                border-color: #b5b5b5;
+                a {
+                    color: #fff;
+                    text-shadow:0 1px 0 rgba(0,0,0,0.1);
+                }
+            }
+        }
+    }
+    .content {
+        @include clr;
+        .in {
+            margin: 8px;
+            height: 240px - 16px;
+            overflow: auto;
+        }
+        i {
+            @include border-radius(5px);
+            @include box-sizing(border-box);
+            cursor: pointer;
+            border: 2px solid #fff;
+            display: block;
+            float: left;
+            width: 65px + 4px;
+            height: 65px + 4px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 8px 8px 0;
+            overflow: hidden;
+            &.active {
+                border-color: #29bbeb;
+                cursor: default;
+            }
+        }
+    }
+}
+
+.images_filters {
+    @include clr;
+    list-style:none;
+    margin-bottom: 20px;
+    li {
+        float: left;
+        text-align: center;
+        font-size: 12px;
+    }
+    i {
+        @include border-radius(5px);
+        @include box-sizing(border-box);
+        cursor: pointer;
+        border: 2px solid #fff;
+        display: block;
+        width: 65px + 4px;
+        height: 65px + 4px;
+        background-image: url('../img/filters.jpg');
+        margin: 0 8px 8px 0;
+        overflow: hidden;
+        &.filter1 {background-position: 0 0;}
+        &.filter2 {background-position: -65px*1 0;}
+        &.filter3 {background-position: -65px*2 0;}
+        &.filter4 {background-position: -65px*3 0;}
+        &.filter5 {background-position: -65px*4 0;}
+    }
+    .active i {
+        border-color: #29bbeb;
+        cursor: default;
+    }
+}
+
+.pop-in-cover {
+    display: none;
+    background: rgba(255,255,255,0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 30;
+}
+
+.blank-iphone5 {
+    display: block;
+    background: transparent url('../img/blank-iphone5.png') 0 0 no-repeat;
+    width: 290px;
+    height: 579px;
+    position: relative;
+    &.black {
+        background: transparent url('../img/blank-iphone5-black.png') 0 0 no-repeat;
+    }
+    .mask {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: transparent url('../img/mask-iphone5.png') 0 0 no-repeat;
+    }
+}
+.blank-iphone4 {
+    display: block;
+    background: transparent url('../img/blank-iphone4.png') 0 0 no-repeat;
+    width: 290px;
+    height: 540px;
+    &.black {
+        background: transparent url('../img/blank-iphone4-black.png') 0 0 no-repeat;
+    }
+}
+.blank-ipad {
+    display: block;
+    background: transparent url('../img/blank-ipad.png') 0 0 no-repeat;
+    width: 349px;
+    height: 505px;
+    &.black {
+        background: transparent url('../img/blank-ipad-black.png') 0 0 no-repeat;
+    }
+}
+.blank-ipad_mini {
+    display: block;
+    background: transparent url('../img/blank-ipad_mini.png') 0 0 no-repeat;
+    width: 318px;
+    height: 453px;
+    &.black {
+        background: transparent url('../img/blank-ipad_mini-black.png') 0 0 no-repeat;
+    }
+}
+.blank-galaxy {
+    display: block;
+    background: transparent url('../img/blank-galaxy.png') 0 0 no-repeat;
+    width: 298px;
+    height: 571px;
+    &.black {
+        background: transparent url('../img/blank-galaxy-black.png') 0 0 no-repeat;
+    }
+}
+
+.blank_block {
+    @include transition(all, 0.5s, ease-out);
+    @include clr;
+    display: none;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    z-index: 50;
+    &.blank-iphone5,
+    &.blank-iphone4 {
+        left: 36px;
+    }
+    &.blank-ipad {
+        left: 10px;
+    }
+    &.blank-galaxy {
+        left: 20px;
+    }
+    &.finished {
+        left: 50%;
+        top: 142px;
+        margin-left: - 290px/2;
+    }
+}
+
+.button.button_preview.active {
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: 340px;
+    z-index: 50;
+    i {
+        margin: 0 5px 0 -10px;
+    }
+}
+
+.page_iphone {
+    h1, .options {
+        padding-left: 340px;
+    }
+    .button.button_preview.active {
+        left: 340px;
+    }
+}
+
+.page_ipad {
+    h1, .options {
+        padding-left: 380px;
+    }
+    .button.button_preview.active {
+        left: 380px;
+    }
+}

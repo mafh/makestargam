@@ -1,0 +1,54 @@
+        <div class="items_row hidden_row" style="display:none">
+            <div class="wrap">
+                <div class="case_item">
+                    <div class="case">
+                        <div class="case-img"><img src="img/case1.jpg" alt=""></div>
+                        <div class="case-shadow"></div>
+                    </div>
+                    <div class="ribbon">
+                        <div class="in">
+                            <span>В. Светличный</span>
+                            <h3>Гомункул</h3>
+                        </div>
+                    </div>
+                    <p><span>Гомункул</span><br>1200 руб.</p>
+                    <p>&mdash;</p>
+                    <p>В. Светличный</p>
+                    <a href="#" class="button blue">1200 руб.</a>
+                </div>
+                <div class="case_item">
+                    <div class="case">
+                        <div class="case-img"><img src="img/case2.jpg" alt=""></div>
+                        <div class="case-shadow"></div>
+                    </div>
+                    <div class="ribbon">
+                        <div class="in">
+                            <span>В. Светличный</span>
+                            <h3>Having rest in Italy</h3>
+                        </div>
+                    </div>
+                    <p><span>Having rest in Italy</span><br>1200 руб.</p>
+                    <p>&mdash;</p>
+                    <p>Merdanchik</p>
+                    <a href="#" class="button blue">1200 руб.</a>
+                </div>
+                <div class="case_item">
+                    <div class="case">
+                        <div class="case-img"><img src="img/case3.jpg" alt=""></div>
+                        <div class="case-shadow"></div>
+                    </div>
+                </div>
+                <div class="case_item">
+                    <div class="case">
+                        <div class="case-img"><img src="img/case4.jpg" alt=""></div>
+                        <div class="case-shadow"></div>
+                    </div>
+                </div>
+                <div class="case_item">
+                    <div class="case">
+                        <div class="case-img"><img src="img/case5.jpg" alt=""></div>
+                        <div class="case-shadow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>

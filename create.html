@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Makestagram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1; maximum-scale=1.0"/>
+    <link rel="stylesheet" media="screen" href="fonts/proxima.css">
+	<link rel="stylesheet" media="screen" href="css/screen.css">
+	<script type="text/javascript" src="js/html5.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <!--js-select-->
+	<script type="text/javascript" src="js-select/js-select.js"></script>
+    <link rel="stylesheet" media="screen" href="js-select/js-select.css">
+    <!--/js-select-->
+</head>
+<body class="bg_black">
+
+<div class="page">
+    <div class="top_login">
+        <ul>
+            <li><a href="#" class="social-fb"></a></li>
+            <li><a href="#" class="social-insta"></a></li>
+            <li><a href="#" class="social-vk"></a></li>
+        </ul>
+    </div>
+    <header class="top" id="top">
+        <div class="outer">
+            <div class="table">
+                <div class="cell"><a href="#" class="head_logo"></a></div>
+                <div class="cell">
+                    <ul class="nav top_menu">
+                        <li><a href="#" class="dev_menu_link">Создать чехол<i class="s_arrow"></i></a></li>
+                        <li><a href="#">Готовые дизайны</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">О проекте</a></li>
+                    </ul>
+                </div>
+                <div class="cell">
+                    <ul class="nav">
+                        <li><a href="#" class="login_link">Вход</a></li>
+                        <li><a href="#" class="create_link">Создать кейс</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="dev_menu dev_top_menu">
+        <nav>
+            <div class="tab active"><div class="inner"><i class="dev-iphone5"></i><p>iPhone 5</p></div></div>
+            <div class="tab"><div class="inner"><i class="dev-iphone4"></i><p>iPhone 4/4s</p></div></div>
+            <div class="tab"><div class="inner"><i class="dev-ipad_mini"></i><p>iPad Mini</p></div></div>
+            <div class="tab"><div class="inner"><i class="dev-ipad"></i><p>iPad 2</p></div></div>
+            <div class="tab"><div class="inner"><i class="dev-ipad"></i><p>iPad 3/4</p></div></div>
+            <div class="tab"><div class="inner"><i class="dev-galaxy"></i><p>Galaxy S3</p></div></div>
+        </nav>
+    </div>
+
+    <div style="height: 2000px; background: #f7f7f7;">
+        <p style="text-align: center; padding: 100px;"><a href="#" class="show_error_link">[show error]</a></p>
+    </div>
+
+    <footer class="footer">
+        <div class="wrap">
+            <ul>
+                <li><a href="#">Готовые дизайны</a></li><li><a href="#">FAQ</a></li><li><a href="#">Доставка и оплата</a></li><li><a href="#">О проекте</a></li>
+            </ul>
+            <div class="hr"></div>
+            <ul>
+                <li>Создайте кейс</li><li><a href="#">iPhone 5</a></li><li><a href="#">iPhone 4/4S</a></li><li><a href="#">iPad Mini</a></li><li><a href="#">iPad 3</a></li><li><a href="#">iPad 2</a></li><li><a href="#">Galaxy S III</a></li>
+            </ul>
+            <h2>Кейс с вашими впечатлениями для мобильного устройства.<br>Создайте персональный дизайн или выберите готовый</h2>
+            <div class="table">
+                <div class="cell">
+                    <a href="#" class="button blue">Создать кейс</a>
+                    <p>Создайте кейс<br>с вашими снимками</p>
+                </div>
+                <div class="cell">
+                    <a href="#" class="button border">Выбрать готовый</a>
+                    <p>Выберите кейс<br>с авторским дизайном</p>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <ul>
+                <li><a href="#">Instagram</a></li><li><a href="#">Twitter</a></li><li><a href="#">Vkontakte</a></li><li><a href="#">Facebook</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+<div class="popup-wrap"></div>
+<!--popup_error-->
+<div class="popup_holder popup_error">
+    <div class="popup">
+        <a href="#" class="popup__close"></a>
+        <div class="pop-in">
+            <h3>ошибка</h3>
+            <h1>Текст сообщения об ошибке</h1>
+            <p><a href="#" class="button grey">Продолжить</a></p>
+        </div>
+    </div>
+</div>
+<!--/popup_error-->
+
+<!--popup-->
+<div class="popup_holder popup_create popup_show">
+    <div class="popup">
+        <a href="#" class="popup__close"></a>
+        <div class="pop-in page_iphone">
+            <!--hover items-->
+            <aside class="blank_block blank-iphone5 finished"></aside>
+            <a href="#" class="button grey button_preview active"><i class="ico-preview"></i>Предпросмотр</a>
+            <!--/hover items-->
+            <div class="pop-in-cover"></div>
+            <div class="create">
+                <section class="step-layout step step1" style="display: block;">
+                    <header>
+                        <div class="progress">
+                            <span class="done">Устройство<b></b></span>
+                            <span>Дизайн<b></b></span>
+                            <span>Фильтры<b></b></span>
+                            <span>Подтверждение</span>
+                        </div>
+                    </header>
+                    <h1>Выберите тип устройства<br>и расположение фотографий</h1>
+                    <div class="dev_menu">
+                        <nav>
+                            <div class="tab active"><div class="inner"><i class="dev-iphone5"></i><p>iPhone 5</p></div></div>
+                            <div class="tab"><div class="inner"><i class="dev-iphone4"></i><p>iPhone 4/4s</p></div></div>
+                            <div class="tab"><div class="inner"><i class="dev-ipad_mini"></i><p>iPad Mini</p></div></div>
+                            <div class="tab"><div class="inner"><i class="dev-ipad"></i><p>iPad 2</p></div></div>
+                            <div class="tab"><div class="inner"><i class="dev-ipad"></i><p>iPad 3/4</p></div></div>
+                            <div class="tab"><div class="inner"><i class="dev-galaxy"></i><p>Galaxy S3</p></div></div>
+                        </nav>
+                        <nav class="grids">
+                            <div class="tab"><div class="inner"><i class="grid1"></i></div></div>
+                            <div class="tab"><div class="inner"><i class="grid2"></i></div></div>
+                            <div class="tab active"><div class="inner"><i class="grid3"></i></div></div>
+                            <div class="tab"><div class="inner"><i class="grid4"></i></div></div>
+                            <div class="tab"><div class="inner"><i class="grid5"></i></div></div>
+                            <div class="tab"><div class="inner"><i class="grid6"></i></div></div>
+                            <div class="tab"><div class="inner"><i class="grid7"></i></div></div>
+                            <div class="tab"><div class="inner"><i class="grid8"></i></div></div>
+                            <div class="tab"><div class="inner"><i class="grid9"></i></div></div>
+                        </nav>
+                    </div>
+                    <footer><a href="#" class="button blue gostep2">Продолжить</a></footer>
+                </section>
+
+                <section class="step-design step step2" style="display: none;">
+                    <header>
+                        <a href="#" class="goback gostep1"><i></i>Назад</a>
+                        <div class="progress">
+                            <span class="done">Устройство<b></b></span>
+                            <span class="done">Дизайн<b></b></span>
+                            <span>Фильтры<b></b></span>
+                            <span>Подтверждение</span>
+                        </div>
+                    </header>
+                    <div class="prepare">
+                        <h1>Создайте собственный<br>дизайн</h1>
+                        <div class="options">
+                            <p>
+                                <a href="#" class="button grey button_preview"><i class="ico-preview"></i>Предпросмотр</a><a href="#" class="button grey button_autofill"><i class="ico-shuffle"></i>Автозаполнение</a>
+                            </p>
+                            <ul class="color_choose">
+                                <li class="active"><a href="#" class="cc_iphone_white"></a></li>
+                                <li><a href="#" class="cc_iphone_black"></a></li>
+                            </ul>
+                            <div class="images_choose">
+                                <ul class="tabs">
+                                    <li class="active"><a href="#"><i class="tab-insta"></i>Instagram</a></li>
+                                    <li><a href="#"><i class="tab-fb"></i>Facebook</a></li>
+                                    <li><a href="#"><i class="tab-vk"></i>VK</a></li>
+                                    <li><a href="#">Загрузить</a></li>
+                                </ul>
+                                <div class="content">
+                                    <div class="in content-insta">
+                                        <i style="background-image: url('http://cs411723.vk.me/v411723723/669c/XGeZ1xAoJjA.jpg');"></i><i style="background-image: url('http://cs323127.vk.me/v323127986/644c/kjXayJxX5qA.jpg');" class="active"></i><i style="background-image: url('http://cs323324.vk.me/u4063837/d_c6cbd895.jpg');"></i><i style="background-image: url('http://cs418730.vk.me/v418730872/3897/wl6WIXQmY9g.jpg');"></i><i style="background-image: url('http://cs411020.vk.me/v411020015/658d/nlFSRNCMQ0o.jpg');"></i><i style="background-image: url('http://cs11283.vk.me/u4055928/d_6317644f.jpg');"></i><i style="background-image: url('http://cs411226.vk.me/u5968934/d_6e3f7082.jpg');"></i><i style="background-image: url('http://cs411723.vk.me/v411723723/669c/XGeZ1xAoJjA.jpg');"></i><i style="background-image: url('http://cs323127.vk.me/v323127986/644c/kjXayJxX5qA.jpg');"></i><i style="background-image: url('http://cs323324.vk.me/u4063837/d_c6cbd895.jpg');"></i><i style="background-image: url('http://cs418730.vk.me/v418730872/3897/wl6WIXQmY9g.jpg');"></i><i style="background-image: url('http://cs411020.vk.me/v411020015/658d/nlFSRNCMQ0o.jpg');"></i><i style="background-image: url('http://cs11283.vk.me/u4055928/d_6317644f.jpg');"></i><i style="background-image: url('http://cs411226.vk.me/u5968934/d_6e3f7082.jpg');"></i><i style="background-image: url('http://cs411020.vk.me/v411020015/658d/nlFSRNCMQ0o.jpg');"></i><i style="background-image: url('http://cs11283.vk.me/u4055928/d_6317644f.jpg');"></i><i style="background-image: url('http://cs411226.vk.me/u5968934/d_6e3f7082.jpg');"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer><a href="#" class="button blue gostep3">Продолжить</a></footer>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="step-filter step step3" style="display: none;">
+                    <header>
+                        <a href="#" class="goback gostep2"><i></i>Назад</a>
+                        <div class="progress">
+                            <span class="done">Устройство<b></b></span>
+                            <span class="done">Дизайн<b></b></span>
+                            <span class="done">Фильтры<b></b></span>
+                            <span>Подтверждение</span>
+                        </div>
+                    </header>
+                    <div class="prepare">
+                        <h1>Примените фильтр</h1>
+                        <div class="options">
+                            <ul class="images_filters">
+                                <li><i class="filter1"></i>Без фильтра</li>
+                                <li class="active"><i class="filter2"></i>Синий</li>
+                                <li><i class="filter3"></i>Желтый</li>
+                                <li><i class="filter4"></i>Волна</li>
+                                <li><i class="filter5"></i>Зеленый</li>
+                            </ul>
+                            <footer><a href="#" class="button blue gostep4">Продолжить</a></footer>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="step-done step step4" style="display: none;">
+                    <header>
+                        <a href="#" class="goback done gostep3"><i></i>Назад</a>
+                        <div class="progress">
+                            <span class="done">Устройство<b></b></span>
+                            <span class="done">Дизайн<b></b></span>
+                            <span class="done">Фильтры<b></b></span>
+                            <span class="done">Подтверждение</span>
+                        </div>
+                    </header>
+                    <div class="prepare">
+                        <h1>Ваш кейс от Makestagram готов</h1>
+                        <div class="options">
+                            <footer><a href="#" class="button blue">Оплатить</a><div class="button_label white">1300 р.</div></footer>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--/popup-->
+
+</body>
+</html>

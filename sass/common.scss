@@ -1,0 +1,889 @@
+
+@import "base";
+*{margin: 0;padding: 0;-webkit-text-size-adjust: none}
+input:focus,textarea:focus{outline: none}
+body{
+    font: {
+        family: "ProximaNova-Regular", Arial, sans-serif;
+        weight: normal;
+        size: 14px;
+        }
+    line-height:1.4;
+    background:#f1f1f1;
+    color: #2a2a2a;
+    -webkit-font-smoothing: antialiased;
+    &.bg_black {
+        background: #191919;
+    }
+}
+/*resets*/
+a img,fieldset{
+    border:none;
+    }
+a{
+    color:#29bbeb;
+    text-decoration:none;
+    &:hover{
+    }
+}
+b {
+    font-family: "ProximaNova-Bold", Arial, sans-serif;
+    font-weight: normal;
+}
+button::-moz-focus-inner {padding:0; border:0}
+input[type="submit"]::-moz-focus-inner {padding: 0;border: 0 }
+header,footer,article,nav,section{ display: block}
+input[disabled="disabled"] {cursor: default}
+
+h1 {
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: normal;
+    padding-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: normal;
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-family: "ProximaNova-Semibold", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hr {
+    @include hide-text;
+    height: 0;
+    border-top: 1px solid #303030;
+}
+
+.table {
+    display: table;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+}
+
+.page {
+    min-width: 1200px;
+}
+
+.outer {
+    padding: 0 30px;
+    .ico_logo {
+        position: absolute;
+    }
+}
+
+.wrap {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.top {
+    @include box-shadow(0 1px 1px rgba(0,0,0,0.05));
+    border-bottom: 1px solid #d2d2d2;
+    background: #fff;
+    position: relative;
+    z-index: 50;
+    .table {
+        width: 100%;
+        position: relative;
+    }
+    .cell {
+        display: table-cell;
+        height: 58px;
+        vertical-align: middle;
+        text-align: center;
+        &:first-child,
+        &:last-child {
+            width: 500px;
+            text-align: left;
+        }
+        &:last-child {text-align: right}
+    }
+    &.top_slim .cell {height: 40px}
+}
+
+.head_logo {
+    @include sized-sprite($common, "head_logo");
+    @include inline-block;
+}
+.text_logo-dark {
+    @include sized-sprite($common, "text_logo-dark");
+    @include inline-block;
+}
+.ico_logo {
+    @include sized-sprite($common, "ico_logo");
+    @include inline-block;
+}
+.ico_logo-dark {
+    @include sized-sprite($common, "ico_logo-dark");
+    @include inline-block;
+}
+.ico_logo-big {
+    @include sized-sprite($common, "ico_logo-big");
+    @include inline-block;
+}
+.footer_logo {
+    @include sized-sprite($common, "footer_logo");
+    @include inline-block;
+}
+
+.nav {
+    @include inline-block;
+    list-style:none;
+    li {
+        display: block;
+        font-size: 14px;
+        float: left;
+    }
+    &.top_menu {
+        width: 600px;
+    }
+    &.side_menu {
+        li {margin-left: 10px;}
+    }
+    a {
+        @include border-radius(3px);
+        display: block;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 15px;
+        color: #000;
+    }
+    .active a {
+        @include box-shadow(inset 0 2px 0 #9a9a9a);
+        background: #b5b5b5;
+        color: #fff;
+        text-shadow:0 1px 0 rgba(0,0,0,0.1);
+    }
+    .create_link {
+        background: #353535;
+        color: #fff;
+        text-shadow:0 1px 0 rgba(0,0,0,0.1);
+    }
+    .s_arrow {
+        @include sized-sprite($icons, "select-arrow");
+        @include inline-block;
+        @include hide-text;
+        vertical-align: middle;
+        margin: -2px 0 0 4px;
+    }
+    .active .s_arrow {
+        @include sized-sprite($icons, "select-arrow-active");
+    }
+}
+
+.promo {
+    background-position: 50% 50%;
+    background-size: cover;
+    color: #fff;
+    .outer {
+        padding: 30px;
+    }
+    .wrap {
+        @include clr();
+    }
+    h2 {
+        padding-bottom: 50px;
+    }
+    h2 span {
+        color: #fcb214;
+    }
+}
+
+.text_left {
+    float: left;
+    width: 550px;
+    margin-top: 110px;
+}
+.text_right {
+    float: right;
+    width: 420px;
+    margin-top: 180px;
+}
+
+.promo_top {
+    background-image: url(../img/promobg1.jpg);
+    height: 610px;
+    position: relative;
+    .promo_hand {
+        position: absolute;
+        background-image: url(../img/promo_hand.png);
+        width: 583px;
+        height: 547px;
+        bottom: 0;
+        left: 50%;
+    }
+    .work_with {
+        font-size: 12px;
+        width: 230px;
+        position: absolute;
+        top: 64px;
+        left: 50%;
+        margin-left: 326px;
+        line-height: 1.1;
+        ul {
+            @include clr;
+            list-style: none;
+            padding-bottom: 10px;
+            li {
+                float: left;
+                margin-right: 12px;
+            }
+        }
+        i {
+            display: block;
+        }
+    }
+}
+
+.top-fb {@include sized-sprite($icons, "top-fb");}
+.top-vk {@include sized-sprite($icons, "top-vk");}
+.top-insta {@include sized-sprite($icons, "top-insta");}
+
+.tab-fb {@include sized-sprite($icons, "grey-fb");}
+.tab-vk {@include sized-sprite($icons, "grey-vk");}
+.tab-insta {@include sized-sprite($icons, "grey-insta");}
+
+.active .tab-fb {@include sized-sprite($icons, "top-fb");}
+.active .tab-vk {@include sized-sprite($icons, "top-vk");}
+.active .tab-insta {@include sized-sprite($icons, "top-insta");}
+
+.promo_med {
+    background-image: url(../img/promobg2.jpg);
+    height: 650px;
+    h1,h2 {@include opacity(.8)}
+    h3 {@include opacity(.5)}
+}
+
+.slider {
+    min-height: 380px;
+    position: relative;
+    .wrap {@include clr}
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 36px;
+        background: rgba(0,0,0,0.3);
+        margin-top: -18px;
+        z-index: 10;
+        i {
+            display: block;
+            margin: 12px auto 0;
+        }
+        
+    }
+    .more {
+        font-family: "ProximaNova-Semibold", Arial, sans-serif;
+        font-size: 12px;
+        line-height: 34px;
+        position: absolute;
+        top: 70px;
+        height: 36px;
+        background: #303030;
+        padding: 0 20px;
+        z-index: 10;
+        color: #fff;
+        i {
+            @include inline-block;
+            vertical-align: top;
+            margin:12px 0 0 10px;
+        }
+        span {
+            @include inline-block;
+            vertical-align: top;
+        }
+        
+    }
+    .prev {
+        @include border-radius(0 3px 3px 0);
+        left: 0;
+        i {@include sized-sprite($common, "slider-prev-white")}
+    }
+    .next {
+        @include border-radius(3px 0 0 3px);
+        right: 0;
+        i {@include sized-sprite($common, "slider-next-white")}
+    }
+    .more {
+        @include border-radius(3px 0 0 3px);
+        right: 0;
+        i {@include sized-sprite($common, "slider-next-white")}
+    }
+    aside {
+        @include border-radius(0 5px 5px 0);
+        width: 100px;
+        padding: 12px 30px 4px;
+        background: #303030;
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: 0;
+        margin-top: -81px;
+        color: #fff;
+        line-height: 1.2;
+        p {
+            font-size: 12px;
+            color: #adadad;
+            padding-bottom: 8px;
+            b {
+                font-family: "ProximaNova-Semibold", Arial, sans-serif;
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+    }
+    &.bg_white {
+        background: #fff;
+    }
+    &.bg_black {
+        background: #191919;
+    }
+    &.bg_transparent {
+        background: transparent;
+    }
+}
+
+
+.technology {
+    background: #060606 url(../img/tech-phone-bg.jpg) 50% 0 no-repeat;
+    min-height: 680px;
+    position: relative;
+    color: #fff;
+    .phone_top {
+        background: transparent url(../img/phone_top.png) 0 0 no-repeat;
+        display: block;
+        width: 271px;
+        height: 10px;
+        position: absolute;
+        top: -10px; left: 50%;
+        margin-left: 211px;
+    }
+    .phone_jack {
+        @include inline-block;
+        background: transparent url(../img/phone_jack.png) 0 0 no-repeat;
+        width: 206px;
+        height: 206px;
+        margin-top: 80px;
+        margin-left: -20px;
+        margin-right: 20px;
+    }
+    .phone_camera {
+        @include inline-block;
+        background: transparent url(../img/phone_camera.png) 0 0 no-repeat;
+        width: 206px;
+        height: 206px;
+        margin-top: 80px;
+    }
+    .tech_descr {
+        @include clr;
+    }
+    dl {
+        float: left;
+        width: 220px;
+        margin:30px 5px 0 0;
+        .ico {
+            margin-top: -14px;
+            float: left;
+        }
+        dd {
+            color: #777;
+            margin:10px 0 0 45px;
+            height: 120px;
+        }
+    }
+    .text_right {
+        margin-top: 270px;
+    }
+    h3 {
+        @include opacity(.5);
+    }
+    h2 {
+        color: #999;
+    }
+    
+}
+
+.ico {
+    @include inline-block;
+    width: 45px;
+    height: 45px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    &.ico-headphones {background-image: url(../img/icons/ico-headphones.png)}
+    &.ico-ergo       {background-image: url(../img/icons/ico-ergo.png)}
+    &.ico-foto       {background-image: url(../img/icons/ico-foto.png)}
+    &.ico-iphone     {background-image: url(../img/icons/ico-iphone.png)}
+    &.ico-brush      {background-image: url(../img/icons/ico-brush.png)}
+}
+
+.description {
+    min-height: 500px;
+    padding:50px 0 70px;
+    background: #fff;
+    header {
+        @include clr;
+        min-height: 270px;
+        h1 {
+            overflow: hidden;
+            padding-right: 50px;
+        }
+        aside {
+            float: left;
+            width: 270px;
+            margin-left: 50px;
+            h3 {
+                color: #a5a5a5;
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+.descr_content {
+    @include clr;
+    aside {
+        @include clr;
+        width: 500px;
+        margin-left: 50px;
+        float: left;
+    }
+    dl {
+        float: left;
+        color: #696969;
+        font-size: 20px;
+        width: 270px;
+        .icon_holder {
+            margin-top: -28px;
+        }
+        h3 {
+            color: #a5a5a5;
+            padding-top: 20px;
+        }
+        dt {
+            border-top: 1px solid #e5e5e5;
+        }
+        dd {
+            height: 210px;
+            padding-right: 25px;
+        }
+    }
+    .short {
+        width: 230px;
+        dd {
+            padding-right: 0;
+        }
+        
+    }
+}
+
+.tech_holder {
+    border-top: 1px solid #e5e5e5;
+    float: left;
+    width: 550px;
+    .icon_holder {
+        margin-top: -28px;
+        margin-left: 110px;
+        float: left;
+    }
+    h3 {
+        color: #a5a5a5;
+        padding-top: 42px;
+        padding-bottom: 30px;
+        margin-left: 110px;
+    }
+    .tech_table {
+        margin-left: 110px;
+    }
+}
+
+.tech_table {
+    @include border-radius(3px);
+    width: 450px;
+    height: 480px;
+    background: #f1f1f1;
+    overflow: hidden;
+    nav {
+        @include clr;
+        .tab {
+            @include box-sizing(border-box);
+            float: left;
+            padding-top: 4px;
+            height: 120px;
+            width: 90px;
+            border-bottom: 2px solid #cdcdcd;
+            text-align: center;
+            font-size: 12px;
+            color: #9f9f9f;
+            cursor: pointer;
+            .inner {
+                height: 108px;
+                border-right: 1px solid #dedede;
+            }
+            &.active {
+                background: #29bbeb;
+                border-color: #239fc8;
+                border-right: 0;
+                color: #fff;
+                cursor: default;
+                text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+                .inner {border-right: 0;}
+            }
+            &:last-child {
+                .inner {border-right: 0;}
+            }
+            i {
+                @include inline-block;
+                height: 55px;
+                width: 44px;
+                margin: 16px 0 13px;
+            }
+        }
+    }
+    .table {
+        width: 100%;
+        .cell {
+            line-height: 50px;
+            color: #2a2a2a;
+            border-bottom: 1px solid #dedede;
+            &:first-child {
+                color: #777;
+                padding-left: 20px;
+                width: 180px;
+            }
+        }
+        .row:last-child .cell {
+            border-bottom: 0;
+        }
+    }
+}
+
+.dev_menu {
+    text-align: center;
+    display: none;
+    background: #f1f1f1;
+    nav {
+        @include clr;
+        @include inline-block;
+        .tab {
+            @include box-sizing(border-box);
+            float: left;
+            height: 120px;
+            width: 90px;
+            text-align: center;
+            font-size: 12px;
+            color: #9f9f9f;
+            cursor: pointer;
+            .inner {
+                height: 120px;
+                border-right: 1px solid #dedede;
+            }
+            &.active {
+                background: #29bbeb;
+                border-color: #239fc8;
+                border-right: 0;
+                color: #fff;
+                cursor: default;
+                text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+                .inner {border-right: 0;}
+            }
+            &:last-child {
+                .inner {border-right: 0;}
+            }
+            i {
+                @include inline-block;
+                height: 55px;
+                width: 44px;
+                margin: 16px 0 13px;
+            }
+        }
+    }
+}
+
+.dev-iphone5 {
+    @include sized-sprite($common, "dev-iphone5");
+}
+.dev-iphone4 {
+    @include sized-sprite($common, "dev-iphone4");
+}
+.dev-ipad_mini {
+    @include sized-sprite($common, "dev-ipad_mini");
+}
+.dev-ipad {
+    @include sized-sprite($common, "dev-ipad");
+}
+.dev-galaxy {
+    @include sized-sprite($common, "dev-galaxy");
+}
+
+.active .dev-iphone5 {
+    @include sized-sprite($common, "dev-iphone5-white");
+}
+.active .dev-iphone4 {
+    @include sized-sprite($common, "dev-iphone4-white");
+}
+.active .dev-ipad_mini {
+    @include sized-sprite($common, "dev-ipad_mini-white");
+}
+.active .dev-ipad {
+    @include sized-sprite($common, "dev-ipad-white");
+}
+.active .dev-galaxy {
+    @include sized-sprite($common, "dev-galaxy-white"); 
+}
+
+.icon {
+    @include border-radius(26px);
+    @include hide-text;
+    display: table-cell; 
+    background: #f1f1f1;
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    vertical-align: middle;
+    &.dark {
+        background: #c5c5c5;
+    }
+}
+
+.dim-truck {
+    @include inline-block;
+    @include sized-sprite($icons, "dim-truck");
+}
+
+.dim-thumb_up {
+    @include inline-block;
+    @include sized-sprite($icons, "dim-thumb_up");
+}
+
+.dim-payback {
+    @include inline-block;
+    @include sized-sprite($icons, "dim-payback"); 
+}
+
+.dim-warranty {
+    @include inline-block; 
+    @include sized-sprite($icons, "dim-warranty");
+}
+
+.dim-expand {
+    @include inline-block;
+    @include sized-sprite($icons, "dim-expand");
+}
+
+.dim-card {
+    @include inline-block;
+    @include sized-sprite($icons, "dim-card");
+}
+
+.button {
+    @include box-sizing(border-box);
+    @include border-radius(3px);
+    @include inline-block;
+    font-family: "ProximaNova-Semibold", Arial, sans-serif;
+    color: #fff;
+    height: 36px;
+    line-height: 34px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+    &.border {
+        border: 1px solid #8c8c8c;
+    }
+    &.blue {
+        @include box-shadow(inset 0 -2px 0 #239fc8);
+        border-color: transparent;
+        background: #29bbeb;
+        text-shadow:0 1px 0 rgba(0,0,0,0.1);
+    }
+    &.darkblue {
+        @include box-shadow(inset 0 -2px 0 #1990b7);
+        border-color: transparent;
+        background: #1da9d7;
+        text-shadow:0 1px 0 rgba(0,0,0,0.1);
+    }
+    &.grey {
+        @include box-shadow(inset 0 -2px 0 #9a9a9a);
+        border-color: transparent;
+        background: #b5b5b5;
+        text-shadow:0 1px 0 rgba(0,0,0,0.1);
+        &.active {
+            @include box-shadow(inset 0 2px 0 #239fc8);
+            background: #29bbeb;
+            text-shadow:0 1px 0 rgba(0,0,0,0.1);
+        }
+    }
+    &.tiny {
+        height: 32px;
+        line-height: 30px;
+    }
+    &.left {
+        @include border-radius(3px 0 0 3px);
+        margin-right: 0!important;
+    }
+    &.right {
+        @include border-radius(0 3px 3px 0);
+        margin-left: 0!important;
+    }
+}
+
+.button_label {
+    @include border-radius(0 3px 3px 0);
+    @include inline-block;
+    background: #f1f1f1;
+    color: #6a6a6a;
+    height: 36px;
+    line-height: 34px;
+    padding: 0 15px 0 18px;
+    margin-left: -3px;
+    white-space: nowrap;
+    text-shadow: none;
+    &.absolute {
+        position: absolute;
+    }
+    &.white {
+        background: #fff;
+    }
+}
+
+.nav_simple {
+    @include box-shadow(0 2px 0 rgba(0,0,0,0.05));
+    background: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.error_block {
+    background: #191919;
+    color: #fff;
+    text-align: center;
+    padding-top: 75px;
+    p {
+        font-size: 30px;
+        line-height: 1;
+        padding: 40px 0 0;
+    }
+    big {
+        font-size: 150px;
+    }
+}
+
+.top_login {
+    @include box-shadow(inset 0 2px 0 #a3a3a3);
+    text-align: center;
+    background: #b5b5b5;
+    padding: 10px 0;
+    display: none;
+    ul {
+        @include inline-block;
+        @include clr;
+        list-style: none;
+        li {
+            float: left;
+            margin: 0 5px;
+        }
+    }
+}
+
+.social-fb {
+    @include inline-block;
+    @include sized-sprite($common, "social-fb");
+}
+.social-insta {
+    @include inline-block;
+    @include sized-sprite($common, "social-insta");
+}
+.social-vk {
+    @include inline-block;
+    @include sized-sprite($common, "social-vk");
+}
+
+.popup-wrap{
+    display: none;
+    position:fixed;
+    top:0;
+    left:0;
+    background:#000;
+    @include opacity(.75);
+    height:100%;
+    width:100%;
+    z-index:300;
+}
+.popup_holder {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    z-index:300;
+    &.popup_error .popup {
+        width: 420px;
+        text-align: center;
+        margin-left:-210px;
+        .pop-in {padding: 30px 50px;}
+        .popup__close {
+            top: 10px;
+            right: 10px;
+        }
+        h3 {
+            padding-bottom: 8px;
+            color: #a5a5a5;
+        }
+    }
+}
+.popup{
+    @include border-radius(5px);
+    font-size: 14px;
+    line-height: 1.8;
+    position:relative;
+    left:50%;
+    width:810px;
+    margin-left:-390px;
+    margin-bottom: 20px;
+    top:50%;
+    z-index:350;
+    .pop-in {
+        padding: 0;
+        min-height: 72px;
+    }
+    .popup__close{
+        @include sized-sprite($common, close);
+        position:absolute;
+        top:20px;
+        right:20px;
+        cursor:pointer;
+        z-index: 20;
+        &:hover {
+            @include opacity(0.6);
+        }
+    }
+}
+.popup_top{
+    position: relative;
+    bottom:auto;
+    top:10px;
+    margin-top:0;
+}
+.popup_center{
+    position:fixed;
+}
+
+.popup_error .popup {background: #fff;}

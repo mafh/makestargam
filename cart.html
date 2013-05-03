@@ -1,0 +1,410 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Makestagram</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1; maximum-scale=1.0"/>
+    <link rel="stylesheet" media="screen" href="fonts/proxima.css">
+	<link rel="stylesheet" media="screen" href="css/screen.css">
+	<script type="text/javascript" src="js/html5.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <!--js-select-->
+	<script type="text/javascript" src="js-select/js-select.js"></script>
+    <link rel="stylesheet" media="screen" href="js-select/js-select.css">
+    <!--/js-select-->
+</head>
+<body class="bg_black">
+
+<div class="page">
+    <div class="top_login">
+        <ul>
+            <li><a href="#" class="social-fb"></a></li>
+            <li><a href="#" class="social-insta"></a></li>
+            <li><a href="#" class="social-vk"></a></li>
+        </ul>
+    </div>
+    <header class="top" id="top">
+        <div class="outer">
+            <div class="table">
+                <div class="cell"><a href="#" class="head_logo"></a></div>
+                <div class="cell">
+                    <ul class="nav top_menu">
+                        <li><a href="#" class="dev_menu_link">Создать чехол<i class="s_arrow"></i></a></li>
+                        <li><a href="#">Готовые дизайны</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">О проекте</a></li>
+                    </ul>
+                </div>
+                <div class="cell">
+                    <ul class="nav">
+                        <li><a href="#" class="login_link">Вход</a></li>
+                        <li><a href="#" class="create_link">Создать кейс</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="dev_menu dev_top_menu">
+        <nav>
+            <div class="tab active"><div class="inner"><i class="dev-iphone5"></i><p>iPhone 5</p></div></div>
+            <div class="tab"><div class="inner"><i class="dev-iphone4"></i><p>iPhone 4/4s</p></div></div>
+            <div class="tab"><div class="inner"><i class="dev-ipad_mini"></i><p>iPad Mini</p></div></div>
+            <div class="tab"><div class="inner"><i class="dev-ipad"></i><p>iPad 2</p></div></div>
+            <div class="tab"><div class="inner"><i class="dev-ipad"></i><p>iPad 3/4</p></div></div>
+            <div class="tab"><div class="inner"><i class="dev-galaxy"></i><p>Galaxy S3</p></div></div>
+        </nav>
+    </div>
+
+    <div style="height: 2000px; background: #f7f7f7;">
+        <p style="text-align: center; padding: 100px;"><a href="#" class="show_error_link">[show error]</a></p>
+    </div>
+
+    <footer class="footer">
+        <div class="wrap">
+            <ul>
+                <li><a href="#">Готовые дизайны</a></li><li><a href="#">FAQ</a></li><li><a href="#">Доставка и оплата</a></li><li><a href="#">О проекте</a></li>
+            </ul>
+            <div class="hr"></div>
+            <ul>
+                <li>Создайте кейс</li><li><a href="#">iPhone 5</a></li><li><a href="#">iPhone 4/4S</a></li><li><a href="#">iPad Mini</a></li><li><a href="#">iPad 3</a></li><li><a href="#">iPad 2</a></li><li><a href="#">Galaxy S III</a></li>
+            </ul>
+            <h2>Кейс с вашими впечатлениями для мобильного устройства.<br>Создайте персональный дизайн или выберите готовый</h2>
+            <div class="table">
+                <div class="cell">
+                    <a href="#" class="button blue">Создать кейс</a>
+                    <p>Создайте кейс<br>с вашими снимками</p>
+                </div>
+                <div class="cell">
+                    <a href="#" class="button border">Выбрать готовый</a>
+                    <p>Выберите кейс<br>с авторским дизайном</p>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <ul>
+                <li><a href="#">Instagram</a></li><li><a href="#">Twitter</a></li><li><a href="#">Vkontakte</a></li><li><a href="#">Facebook</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+<div class="popup-wrap"></div>
+<!--popup_error-->
+<div class="popup_holder popup_error">
+    <div class="popup">
+        <a href="#" class="popup__close"></a>
+        <div class="pop-in">
+            <h3>ошибка</h3>
+            <h1>Текст сообщения об ошибке</h1>
+            <p><a href="#" class="button grey">Продолжить</a></p>
+        </div>
+    </div>
+</div>
+<!--/popup_error-->
+
+<!--popup-->
+<div class="popup_holder popup_cart popup_show">
+    <div class="popup">
+        <a href="#" class="popup__close"></a>
+        <div class="pop-in">
+            <div class="pop-in-cover"></div>
+            <div class="cart">
+                <section class="cart-overview step step1" style="1display: none;">
+                    <header>
+                        <a href="#" class="goback gostep0"><i></i>Назад</a>
+                        <div class="progress">
+                            <span class="done">Ваш заказ<b></b></span>
+                            <span>Доставка<b></b></span>
+                            <span>Оплата<b></b></span>
+                            <span>Подтверждение</span>
+                        </div>
+                    </header>
+                    <div class="overview">
+                        <div class="table">
+                            <div class="row thead">
+                                <div class="cell">Товар</div>
+                                <div class="cell">Кол-во</div>
+                                <div class="cell">Цена, руб.</div>
+                                <div class="cell">Итого, руб.</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell">
+                                    <div class="details-item">
+                                        <div class="details-img"><i class="iphone5"></i></div>
+                                        <div class="details-descr">
+                                            <h2>Океан в Сан-Франциско</h2>
+                                            <p><span>Чехол для</span> iPhone 5, белый<br><span>Автор:</span> Владимир Светличный
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <div class="counter"><a href="#" class="more"></a><a href="#" class="less"></a><span>1</span></div>
+                                </div>
+                                <div class="cell price">1390</div><div class="cell price final">1390</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell">
+                                    <div class="details-item">
+                                        <div class="details-img"><i class="ipad"></i></div>
+                                        <div class="details-descr">
+                                            <h2>Река</h2>
+                                            <p><span>Чехол для</span> iPad 3/4, белый<br><span>Автор:</span> Владимир Светличный
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <div class="counter"><a href="#" class="more"></a><a href="#" class="less"></a><span>2</span></div>
+                                </div>
+                                <div class="cell price">1390</div><div class="cell price final">1390</div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer><a href="#" class="button blue gostep2">Продолжить</a><span class="button_label absolute">1390 р.</span></footer>
+                </section>
+
+                <section class="cart-delivery step step2" style="display: none;">
+                    <h1>Укажите адрес и тип доставки</h1>
+                    <header>
+                        <a href="#" class="goback gostep1"><i></i>Назад</a>
+                        <div class="progress">
+                            <span class="done">Ваш заказ<b></b></span>
+                            <span class="done">Доставка<b></b></span>
+                            <span>Оплата<b></b></span>
+                            <span>Подтверждение</span>
+                        </div>
+                    </header>
+                    <div class="delivery">
+                        <div class="table_checkout">
+                            <div class="row">
+                                <div class="cell">Имя получателя</div>
+                                <div class="cell"><input type="text" class="text"></div>
+                                <div class="cell"><div class="error_block">Ошибка при заполнении</div></div>
+                            </div>
+                            <div class="row">
+                                <div class="cell">Страна</div>
+                                <div class="cell">
+                                    <span class="js-sel">
+                                        <select>
+                                            <option selected="selected" value="">Волшебная страна</option>
+                                            <option value="">Россия</option>
+                                            <option value="">Украина</option>
+                                            <option value="">Беларусь</option>
+                                            <option value="">Польша</option>
+                                        </select>
+                                    </span>
+                                </div>
+                                <div class="cell"></div>
+                            </div>
+                            <div class="row">
+                                <div class="cell">Город</div>
+                                <div class="cell">
+                                    <span class="js-sel">
+                                        <select>
+                                            <option selected="selected" value="">Москва</option>
+                                            <option value="">Томск</option>
+                                            <option value="">Марьина Роща</option>
+                                            <option value="">Петрозаводск</option>
+                                            <option value="">Тамбов</option>
+                                            <option value="">Дмитров</option>
+                                            <option value="">Брянск</option>
+                                            <option value="">Томск</option>
+                                            <option value="">Марьина Роща</option>
+                                            <option value="">Петрозаводск</option>
+                                            <option value="">Тамбов</option>
+                                            <option value="">Дмитров</option>
+                                            <option value="">Брянск</option>
+                                        </select>
+                                    </span>
+                                </div>
+                                <div class="cell"></div>
+                            </div>
+                            <div class="row input_error">
+                                <div class="cell">Номер телефона</div>
+                                <div class="cell"><input type="text" class="text"></div>
+                                <div class="cell"><div class="error_block">Ошибка при заполнении</div></div>
+                            </div>
+                            <div class="row">
+                                <div class="cell">Адрес</div>
+                                <div class="cell"><input type="text" class="text"></div>
+                                <div class="cell"><div class="error_block">Ошибка при заполнении</div></div>
+                            </div>
+                            <div class="row">
+                                <div class="cell">Почтовый код</div>
+                                <div class="cell"><input type="text" class="text med"></div>
+                                <div class="cell"><div class="error_block">Ошибка при заполнении</div></div>
+                            </div>
+                            <div class="row">
+                                <div class="cell">Тип доставки</div>
+                                <div class="cell">
+                                    <span class="js-sel">
+                                        <select>
+                                            <option selected="selected" value="">Курьер, 250 руб.</option>
+                                            <option value="">Самолет, 7390 руб.</option>
+                                        </select>
+                                    </span>
+                                </div>
+                                <div class="cell"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer><a href="#" class="button blue gostep3">Продолжить</a><span class="button_label absolute">1390 р.</span></footer>
+                </section>
+
+                <section class="cart-pay step step3" style="display: none;">
+                    <h1>Выберите тип оплаты</h1>
+                    <header>
+                        <a href="#" class="goback gostep2"><i></i>Назад</a>
+                        <div class="progress">
+                            <span class="done">Ваш заказ<b></b></span>
+                            <span class="done">Доставка<b></b></span>
+                            <span class="done">Оплата<b></b></span>
+                            <span>Подтверждение</span>
+                        </div>
+                    </header>
+                    <div class="pay">
+                        <div class="table_checkout">
+                            <div class="row">
+                                <div class="cell">Тип оплаты</div>
+                                <div class="cell">
+                                    <ul class="type_tabs">
+                                        <li><a href="#">Наличные</a></li>
+                                        <li class="active"><a href="#">Банковская карта</a></li>
+                                        <li><a href="#">Paypal</a></li>
+                                    </ul>
+                                </div>
+                                <div class="cell"></div>
+                            </div>
+                        </div>
+                        <div class="table_checkout">
+                            <div class="type_tabs_content type_cash" style="display: none;">
+                            </div>
+                            <div class="type_tabs_content type_card">
+                                <div class="row">
+                                    <div class="cell">Тип карты</div>
+                                    <div class="cell">
+                                        <span class="js-sel">
+                                            <select>
+                                                <option selected="selected" value="">MasterCard</option>
+                                                <option value="">Visa</option>
+                                            </select>
+                                        </span>
+                                    </div>
+                                    <div class="cell"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell">Имя на карте</div>
+                                    <div class="cell"><input type="text" class="text"></div>
+                                    <div class="cell"><div class="error_block">Ошибка при заполнении</div></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell">Адрес</div>
+                                    <div class="cell"><input type="text" class="text"></div>
+                                    <div class="cell"><div class="error_block">Ошибка при заполнении</div></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell">Номер карты</div>
+                                    <div class="cell card_number">
+                                        <input type="text" class="text short" maxlength="4"><input type="text" class="text short" maxlength="4"><input type="text" class="text short" maxlength="4"><input type="text" class="text short" maxlength="4">
+                                    </div>
+                                    <div class="cell"><div class="error_block">Ошибка при заполнении</div></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell">Трехцифровой код</div>
+                                    <div class="cell card_number">
+                                        <input type="text" class="text med" maxlength="3"><div class="code-cv"></div>
+                                    </div>
+                                    <div class="cell"><div class="error_block">Ошибка при заполнении</div></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell">Годна до</div>
+                                    <div class="cell card_expire">
+                                        <span class="js-sel">
+                                            <select>
+                                                <option selected="selected" value="">Январь (01)</option>
+                                                <option value="">Февраль (02)</option>
+                                                <option value="">Март (03)</option>
+                                                <option value="">Апрель (04)</option>
+                                                <option value="">Май (05)</option>
+                                                <option value="">Июнь (06)</option>
+                                                <option value="">Июль (07)</option>
+                                                <option value="">Август (08)</option>
+                                                <option value="">Сентябрь (09)</option>
+                                                <option value="">Октябрь (10)</option>
+                                                <option value="">Ноябрь (11)</option>
+                                                <option value="">Декабрь (12)</option>
+                                            </select>
+                                        </span><span class="js-sel">
+                                            <select>
+                                                <option selected="selected" value="">2012</option>
+                                                <option value="">2013</option>
+                                                <option value="">2014</option>
+                                                <option value="">2015</option>
+                                                <option value="">2016</option>
+                                                <option value="">2017</option>
+                                                <option value="">2018</option>
+                                            </select>
+                                        </span>
+                                    </div>
+                                    <div class="cell"></div>
+                                </div>
+                            </div>
+                            <div class="type_tabs_content type_paypal" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <footer><a href="#" class="button blue gostep4">Продолжить</a><span class="button_label absolute">1390 р.</span></footer>
+                </section>
+
+                <section class="cart-success step step4" style="display: none;">
+                    <h1>Иван, все получилось!</h1>
+                    <header>
+                        <a href="#" class="goback done gostep3"><i></i>Назад</a>
+                        <div class="progress">
+                            <span class="done">Ваш заказ<b></b></span>
+                            <span class="done">Доставка<b></b></span>
+                            <span class="done">Оплата<b></b></span>
+                            <span class="done">Подтверждение</span>
+                        </div>
+                    </header>
+                    <div class="success">
+                        <big>Ваш заказ будет доствален по адресу: <strong>Москва, ул. Барановского, 19-24</strong>. Подробности вы найдете в подтвержающем электронном письме на <strong>ivan.doronin@gmail.com</strong></big>
+                        <div class="items_block">
+                            <b class="tail"></b>
+                            <div class="in">
+                                <div class="details-item">
+                                    <div class="details-img"><i class="iphone5"></i></div>
+                                    <div class="details-descr">
+                                        <h2>Океан в Сан-Франциско</h2>
+                                        <p><span>Чехол для</span> iPhone 5, белый<br><span>Автор:</span> Владимир Светличный
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="in">
+                                <div class="details-item">
+                                    <div class="details-img"><i class="ipad"></i></div>
+                                    <div class="details-descr">
+                                        <h2>Река</h2>
+                                        <p><span>Чехол для</span> iPad 3/4, белый<br><span>Автор:</span> Владимир Светличный
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_logo-dark"></div>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--/popup-->
+
+</body>
+</html>

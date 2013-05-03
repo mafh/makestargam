@@ -1,0 +1,107 @@
+@import "base";
+
+.item_full {
+    min-height: 500px;
+    background: #f1f1f1;
+    border-bottom: 1px solid #dedede;
+    .wrap {
+        @include clr;
+    }
+    aside {
+        float: left;
+        width: 440px;
+        padding-top: 40px;
+    }
+    article {
+        float: left;
+        width: 1100px - 440px;
+        padding-top: 65px;
+    }
+    header {
+        padding-bottom: 20px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #d8d8d8;
+    }
+    footer {
+        padding-top: 20px;
+        margin-top: 15px;
+        border-top: 1px solid #d8d8d8;
+    }
+    .item_options {
+        @include clr;
+        padding-bottom: 30px;
+        .button,
+        .js-sel {
+            float: left;
+            margin-right: 10px;
+        }
+    }
+    h1 {
+        padding-bottom: 15px;
+        line-height: 1.1;
+    }
+    h2 {
+        color: #666;
+    }
+    h3 {
+        @include opacity(0.5);
+    }
+    .author {
+        @include clr;
+        list-style: none;
+        color: #8d8d8d;
+        line-height: 1;
+        li {
+            float: left;
+        }
+        .sep {
+            @include hide-text;
+            display: block;
+            width: 2px;
+            height: 5px;
+            background: #c1c1c1;
+            margin: 5px 10px 0;
+        }
+        span {
+            color: #000;
+        }
+    }
+    .more_info {
+        @include clr;
+        dl {
+            float: left;
+            width: 280px;
+            padding-right: 20px;
+            float: left;
+        }
+        dt {
+            float: left;
+            width: 75px;
+        }
+        dd {
+            overflow: hidden;
+        }
+    }
+}
+
+.lagre_case {
+    width: 273px;
+    height: 539px;
+    position: relative;
+    margin-left: 50px - 18px;
+}
+.lagre_case-shadow {
+    background: transparent url('../img/large_case-shadow.png') 0 0 no-repeat;
+    width: 273px;
+    height: 539px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.lagre_case-img {
+    @include border-radius(34px);
+    width: 237px;
+    height: 492px;
+    overflow: hidden;
+    margin: 0 0 0 18px;
+}

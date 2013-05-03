@@ -1,0 +1,49 @@
+/* TRANSITION */
+/* line 3, ../sass/footer.scss */
+.footer {
+  background: #191919;
+  padding-top: 30px;
+  padding-bottom: 80px;
+  color: #fff;
+}
+/* line 8, ../sass/footer.scss */
+.footer .wrap {
+  text-align: center;
+}
+/* line 11, ../sass/footer.scss */
+.footer ul {
+  padding: 17px 0;
+  list-style: none;
+}
+/* line 14, ../sass/footer.scss */
+.footer ul li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  padding: 0 7px;
+}
+/* line 18, ../sass/footer.scss */
+.footer ul a {
+  color: #7c7c7c;
+}
+/* line 22, ../sass/footer.scss */
+.footer .table {
+  margin: 0 auto 20px;
+}
+/* line 24, ../sass/footer.scss */
+.footer .table .cell {
+  text-align: left;
+  padding: 10px 20px;
+}
+/* line 27, ../sass/footer.scss */
+.footer .table .cell:first-child {
+  border-right: 1px solid #3b3b3b;
+}
+/* line 31, ../sass/footer.scss */
+.footer .table p {
+  padding-top: 14px;
+  line-height: 1.3;
+}

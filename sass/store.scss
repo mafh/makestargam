@@ -1,0 +1,217 @@
+@import "base";
+
+.prepared {
+    background: transparent url(../img/prepared-bg.jpg) 50% 50% repeat;
+    background-size: cover;
+    height: 540px;
+}
+
+.create_promotion {
+    color: #fff;
+    width: 100%;
+    margin-bottom: 30px;
+    .cell {
+        background: rgba(0,0,0,0.1);
+        height: 75px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    h2,
+    span {
+        @include inline-block;
+        padding: 0;
+    }
+    span {
+        padding: 0 10px;
+        @include opacity(.3);
+    }
+
+}
+
+.loadmore {
+    padding: 10px 0;
+    background: #262626;
+    text-align: center;
+    .button {
+        border: 0;
+        background: #4f4f4f;
+        text-shadow:0 1px 0 rgba(0,0,0,0.1);
+        @include box-shadow(inset 0 -2px 1px #434343);
+    }
+}
+
+.case {
+    @include inline-block;
+    position: relative;
+    width: 136px;
+    height: 269px;
+    .case-shadow {
+        background: transparent url('../img/case-shadow.png') 0 0 no-repeat;
+        width: 136px;
+        height: 269px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .case-img {
+        @include border-radius(20px);
+        width: 120px;
+        height: 246px;
+        position: absolute;
+        top: 0;
+        left: 8px;
+        overflow: hidden;
+        img {
+            @include border-radius(20px);
+            min-width: 120px;
+            min-height: 246px;
+        }
+    }
+}
+
+.case_list {
+    .wrap {
+        @include clr;
+    }
+    .items_row {
+        border-bottom: 1px solid #dedede;
+    }
+}
+
+.case_item {
+    @include inline-block;
+    position: relative;
+    float: left;
+    margin-left: -1px;
+    vertical-align: top;
+    text-align: center;
+    width: 219px;
+    height: 380px;
+    border: 1px solid #dedede;
+    border-bottom: 0;
+    border-top: 0;
+    color: #a5a5a5;
+    p span {
+        color: #2f2f2f;
+    }
+    .case {
+        margin-top: 20px;
+    }
+    .button {
+        visibility: hidden;
+        margin-top: 12px;
+    }
+    .ribbon {
+        position: absolute;
+        top: 160px;
+        left: 18px;
+        display: none;
+        cursor: default;
+        .in {
+            @include sized-sprite($common, "ribbon");
+            //@include box-sizing(content-box);
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0 40px;
+            width: 185px - 80px;
+        }
+        span {
+            font-size: 12px;
+        }
+        h3 {
+            color: #fff;
+        }
+    }
+    &:hover {
+        background: #fff;
+        .button {
+            visibility: visible;
+        }
+        p {
+            display: none;
+        }
+        .ribbon {
+            display: table;
+        }
+    }
+}
+
+.bigcase_item {
+    @include clr;
+    @include inline-block;
+    position: relative;
+    float: left;
+    vertical-align: top;
+    text-align: center;
+    border-bottom: 0;
+    border-top: 0;
+    color: #fff;
+    width: 220px*3 - 50px;
+    height: 380px;
+    text-align: left;
+    padding-right: 50px;
+    .bigcase {
+        float: left;
+        margin-left:  50px - 18px;
+        margin-right: 40px - 18px;
+        width: 227px;
+        height: 444px;
+        position: relative;
+    }
+    .case-shadow {
+        background: transparent url('../img/bigcase-shadow.png') 0 0 no-repeat;
+        width: 227px;
+        height: 444px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .case-img {
+        @include border-radius(30px);
+        width: 192px;
+        height: 397px;
+        overflow: hidden;
+        margin: 0 0 0 18px;
+    }
+    h1 {
+        line-height: 1.3;
+        padding-top: 15px;
+        padding-bottom: 18px;
+    }
+    h2 {
+        line-height: 1.3;
+        padding-bottom: 23px;
+    }
+    p {
+        padding-bottom: 18px;
+        @include opacity(0.5);
+    }
+}
+
+.bg_black .case_item {
+    border-color: #252525;
+    color: #6f6f6f;
+    p span {
+        color: #ccc;
+    }
+    &:hover {
+        background: #262626;
+    }
+}
+
+.bg_transparent .case_item {
+    margin: 0;
+    border: 0;
+    border-left: 1px solid rgba(255,255,255,0.07);
+    color: #fff;
+    p span {
+        color: #fff;
+    }
+    &:hover {
+        background: transparent;
+    }
+}
+
+.prepared {
+    color: #fff;
+}

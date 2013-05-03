@@ -1,0 +1,159 @@
+/* TRANSITION */
+/* line 3, ../sass/item.scss */
+.item_full {
+  min-height: 500px;
+  background: #f1f1f1;
+  border-bottom: 1px solid #dedede;
+}
+/* line 37, ../sass/_base.scss */
+.item_full .wrap:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 10, ../sass/item.scss */
+.item_full aside {
+  float: left;
+  width: 440px;
+  padding-top: 40px;
+}
+/* line 15, ../sass/item.scss */
+.item_full article {
+  float: left;
+  width: 660px;
+  padding-top: 65px;
+}
+/* line 20, ../sass/item.scss */
+.item_full header {
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #d8d8d8;
+}
+/* line 25, ../sass/item.scss */
+.item_full footer {
+  padding-top: 20px;
+  margin-top: 15px;
+  border-top: 1px solid #d8d8d8;
+}
+/* line 30, ../sass/item.scss */
+.item_full .item_options {
+  padding-bottom: 30px;
+}
+/* line 37, ../sass/_base.scss */
+.item_full .item_options:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 34, ../sass/item.scss */
+.item_full .item_options .button,
+.item_full .item_options .js-sel {
+  float: left;
+  margin-right: 10px;
+}
+/* line 39, ../sass/item.scss */
+.item_full h1 {
+  padding-bottom: 15px;
+  line-height: 1.1;
+}
+/* line 43, ../sass/item.scss */
+.item_full h2 {
+  color: #666;
+}
+/* line 46, ../sass/item.scss */
+.item_full h3 {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+/* line 49, ../sass/item.scss */
+.item_full .author {
+  list-style: none;
+  color: #8d8d8d;
+  line-height: 1;
+}
+/* line 37, ../sass/_base.scss */
+.item_full .author:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 54, ../sass/item.scss */
+.item_full .author li {
+  float: left;
+}
+/* line 57, ../sass/item.scss */
+.item_full .author .sep {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  display: block;
+  width: 2px;
+  height: 5px;
+  background: #c1c1c1;
+  margin: 5px 10px 0;
+}
+/* line 65, ../sass/item.scss */
+.item_full .author span {
+  color: #000;
+}
+/* line 37, ../sass/_base.scss */
+.item_full .more_info:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 71, ../sass/item.scss */
+.item_full .more_info dl {
+  float: left;
+  width: 280px;
+  padding-right: 20px;
+  float: left;
+}
+/* line 77, ../sass/item.scss */
+.item_full .more_info dt {
+  float: left;
+  width: 75px;
+}
+/* line 81, ../sass/item.scss */
+.item_full .more_info dd {
+  overflow: hidden;
+}
+
+/* line 87, ../sass/item.scss */
+.lagre_case {
+  width: 273px;
+  height: 539px;
+  position: relative;
+  margin-left: 32px;
+}
+
+/* line 93, ../sass/item.scss */
+.lagre_case-shadow {
+  background: transparent url("../img/large_case-shadow.png") 0 0 no-repeat;
+  width: 273px;
+  height: 539px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 101, ../sass/item.scss */
+.lagre_case-img {
+  -webkit-border-radius: 34px;
+  -moz-border-radius: 34px;
+  -ms-border-radius: 34px;
+  -o-border-radius: 34px;
+  border-radius: 34px;
+  width: 237px;
+  height: 492px;
+  overflow: hidden;
+  margin: 0 0 0 18px;
+}

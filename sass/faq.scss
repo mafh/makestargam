@@ -1,0 +1,57 @@
+@import "base";
+
+.faq {
+    @include clr;
+    background: #e5e5e5;
+    nav {
+        position: relative;
+        float: left;
+        width: 300px;
+        .ico_logo-dark {
+            margin: 30px 0 22px 30px;
+        }
+        .q_list {
+            width: 300px;
+            a {
+                display: block;
+                padding: 7px 50px 7px 30px;
+                color: #777;
+                border-bottom: 1px solid #d5d5d5;
+                &.active {
+                    background: #29bbeb url('../img/common/slider-next-white.png') 96% 50% no-repeat;
+                    color: #fff;
+                    text-shadow:0 1px 0 rgba(0,0,0,0.1);
+                    border-bottom: 0;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    margin-top: -1px;
+                }
+            }
+            &.fixed {
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    aside {
+        overflow: hidden;
+        background: #f1f1f1;
+        article {
+            padding: 45px 0 45px 90px;
+            border-bottom: 1px solid #d8d8d8;
+            &.active {
+                background: #fff;
+            }
+        }
+        h1,p {width: 700px;}
+        h1 {
+            line-height: 1.1;
+        }
+        p {
+            color: #2a2a2a;
+            font-size: 20px;
+            font-weight: 200;
+        }
+    }
+}

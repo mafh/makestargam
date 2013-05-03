@@ -1,0 +1,78 @@
+/* TRANSITION */
+/* line 3, ../sass/faq.scss */
+.faq {
+  background: #e5e5e5;
+}
+/* line 37, ../sass/_base.scss */
+.faq:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 6, ../sass/faq.scss */
+.faq nav {
+  position: relative;
+  float: left;
+  width: 300px;
+}
+/* line 10, ../sass/faq.scss */
+.faq nav .ico_logo-dark {
+  margin: 30px 0 22px 30px;
+}
+/* line 13, ../sass/faq.scss */
+.faq nav .q_list {
+  width: 300px;
+}
+/* line 15, ../sass/faq.scss */
+.faq nav .q_list a {
+  display: block;
+  padding: 7px 50px 7px 30px;
+  color: #777;
+  border-bottom: 1px solid #d5d5d5;
+}
+/* line 20, ../sass/faq.scss */
+.faq nav .q_list a.active {
+  background: #29bbeb url("../img/common/slider-next-white.png") 96% 50% no-repeat;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  border-bottom: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: -1px;
+}
+/* line 30, ../sass/faq.scss */
+.faq nav .q_list.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+/* line 37, ../sass/faq.scss */
+.faq aside {
+  overflow: hidden;
+  background: #f1f1f1;
+}
+/* line 40, ../sass/faq.scss */
+.faq aside article {
+  padding: 45px 0 45px 90px;
+  border-bottom: 1px solid #d8d8d8;
+}
+/* line 43, ../sass/faq.scss */
+.faq aside article.active {
+  background: #fff;
+}
+/* line 47, ../sass/faq.scss */
+.faq aside h1, .faq aside p {
+  width: 700px;
+}
+/* line 48, ../sass/faq.scss */
+.faq aside h1 {
+  line-height: 1.1;
+}
+/* line 51, ../sass/faq.scss */
+.faq aside p {
+  color: #2a2a2a;
+  font-size: 20px;
+  font-weight: 200;
+}

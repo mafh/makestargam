@@ -1,0 +1,36 @@
+@import "base";
+
+.footer {
+    background: #191919;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    color: #fff;
+    .wrap {
+        text-align: center;
+    }
+    ul {
+        padding: 17px 0;
+        list-style:none;
+        li {
+            @include inline-block;
+            padding: 0 7px;
+        }
+        a {
+            color: #7c7c7c;
+        }
+    }
+    .table {
+        margin: 0 auto 20px;
+        .cell {
+            text-align: left;
+            padding: 10px 20px;
+            &:first-child {
+                border-right: 1px solid #3b3b3b;
+            }
+        }
+        p {
+            padding-top: 14px;
+            line-height: 1.3;
+        }
+    }
+}
