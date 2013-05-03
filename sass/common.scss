@@ -76,6 +76,10 @@ h3 {
 
 .page {
     min-width: 1200px;
+    padding-top: 58px;
+    p {
+        padding-bottom: 20px;
+    }
 }
 
 .outer {
@@ -88,6 +92,12 @@ h3 {
 .wrap {
     width: 1100px;
     margin: 0 auto;
+}
+
+.top_fixed {
+    position: fixed;
+    z-index: 90;
+    width: 100%;
 }
 
 .top {
@@ -112,7 +122,13 @@ h3 {
         }
         &:last-child {text-align: right}
     }
-    &.top_slim .cell {height: 40px}
+}
+
+.top_slim {
+    .page {
+        padding-top: 40px;
+    }
+    .top .cell {height: 40px}
 }
 
 .head_logo {
@@ -612,6 +628,10 @@ h3 {
             }
         }
     }
+}
+
+.dev_top_menu {
+    @include box-shadow(0 1px 1px rgba(0,0,0,0.05));
 }
 
 .dev-iphone5 {

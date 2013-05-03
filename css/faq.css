@@ -24,15 +24,17 @@
 /* line 13, ../sass/faq.scss */
 .faq nav .q_list {
   width: 300px;
+  top: 0;
+  left: 0;
 }
-/* line 15, ../sass/faq.scss */
+/* line 17, ../sass/faq.scss */
 .faq nav .q_list a {
   display: block;
   padding: 7px 50px 7px 30px;
   color: #777;
   border-bottom: 1px solid #d5d5d5;
 }
-/* line 20, ../sass/faq.scss */
+/* line 22, ../sass/faq.scss */
 .faq nav .q_list a.active {
   background: #29bbeb url("../img/common/slider-next-white.png") 96% 50% no-repeat;
   color: #fff;
@@ -42,35 +44,37 @@
   padding-bottom: 8px;
   margin-top: -1px;
 }
-/* line 30, ../sass/faq.scss */
+/* line 32, ../sass/faq.scss */
 .faq nav .q_list.fixed {
   position: fixed;
-  top: 0;
-  left: 0;
 }
-/* line 37, ../sass/faq.scss */
+/* line 35, ../sass/faq.scss */
+.faq nav .q_list.absolute {
+  position: absolute;
+}
+/* line 40, ../sass/faq.scss */
 .faq aside {
   overflow: hidden;
   background: #f1f1f1;
 }
-/* line 40, ../sass/faq.scss */
+/* line 43, ../sass/faq.scss */
 .faq aside article {
   padding: 45px 0 45px 90px;
   border-bottom: 1px solid #d8d8d8;
 }
-/* line 43, ../sass/faq.scss */
+/* line 46, ../sass/faq.scss */
 .faq aside article.active {
   background: #fff;
 }
-/* line 47, ../sass/faq.scss */
+/* line 50, ../sass/faq.scss */
 .faq aside h1, .faq aside p {
   width: 700px;
 }
-/* line 48, ../sass/faq.scss */
+/* line 51, ../sass/faq.scss */
 .faq aside h1 {
   line-height: 1.1;
 }
-/* line 51, ../sass/faq.scss */
+/* line 54, ../sass/faq.scss */
 .faq aside p {
   color: #2a2a2a;
   font-size: 20px;

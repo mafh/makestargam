@@ -187,13 +187,33 @@ $(document).ready(function() {
     });
 
     if ($('.faq .q_list').exists()){
+
+        var list = $('.q_list');
+        var page = $('.page');
+        var foot = $('.footer');
+        var l = list.height();
+        var p = page.height();
+        var f = foot.height();
+        var d = p - l - f - 109;
+        //alert(d);
+
         $(window).scroll(function(){
-            if ($(window).scrollTop() > 160) {
-                $('.faq .q_list').addClass('fixed');
-            }
-            else{
+            console.log($(window).scrollTop());
+            if ($(window).scrollTop() < 100) {
                 $('.faq .q_list').removeClass('fixed');
+                $('.faq .q_list').removeClass('absolute');
+                $('.faq .q_list').css('top', '0');
+                
+            } else if ($(window).scrollTop() > d) {
+                $('.faq .q_list').removeClass('fixed');
+                $('.faq .q_list').addClass('absolute');
+                $('.faq .q_list').css('top', d + 'px');
+            } else {
+                $('.faq .q_list').addClass('fixed');
+                $('.faq .q_list').removeClass('absolute');
+                $('.faq .q_list').css('top', '60px');
             }
+
         });
         $('.faq .q_list a').click(function(){
             $('.faq .q_list a').removeClass('active');
@@ -202,25 +222,29 @@ $(document).ready(function() {
     }
 
     if ($('.loadmore').exists()){
-        $('.loadmore .button').click(function(){
+        $('.load_button').click(function(){
             getItems()
             return false;
         });
     }
 
     function getItems() {
+        $('.load_button').addClass('active');
         $.ajax({
             url: 'store_ajax_content',
             dataType: 'html',
+            error: function() {
+            },
             success: function(data) {
                 $(".case_list").append(data);
                 $('.case_list .hidden_row').slideDown(200);
+                $('.load_button').removeClass('active');
             }
         });
     }
 
 //  slider
-    if ($('.slider').exists()){
+    if ($('section.slider').exists()){
         (function($){
             $(window).load(function(){
                 $(".slider .wrap").mCustomScrollbar({

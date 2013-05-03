@@ -12,6 +12,8 @@
         }
         .q_list {
             width: 300px;
+            top: 0;
+            left: 0;
             a {
                 display: block;
                 padding: 7px 50px 7px 30px;
@@ -29,8 +31,9 @@
             }
             &.fixed {
                 position: fixed;
-                top: 0;
-                left: 0;
+            }
+            &.absolute {
+                position: absolute;
             }
         }
     }

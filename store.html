@@ -12,22 +12,29 @@
 </head>
 <body>
 
-<div class="page">
+<div class="top_fixed">
+    <div class="top_login">
+        <ul>
+            <li><a href="#" class="social-fb"></a></li>
+            <li><a href="#" class="social-insta"></a></li>
+            <li><a href="#" class="social-vk"></a></li>
+        </ul>
+    </div>
     <header class="top" id="top">
         <div class="outer">
             <div class="table">
                 <div class="cell"><a href="#" class="head_logo"></a></div>
                 <div class="cell">
                     <ul class="nav top_menu">
-                        <li><a href="#">Создать чехол<i class="s_arrow"></i></a></li>
-                        <li class="active"><a href="#">Готовые дизайны</a></li>
+                        <li><a href="#" class="dev_menu_link">Создать чехол<i class="s_arrow"></i></a></li>
+                        <li><a href="#">Готовые дизайны</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Доставка и оплата</a></li>
                         <li><a href="#">О проекте</a></li>
                     </ul>
                 </div>
                 <div class="cell">
-                    <ul class="nav">
+                    <ul class="nav side_menu">
                         <li><a href="#" class="login_link">Вход</a></li>
                         <li><a href="#" class="create_link">Создать кейс</a></li>
                     </ul>
@@ -35,7 +42,19 @@
             </div>
         </div>
     </header>
+    <div class="dev_menu dev_top_menu">
+        <nav>
+            <div class="tab active"><div class="inner"><i class="dev-iphone5"></i><p>iPhone 5</p></div></div>
+            <div class="tab"><div class="inner"><i class="dev-iphone4"></i><p>iPhone 4/4s</p></div></div>
+            <div class="tab"><div class="inner"><i class="dev-ipad_mini"></i><p>iPad Mini</p></div></div>
+            <div class="tab"><div class="inner"><i class="dev-ipad"></i><p>iPad 2</p></div></div>
+            <div class="tab"><div class="inner"><i class="dev-ipad"></i><p>iPad 3/4</p></div></div>
+            <div class="tab"><div class="inner"><i class="dev-galaxy"></i><p>Galaxy S3</p></div></div>
+        </nav>
+    </div>
+</div>
 
+<div class="page">
     <section class="prepared">
         <div class="create_promotion table">
             <div class="cell"><h2>Выберите себе чехол с авторским дизайном</h2> <span>или</span> <a href="#" class="button border">Создайте собственный</a></div>
@@ -161,7 +180,7 @@
     </section>
 
     <section class="loadmore">
-        <a href="#" class="button">Загрузить больше</a>
+        <a href="#" class="button load_button"><span>Загрузить больше</span><i class="loading"></i></a>
     </section>
 
     <footer class="footer">
