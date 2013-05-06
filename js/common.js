@@ -36,7 +36,7 @@ $(document).ready(function() {
                 $('.top_login').slideDown(200);
                 $(this).parent().addClass('active');
             }
-            
+            return false;
         })
     };
 
@@ -189,16 +189,15 @@ $(document).ready(function() {
     if ($('.faq .q_list').exists()){
 
         var list = $('.q_list');
-        var page = $('.page');
+        var page = $('body');
         var foot = $('.footer');
         var l = list.height();
         var p = page.height();
         var f = foot.height();
-        var d = p - l - f - 109;
+        var d = p - l - f - 167;
         //alert(d);
 
         $(window).scroll(function(){
-            console.log($(window).scrollTop());
             if ($(window).scrollTop() < 100) {
                 $('.faq .q_list').removeClass('fixed');
                 $('.faq .q_list').removeClass('absolute');
@@ -211,7 +210,7 @@ $(document).ready(function() {
             } else {
                 $('.faq .q_list').addClass('fixed');
                 $('.faq .q_list').removeClass('absolute');
-                $('.faq .q_list').css('top', '60px');
+                $('.faq .q_list').css('top', '40px');
             }
 
         });
@@ -304,16 +303,24 @@ $(document).ready(function() {
     }
 
     if ($('.cart').exists()){
-
         $('.cart input.text').click(function(){
             $('.cart .row').removeClass('row_focus');
             $(this).parent().parent().addClass('row_focus');
         });
-
         $(' input.text').blur(function(){
             $(this).parent().parent().removeClass('row_focus');
         });
-
     }
+
+    $(window).scroll(function(){
+        if ($(window).scrollTop() > 18) {
+            $('.top_content').addClass('top_fixed');
+            $('.page').css('padding-top', '40px');
+        } else {
+            $('.top_content').removeClass('top_fixed');
+            $('.page').css('padding-top', '58px');
+        }
+
+    });
 
 });

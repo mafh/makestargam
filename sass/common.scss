@@ -75,6 +75,7 @@ h3 {
 }
 
 .page {
+    @include transition(padding-top, 0.3s);
     min-width: 1200px;
     padding-top: 58px;
     p {
@@ -94,10 +95,16 @@ h3 {
     margin: 0 auto;
 }
 
-.top_fixed {
+.top_content {
     position: fixed;
     z-index: 90;
     width: 100%;
+}
+
+.top_fixed {
+    .top .cell {
+        height: 40px;
+    }
 }
 
 .top {
@@ -111,6 +118,7 @@ h3 {
         position: relative;
     }
     .cell {
+        @include transition(height, 0.3s);
         display: table-cell;
         height: 58px;
         vertical-align: middle;
@@ -122,13 +130,6 @@ h3 {
         }
         &:last-child {text-align: right}
     }
-}
-
-.top_slim {
-    .page {
-        padding-top: 40px;
-    }
-    .top .cell {height: 40px}
 }
 
 .head_logo {
@@ -189,6 +190,9 @@ h3 {
         color: #fff;
         text-shadow:0 1px 0 rgba(0,0,0,0.1);
     }
+    .login_link {
+        color: #666;
+    }
     .s_arrow {
         @include sized-sprite($icons, "select-arrow");
         @include inline-block;
@@ -198,6 +202,11 @@ h3 {
     }
     .active .s_arrow {
         @include sized-sprite($icons, "select-arrow-active");
+    }
+    .ico-cart {
+        @include inline-block;
+        @include hide-text;
+        @include sized-sprite($common, "ico-cart");
     }
 }
 
@@ -710,7 +719,8 @@ h3 {
     @include sized-sprite($icons, "dim-card");
 }
 
-.button {
+.button,
+.nav .button {
     @include box-sizing(border-box);
     @include border-radius(3px);
     @include inline-block;
