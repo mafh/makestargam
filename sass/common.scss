@@ -170,6 +170,9 @@ h3 {
     }
     &.side_menu {
         li {margin-left: 10px;}
+        .left {
+            padding: 0 15px;
+        }
     }
     a {
         @include border-radius(3px);
