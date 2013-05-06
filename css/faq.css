@@ -11,31 +11,36 @@
   clear: both;
   visibility: hidden;
 }
-/* line 6, ../sass/faq.scss */
-.faq nav {
+/* line 7, ../sass/faq.scss */
+.faq nav,
+.faq .faq-nav {
   position: relative;
   float: left;
   width: 300px;
 }
-/* line 10, ../sass/faq.scss */
-.faq nav .ico_logo-dark {
-  margin: 30px 0 22px 30px;
+/* line 11, ../sass/faq.scss */
+.faq nav .ico_logo-dark,
+.faq .faq-nav .ico_logo-dark {
+  margin: 29px 0 22px 30px;
 }
-/* line 13, ../sass/faq.scss */
-.faq nav .q_list {
+/* line 14, ../sass/faq.scss */
+.faq nav .q_list,
+.faq .faq-nav .q_list {
   width: 300px;
   top: 0;
   left: 0;
 }
-/* line 17, ../sass/faq.scss */
-.faq nav .q_list a {
+/* line 18, ../sass/faq.scss */
+.faq nav .q_list a,
+.faq .faq-nav .q_list a {
   display: block;
   padding: 7px 50px 7px 30px;
   color: #777;
   border-bottom: 1px solid #d5d5d5;
 }
-/* line 22, ../sass/faq.scss */
-.faq nav .q_list a.active {
+/* line 23, ../sass/faq.scss */
+.faq nav .q_list a.active,
+.faq .faq-nav .q_list a.active {
   background: #29bbeb url("../img/common/slider-next-white.png") 96% 50% no-repeat;
   color: #fff;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
@@ -44,38 +49,47 @@
   padding-bottom: 8px;
   margin-top: -1px;
 }
-/* line 32, ../sass/faq.scss */
-.faq nav .q_list.fixed {
+/* line 33, ../sass/faq.scss */
+.faq nav .q_list.fixed,
+.faq .faq-nav .q_list.fixed {
   position: fixed;
 }
-/* line 35, ../sass/faq.scss */
-.faq nav .q_list.absolute {
+/* line 36, ../sass/faq.scss */
+.faq nav .q_list.absolute,
+.faq .faq-nav .q_list.absolute {
   position: absolute;
 }
-/* line 40, ../sass/faq.scss */
-.faq aside {
+/* line 42, ../sass/faq.scss */
+.faq aside,
+.faq .aside {
   overflow: hidden;
   background: #f1f1f1;
 }
-/* line 43, ../sass/faq.scss */
-.faq aside article {
+/* line 45, ../sass/faq.scss */
+.faq aside article,
+.faq .aside article {
   padding: 45px 0 45px 90px;
   border-bottom: 1px solid #d8d8d8;
 }
-/* line 46, ../sass/faq.scss */
-.faq aside article.active {
+/* line 48, ../sass/faq.scss */
+.faq aside article.active,
+.faq .aside article.active {
   background: #fff;
 }
-/* line 50, ../sass/faq.scss */
-.faq aside h1, .faq aside p {
+/* line 52, ../sass/faq.scss */
+.faq aside h1, .faq aside p,
+.faq .aside h1,
+.faq .aside p {
   width: 700px;
 }
-/* line 51, ../sass/faq.scss */
-.faq aside h1 {
+/* line 53, ../sass/faq.scss */
+.faq aside h1,
+.faq .aside h1 {
   line-height: 1.1;
 }
-/* line 54, ../sass/faq.scss */
-.faq aside p {
+/* line 56, ../sass/faq.scss */
+.faq aside p,
+.faq .aside p {
   color: #2a2a2a;
   font-size: 20px;
   font-weight: 200;

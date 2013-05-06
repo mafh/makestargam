@@ -112,7 +112,7 @@
         <div class="pop-in">
             <div class="pop-in-cover"></div>
             <div class="cart">
-                <section class="cart-overview step step1" style="1display: none;">
+                <section class="cart-overview step step1" style="display: none;">
                     <header>
                         <a href="#" class="goback gostep0"><i></i>Назад</a>
                         <div class="progress">
@@ -255,7 +255,7 @@
                     <footer><a href="#" class="button blue gostep3">Продолжить</a><span class="button_label absolute">1390 р.</span></footer>
                 </section>
 
-                <section class="cart-pay step step3" style="display: none;">
+                <section class="cart-pay step step3" style="1display: none;">
                     <h1>Выберите тип оплаты</h1>
                     <header>
                         <a href="#" class="goback gostep2"><i></i>Назад</a>
@@ -274,16 +274,17 @@
                                     <ul class="type_tabs">
                                         <li><a href="#">Наличные</a></li>
                                         <li class="active"><a href="#">Банковская карта</a></li>
-                                        <li><a href="#">Paypal</a></li>
+                                        <li><a href="#" class="paypal_link">Paypal</a></li>
                                     </ul>
                                 </div>
                                 <div class="cell"></div>
                             </div>
                         </div>
                         <div class="table_checkout">
-                            <div class="type_tabs_content type_cash" style="display: none;">
+                            <div class="type_tabs_content type_cash tt0" style="display: none;">
+                                <h3>Вы выбрали оплату наличными</h3>
                             </div>
-                            <div class="type_tabs_content type_card">
+                            <div class="type_tabs_content type_card tt1" style="1display: none;">
                                 <div class="row">
                                     <div class="cell">Тип карты</div>
                                     <div class="cell">
@@ -353,7 +354,8 @@
                                     <div class="cell"></div>
                                 </div>
                             </div>
-                            <div class="type_tabs_content type_paypal" style="display: none;">
+                            <div class="type_tabs_content type_paypal tt2" style="display: none;">
+                                <a href="#" class="button blue">PayPal Checkout</a>
                             </div>
                         </div>
                     </div>

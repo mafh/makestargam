@@ -2,12 +2,12 @@
 /* line 3, ../sass/footer.scss */
 .footer {
   background: #191919;
-  padding-top: 30px;
-  padding-bottom: 80px;
   color: #fff;
 }
-/* line 8, ../sass/footer.scss */
+/* line 6, ../sass/footer.scss */
 .footer .wrap {
+  padding-top: 30px;
+  padding-bottom: 80px;
   text-align: center;
 }
 /* line 11, ../sass/footer.scss */

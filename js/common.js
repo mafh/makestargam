@@ -6,17 +6,18 @@ $(document).ready(function() {
 		return $(this).length;
 	}
 
-//  topmenu
-    $('.top_menu a').click(function() {
-        $(this).parent().siblings().removeClass('active');
-        $(this).parent().addClass('active');
-        if ($(this).hasClass('dev_menu_link')) {
-            $('.dev_top_menu').slideDown(200);
+//  topmenu devmenu
+    $('.dev_menu_link').click(function() {
+        if($(this).parent().hasClass('active')) {
+            $('.dev_top_menu').slideUp(200)
+            $(this).parent().removeClass('active');
         } else {
-            $('.dev_top_menu').slideUp(200);
+            $('.dev_top_menu').slideDown(200)
+            $(this).parent().addClass('active');
         }
         return false;
     })
+
 
 //  tabs
     if ($('nav .tab').exists()){
@@ -35,6 +36,23 @@ $(document).ready(function() {
             } else {
                 $('.top_login').slideDown(200);
                 $(this).parent().addClass('active');
+            }
+            return false;
+        })
+    };
+
+//  type_tabs
+    if ($('.type_tabs').exists()){
+        $('.type_tabs a').click(function() {
+            $(this).parent().siblings().removeClass('active');
+            $(this).parent().addClass('active');
+            var n = $(this).parent().index();
+            $('.type_tabs_content').hide();
+            $('.type_tabs_content.tt' + n).show();
+            if ($(this).hasClass('paypal_link')) {
+                $('.cart footer').hide();
+            } else {
+                $('.cart footer').show();
             }
             return false;
         })
@@ -187,17 +205,14 @@ $(document).ready(function() {
     });
 
     if ($('.faq .q_list').exists()){
-
         var list = $('.q_list');
-        var page = $('body');
+        var page = $('.faq');
         var foot = $('.footer');
-        var l = list.height();
-        var p = page.height();
-        var f = foot.height();
-        var d = p - l - f - 167;
-        //alert(d);
-
         $(window).scroll(function(){
+            var p = page.height();
+            var f = foot.height();
+            var l = list.height();
+            var d = p - l;
             if ($(window).scrollTop() < 100) {
                 $('.faq .q_list').removeClass('fixed');
                 $('.faq .q_list').removeClass('absolute');
@@ -226,6 +241,17 @@ $(document).ready(function() {
             return false;
         });
     }
+
+    $(window).scroll(function(){
+        if ($(window).scrollTop() > 18) {
+            $('.top_content').addClass('top_fixed');
+            $('.page').css('padding-top', '40px');
+        } else {
+            $('.top_content').removeClass('top_fixed');
+            $('.page').css('padding-top', '58px');
+        }
+
+    });
 
     function getItems() {
         $('.load_button').addClass('active');
@@ -311,16 +337,5 @@ $(document).ready(function() {
             $(this).parent().parent().removeClass('row_focus');
         });
     }
-
-    $(window).scroll(function(){
-        if ($(window).scrollTop() > 18) {
-            $('.top_content').addClass('top_fixed');
-            $('.page').css('padding-top', '40px');
-        } else {
-            $('.top_content').removeClass('top_fixed');
-            $('.page').css('padding-top', '58px');
-        }
-
-    });
 
 });
