@@ -22,8 +22,53 @@ $(document).ready(function() {
 //  tabs
     if ($('nav .tab').exists()){
         $('nav .tab').click(function() {
+            var n = $(this).index()
             $(this).siblings().removeClass('active');
             $(this).addClass('active');
+            $(this).parents().find('.tab_content').hide();
+            $(this).parents().find('.tab_content.tt' + n).show();
+        })
+    };
+
+    if ($('nav.hover .tab').exists()){
+        $('nav.hover .tab').hover(function() {
+            var n = $(this).index()
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+            $(this).parents().find('.tab_content').hide();
+            $(this).parents().find('.tab_content.tt' + n).show();
+        })
+    };
+
+    if ($('.images_choose').exists()){
+        $('.images_choose .tabs a').click(function() {
+            var n = $(this).parent().index()
+            $(this).parent().siblings().removeClass('active');
+            $(this).parent().addClass('active');
+            $(this).parents().find('.tab_content').hide();
+            $(this).parents().find('.tab_content.tt' + n).show();
+        })
+        $('.images_choose .button').click(function() {
+            $('.images_choose .button input').focus();
+        })
+    };
+
+    if ($('.images_filters').exists()){
+        $('.images_filters li').click(function() {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+        })
+    };
+
+    if ($('.color_choose').exists()){
+        $('.color_choose a').click(function() {
+            $(this).parent().siblings().removeClass('active');
+            $(this).parent().addClass('active');
+            if ($(this).parent().index(0)) {
+                $('.blank_block').addClass('black');
+            } else {
+                $('.blank_block').removeClass('black');
+            }
         })
     };
 

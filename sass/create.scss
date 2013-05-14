@@ -83,7 +83,8 @@
     background: #e8e8e8;
     height: 28px;
     line-height: 26px;
-    span {
+    span,
+    a {
         font-family: "ProximaNova-Semibold", Arial, sans-serif;
         color: #888;
         float: left;
@@ -220,6 +221,8 @@
             border-right: 1px solid #d9d9d9;
             a {
                 color: #777;
+                position: relative;
+                overflow: hidden; 
             }
             i {
                 @include inline-block;
@@ -237,6 +240,13 @@
                     color: #fff;
                     text-shadow:0 1px 0 rgba(0,0,0,0.1);
                 }
+            }
+            input {
+                position: absolute;
+                left: 300px;
+                top: 300px;
+                @include opacity(0);
+                cursor: pointer;
             }
         }
     }
@@ -264,6 +274,19 @@
                 border-color: #29bbeb;
                 cursor: default;
             }
+        }
+        p {
+            padding-top: 80px;
+            text-align: center;
+        }
+        .button {
+            position: relative;
+            overflow: hidden;
+        }
+        #img_upload {
+            position: absolute;
+            right: 0;
+            @include opacity(0);
         }
     }
 }
@@ -400,7 +423,8 @@
     }
 }
 
-.page_iphone {
+.page_iphone,
+.page_galaxy {
     h1, .options {
         padding-left: 340px;
     }
