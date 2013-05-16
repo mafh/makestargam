@@ -1503,7 +1503,7 @@ h3 {
   opacity: 0.75;
   height: 100%;
   width: 100%;
-  z-index: 300;
+  z-index: 60;
 }
 
 /* line 861, ../sass/common.scss */
@@ -1515,7 +1515,7 @@ h3 {
   overflow: auto;
   top: 0;
   left: 0;
-  z-index: 300;
+  z-index: 60;
 }
 /* line 870, ../sass/common.scss */
 .popup_holder.popup_error .popup {
@@ -1553,7 +1553,7 @@ h3 {
   margin-left: -390px;
   margin-bottom: 20px;
   top: 50%;
-  z-index: 350;
+  z-index: 70;
 }
 /* line 896, ../sass/common.scss */
 .popup .pop-in {

@@ -1503,7 +1503,7 @@ h3 {
   opacity: 0.75;
   height: 100%;
   width: 100%;
-  z-index: 300;
+  z-index: 60;
 }
 
 /* line 861, ../sass/common.scss */
@@ -1515,7 +1515,7 @@ h3 {
   overflow: auto;
   top: 0;
   left: 0;
-  z-index: 300;
+  z-index: 60;
 }
 /* line 870, ../sass/common.scss */
 .popup_holder.popup_error .popup {
@@ -1553,7 +1553,7 @@ h3 {
   margin-left: -390px;
   margin-bottom: 20px;
   top: 50%;
-  z-index: 350;
+  z-index: 70;
 }
 /* line 896, ../sass/common.scss */
 .popup .pop-in {
@@ -2871,8 +2871,9 @@ h3 {
   cursor: default;
 }
 
-/* line 326, ../sass/create.scss */
-.pop-in-cover {
+/* line 327, ../sass/create.scss */
+.pop-in-cover,
+.pop-in-cover-dark {
   display: none;
   background: rgba(255, 255, 255, 0.7);
   position: absolute;
@@ -2884,6 +2885,12 @@ h3 {
 }
 
 /* line 337, ../sass/create.scss */
+.pop-in-cover-dark {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+}
+
+/* line 342, ../sass/create.scss */
 .blank-iphone5 {
   display: block;
   background: transparent url("../img/blank-iphone5.png") 0 0 no-repeat;
@@ -2891,11 +2898,11 @@ h3 {
   height: 579px;
   position: relative;
 }
-/* line 343, ../sass/create.scss */
+/* line 348, ../sass/create.scss */
 .blank-iphone5.black {
   background: transparent url("../img/blank-iphone5-black.png") 0 0 no-repeat;
 }
-/* line 346, ../sass/create.scss */
+/* line 351, ../sass/create.scss */
 .blank-iphone5 .mask {
   width: 100%;
   height: 100%;
@@ -2903,55 +2910,55 @@ h3 {
   background: transparent url("../img/mask-iphone5.png") 0 0 no-repeat;
 }
 
-/* line 353, ../sass/create.scss */
+/* line 358, ../sass/create.scss */
 .blank-iphone4 {
   display: block;
   background: transparent url("../img/blank-iphone4.png") 0 0 no-repeat;
   width: 290px;
   height: 540px;
 }
-/* line 358, ../sass/create.scss */
+/* line 363, ../sass/create.scss */
 .blank-iphone4.black {
   background: transparent url("../img/blank-iphone4-black.png") 0 0 no-repeat;
 }
 
-/* line 362, ../sass/create.scss */
+/* line 367, ../sass/create.scss */
 .blank-ipad {
   display: block;
   background: transparent url("../img/blank-ipad.png") 0 0 no-repeat;
   width: 349px;
   height: 505px;
 }
-/* line 367, ../sass/create.scss */
+/* line 372, ../sass/create.scss */
 .blank-ipad.black {
   background: transparent url("../img/blank-ipad-black.png") 0 0 no-repeat;
 }
 
-/* line 371, ../sass/create.scss */
+/* line 376, ../sass/create.scss */
 .blank-ipad_mini {
   display: block;
   background: transparent url("../img/blank-ipad_mini.png") 0 0 no-repeat;
   width: 318px;
   height: 453px;
 }
-/* line 376, ../sass/create.scss */
+/* line 381, ../sass/create.scss */
 .blank-ipad_mini.black {
   background: transparent url("../img/blank-ipad_mini-black.png") 0 0 no-repeat;
 }
 
-/* line 380, ../sass/create.scss */
+/* line 385, ../sass/create.scss */
 .blank-galaxy {
   display: block;
   background: transparent url("../img/blank-galaxy.png") 0 0 no-repeat;
   width: 298px;
   height: 571px;
 }
-/* line 385, ../sass/create.scss */
+/* line 390, ../sass/create.scss */
 .blank-galaxy.black {
   background: transparent url("../img/blank-galaxy-black.png") 0 0 no-repeat;
 }
 
-/* line 390, ../sass/create.scss */
+/* line 395, ../sass/create.scss */
 .blank_block {
   -moz-transition: all 0.5s ease-out;
   -webkit-transition: all 0.5s ease-out;
@@ -2972,26 +2979,26 @@ h3 {
   clear: both;
   visibility: hidden;
 }
-/* line 399, ../sass/create.scss */
+/* line 404, ../sass/create.scss */
 .blank_block.blank-iphone5, .blank_block.blank-iphone4 {
   left: 36px;
 }
-/* line 402, ../sass/create.scss */
+/* line 407, ../sass/create.scss */
 .blank_block.blank-ipad {
   left: 10px;
 }
-/* line 405, ../sass/create.scss */
+/* line 410, ../sass/create.scss */
 .blank_block.blank-galaxy {
   left: 20px;
 }
-/* line 408, ../sass/create.scss */
+/* line 413, ../sass/create.scss */
 .blank_block.finished {
   left: 50%;
   top: 142px;
   margin-left: -145px;
 }
 
-/* line 415, ../sass/create.scss */
+/* line 420, ../sass/create.scss */
 .button.button_preview.active {
   display: none;
   position: absolute;
@@ -2999,30 +3006,290 @@ h3 {
   left: 340px;
   z-index: 50;
 }
-/* line 421, ../sass/create.scss */
+/* line 426, ../sass/create.scss */
 .button.button_preview.active i {
   margin: 0 5px 0 -10px;
 }
 
-/* line 428, ../sass/create.scss */
+/* line 433, ../sass/create.scss */
 .page_iphone h1, .page_iphone .options,
 .page_galaxy h1,
 .page_galaxy .options {
   padding-left: 340px;
 }
-/* line 431, ../sass/create.scss */
+/* line 436, ../sass/create.scss */
 .page_iphone .button.button_preview.active,
 .page_galaxy .button.button_preview.active {
   left: 340px;
 }
 
-/* line 437, ../sass/create.scss */
+/* line 442, ../sass/create.scss */
 .page_ipad h1, .page_ipad .options {
   padding-left: 380px;
 }
-/* line 440, ../sass/create.scss */
+/* line 445, ../sass/create.scss */
 .page_ipad .button.button_preview.active {
   left: 380px;
+}
+
+/* line 450, ../sass/create.scss */
+.grid__device {
+  width: 263px;
+  margin-left: 14px;
+  -webkit-border-radius: 42px;
+  -moz-border-radius: 42px;
+  -ms-border-radius: 42px;
+  -o-border-radius: 42px;
+  border-radius: 42px;
+}
+/* line 454, ../sass/create.scss */
+.grid__device.preview {
+  overflow: hidden;
+}
+/* line 456, ../sass/create.scss */
+.grid__device.preview .edit {
+  display: none;
+}
+/* line 459, ../sass/create.scss */
+.grid__device.preview .edit-add {
+  display: none!important;
+}
+
+/* line 466, ../sass/create.scss */
+.edit,
+.layout .edit {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 37, ../sass/_base.scss */
+.edit:after,
+.layout .edit:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 473, ../sass/create.scss */
+.edit i,
+.layout .edit i {
+  cursor: pointer;
+}
+
+/* line 478, ../sass/create.scss */
+.edit-add {
+  background: url('../img/icons-s3e79710a1d.png') 0 -356px no-repeat;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 52px;
+  height: 52px;
+  margin: -26px 0 0 -26px;
+  display: none;
+  cursor: pointer;
+}
+/* line 488, ../sass/create.scss */
+.edit-add.active {
+  display: block;
+}
+
+/* line 491, ../sass/create.scss */
+.layout .empty:hover .edit-add {
+  display: block;
+}
+
+/* line 493, ../sass/create.scss */
+.edit-pencil {
+  background: url('../img/icons-s3e79710a1d.png') -26px -201px no-repeat;
+  width: 26px;
+  height: 26px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  position: absolute;
+  top: 5px;
+  right: 35px;
+}
+
+/* line 501, ../sass/create.scss */
+.edit-delete {
+  background: url('../img/icons-s3e79710a1d.png') 0 -175px no-repeat;
+  width: 26px;
+  height: 26px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  position: absolute;
+  top: 5px;
+  right: 4px;
+}
+
+/* line 509, ../sass/create.scss */
+.edit-move {
+  background: url('../img/icons-s3e79710a1d.png') 0 -315px no-repeat;
+  width: 41px;
+  height: 41px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* line 517, ../sass/create.scss */
+.edit-plus {
+  background: url('../img/icons-s3e79710a1d.png') -26px -175px no-repeat;
+  width: 26px;
+  height: 26px;
+  display: block;
+  position: absolute;
+  left: 36px;
+  bottom: 0;
+  margin-bottom: 5px;
+}
+
+/* line 526, ../sass/create.scss */
+.edit-minus {
+  background: url('../img/icons-s3e79710a1d.png') 0 -227px no-repeat;
+  width: 26px;
+  height: 26px;
+  display: block;
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  margin-bottom: 5px;
+}
+
+/* line 535, ../sass/create.scss */
+.edit-ok {
+  background: url('../img/icons-s3e79710a1d.png') 0 -201px no-repeat;
+  width: 26px;
+  height: 26px;
+  display: block;
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  margin-bottom: 5px;
+}
+
+/* line 545, ../sass/create.scss */
+.layout1 {
+  margin-top: -1px;
+}
+/* line 37, ../sass/_base.scss */
+.layout1:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 548, ../sass/create.scss */
+.layout1 div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 137px;
+  border-right: 1px solid #61bfda;
+  border-bottom: 1px solid #61bfda;
+  margin: -1px -1px 0 0;
+}
+/* line 558, ../sass/create.scss */
+.layout1 div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 563, ../sass/create.scss */
+.layout1 div:nth-child(2n+2) {
+  border-right: 0;
+}
+/* line 567, ../sass/create.scss */
+.layout1 div:last-child, .layout1 div:nth-last-child(2) {
+  border-bottom: 0;
+}
+/* line 571, ../sass/create.scss */
+.layout1 .slot_small {
+  margin-left: 1px;
+  width: 100%;
+  border: 0;
+}
+/* line 575, ../sass/create.scss */
+.layout1 .slot_small div {
+  height: 70px;
+}
+
+/* line 581, ../sass/create.scss */
+.img_edit {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 80;
+  background: #fff;
+  width: 180px;
+  height: 180px;
+  margin: 41px 0 0 -81px;
+}
+/* line 589, ../sass/create.scss */
+.img_edit .in {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 20px 0 0 20px;
+  overflow: hidden;
+}
+/* line 596, ../sass/create.scss */
+.img_edit .tail {
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  margin-left: -5px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+}
+
+/* line 609, ../sass/create.scss */
+.img_upload {
+  position: absolute;
+  z-index: 100;
+  width: 420px;
+  margin: 70px 0 0 -190px;
+}
+/* line 614, ../sass/create.scss */
+.img_upload .tail {
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  margin-left: -5px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+}
+/* line 625, ../sass/create.scss */
+.img_upload .images_choose {
+  margin: 0;
 }
 
 /* TRANSITION */

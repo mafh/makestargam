@@ -195,11 +195,13 @@ $(document).ready(function() {
     $('.button_preview').click(function(){
         $('.button_preview.active').fadeIn('fast');
         $('.pop-in-cover').fadeIn('fast');
+        $('.grid__device').addClass('preview');
         return false;
     });
     $('.button_preview.active').click(function(){
         $(this).fadeOut('fast');
         $('.pop-in-cover').fadeOut('fast');
+        $('.grid__device').removeClass('preview');
         return false;
     });
 
@@ -233,7 +235,7 @@ $(document).ready(function() {
 
     $('.gostep3').click(function(){
         $('.step').hide();
-
+        $('.grid__device').addClass('preview');
         $('.step3').show();
         $('.blank_block').fadeIn('fast').removeClass('finished');
         initPopup();
@@ -380,6 +382,32 @@ $(document).ready(function() {
         });
         $(' input.text').blur(function(){
             $(this).parent().parent().removeClass('row_focus');
+        });
+    }
+
+    if ($('.grid__device').exists()){
+        $('.edit-add').click(function(){
+            var pos = $(this).offset();
+            $(this).addClass('active');
+            $('.pop-in-cover-dark').fadeIn('fast');
+            $('.img_upload').css({'top' : pos.top, 'left': pos.left}).fadeIn('fast');
+        });
+        $('.slot_small .edit-pencil').click(function(){
+            var pos = $(this).offset();
+            $('.pop-in-cover-dark').fadeIn('fast');
+            $('.img_edit').css({'top' : pos.top, 'left': pos.left}).fadeIn('fast');
+        });
+        $('.pop-in-cover-dark').click(function(){
+            $(this).fadeOut('fast');
+            $('.img_edit').hide();
+            $('.img_upload').hide();
+            $('.edit-add').removeClass('active');
+        });
+        $('.img_edit .edit-ok').click(function(){
+            $('.pop-in-cover-dark').fadeOut('fast');
+            $('.img_edit').hide();
+            $('.img_upload').hide();
+            $('.edit-add').removeClass('active');
         });
     }
 

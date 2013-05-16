@@ -323,7 +323,8 @@
     }
 }
 
-.pop-in-cover {
+.pop-in-cover,
+.pop-in-cover-dark {
     display: none;
     background: rgba(255,255,255,0.7);
     position: absolute;
@@ -332,6 +333,10 @@
     top: 0;
     left: 0;
     z-index: 30;
+}
+.pop-in-cover-dark {
+    background: rgba(0,0,0,0.5);
+    z-index: 50;
 }
 
 .blank-iphone5 {
@@ -439,5 +444,185 @@
     }
     .button.button_preview.active {
         left: 380px;
+    }
+}
+
+.grid__device {
+    width: 263px;
+    margin-left: 14px;
+    @include border-radius(42px);
+    &.preview {
+        overflow: hidden;
+        .edit {
+            display: none;
+        }
+        .edit-add {
+            display: none!important;
+        }
+    }
+}
+
+.edit,
+.layout .edit {
+    @include clr;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    i {
+        cursor: pointer;
+    }
+}
+
+.edit-add {
+    @include sized-sprite($icons, "edit-add");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 52px;
+    height: 52px;
+    margin: -26px 0 0 -26px;
+    display: none;
+    cursor: pointer;
+    &.active {display: block;}
+}
+
+.layout .empty:hover .edit-add {display: block;} 
+
+.edit-pencil {
+    @include sized-sprite($icons, "edit-pencil");
+    @include inline-block;
+    position: absolute;
+    top: 5px;
+    right: 35px;
+}
+
+.edit-delete {
+    @include sized-sprite($icons, "edit-delete");
+    @include inline-block;
+    position: absolute;
+    top: 5px;
+    right: 4px;
+}
+
+.edit-move {
+    @include sized-sprite($icons, "edit-move");
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.edit-plus {
+    @include sized-sprite($icons, "edit-plus");
+    display: block;
+    position: absolute;
+    left: 36px;
+    bottom: 0;
+    margin-bottom: 5px;
+}
+
+.edit-minus {
+    @include sized-sprite($icons, "edit-minus");
+    display: block;
+    position: absolute;
+    left: 5px;
+    bottom: 0;
+    margin-bottom: 5px;
+}
+
+.edit-ok {
+    @include sized-sprite($icons, "edit-ok");
+    display: block;
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+    margin-bottom: 5px;
+}
+
+
+.layout1 {
+    @include clr;
+    margin-top: -1px;
+    div {
+        @include box-sizing(border-box);
+        overflow: hidden;
+        position: relative;
+        float: left;
+        width: 50%;
+        height: 137px; 
+        border-right: 1px solid #61bfda;
+        border-bottom: 1px solid #61bfda;
+        margin: -1px -1px 0 0;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:nth-child(2n+2) {
+            border-right: 0;
+        }
+        &:last-child,
+        &:nth-last-child(2) {
+            border-bottom: 0;
+        }
+    }
+    .slot_small {
+        margin-left: 1px;
+        width: 100%;
+        border: 0;
+        div {
+            height: 70px;
+        }
+    }
+}
+
+.img_edit {
+    @include border-radius(4px);
+    position: absolute;
+    z-index: 80;
+    background: #fff;
+    width: 180px;
+    height: 180px;
+    margin: 41px 0 0 -81px;
+    .in {
+        position: relative;
+        width: 140px;
+        height: 140px;
+        margin: 20px 0 0 20px;
+        overflow: hidden;
+    }
+    .tail {
+        position: absolute;
+        left: 50%;
+        top: -10px;
+        margin-left: -5px; 
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+    }
+}
+
+.img_upload {
+    position: absolute;
+    z-index: 100;
+    width: 420px;
+    margin: 70px 0 0 -190px;
+    .tail {
+        position: absolute;
+        left: 50%;
+        top: -10px;
+        margin-left: -5px; 
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+    }
+    .images_choose {
+        margin: 0;
     }
 }

@@ -856,7 +856,7 @@ h3 {
     @include opacity(.75);
     height:100%;
     width:100%;
-    z-index:300;
+    z-index:60;
 }
 .popup_holder {
     display: none;
@@ -866,7 +866,7 @@ h3 {
     overflow: auto;
     top: 0;
     left: 0;
-    z-index:300;
+    z-index:60;
     &.popup_error .popup {
         width: 420px;
         text-align: center;
@@ -892,7 +892,7 @@ h3 {
     margin-left:-390px;
     margin-bottom: 20px;
     top:50%;
-    z-index:350;
+    z-index:70;
     .pop-in {
         padding: 0;
         min-height: 72px;
