@@ -226,7 +226,7 @@ $(document).ready(function() {
 
     $('.gostep2').click(function(){
         $('.step').hide();
-
+        $('.grid__device').removeClass('preview');
         $('.step2').show();
         $('.blank_block').fadeIn('fast').removeClass('finished');
         initPopup();
