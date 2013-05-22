@@ -392,8 +392,14 @@ $(document).ready(function() {
             $('.pop-in-cover-dark').fadeIn('fast');
             $('.img_upload').css({'top' : pos.top, 'left': pos.left}).fadeIn('fast');
         });
+        $('.edit-pencil').click(function(){
+            var pos = $(this).parent().addClass('active');
+        });
+        $('.edit-ok').click(function(){
+            var pos = $(this).parent().removeClass('active');
+        });
         $('.slot_small .edit-pencil').click(function(){
-            var pos = $(this).offset();
+            var pos = $(this).parent().offset();
             $('.pop-in-cover-dark').fadeIn('fast');
             $('.img_edit').css({'top' : pos.top, 'left': pos.left}).fadeIn('fast');
         });

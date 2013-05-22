@@ -420,7 +420,7 @@ h3 {
 /* line 249, ../sass/common.scss */
 .promo_top .promo_hand {
   position: absolute;
-  background-image: url(../img/promo_hand.png);
+  background-image: url(../img/promo_hand.orig.png);
   width: 583px;
   height: 547px;
   bottom: 0;

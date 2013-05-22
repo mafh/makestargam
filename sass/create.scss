@@ -451,14 +451,50 @@
     width: 263px;
     margin-left: 14px;
     @include border-radius(42px);
+    overflow: hidden;
+    .edit {
+        display: none;
+        .edit-plus,
+        .edit-minus,
+        .edit-move,
+        .edit-ok {
+            display: none;
+        }
+        &.active {
+            display: block;
+            .edit-plus,
+            .edit-minus,
+            .edit-move,
+            .edit-ok {
+                display: block;
+            }
+            .edit-pencil,
+            .edit-delete {
+                display: none;
+            }
+        }
+    }
+    .edit-add {
+        display: none;
+    }
+    &:hover,
+    &.active {
+        overflow: visible;
+        .empty:hover .edit-add {
+            display: block;
+        }
+    }
     &.preview {
         overflow: hidden;
         .edit {
-            display: none;
+            display: none!important;
         }
         .edit-add {
             display: none!important;
         }
+    }
+    .layout div:hover .edit {
+        display: block;
     }
 }
 
@@ -585,7 +621,7 @@
     background: #fff;
     width: 180px;
     height: 180px;
-    margin: 41px 0 0 -81px;
+    margin: 65px 0 0 -63px;
     .in {
         position: relative;
         width: 140px;
