@@ -3037,8 +3037,6 @@ h3 {
 
 /* line 450, ../sass/create.scss */
 .grid__device {
-  width: 263px;
-  margin-left: 14px;
   -webkit-border-radius: 42px;
   -moz-border-radius: 42px;
   -ms-border-radius: 42px;
@@ -3046,63 +3044,63 @@ h3 {
   border-radius: 42px;
   overflow: hidden;
 }
-/* line 455, ../sass/create.scss */
+/* line 453, ../sass/create.scss */
 .grid__device .edit {
   display: none;
 }
-/* line 460, ../sass/create.scss */
+/* line 458, ../sass/create.scss */
 .grid__device .edit .edit-plus,
 .grid__device .edit .edit-minus,
 .grid__device .edit .edit-move,
 .grid__device .edit .edit-ok {
   display: none;
 }
-/* line 463, ../sass/create.scss */
+/* line 461, ../sass/create.scss */
 .grid__device .edit.active {
   display: block;
 }
-/* line 468, ../sass/create.scss */
+/* line 466, ../sass/create.scss */
 .grid__device .edit.active .edit-plus,
 .grid__device .edit.active .edit-minus,
 .grid__device .edit.active .edit-move,
 .grid__device .edit.active .edit-ok {
   display: block;
 }
-/* line 472, ../sass/create.scss */
+/* line 470, ../sass/create.scss */
 .grid__device .edit.active .edit-pencil,
 .grid__device .edit.active .edit-delete {
   display: none;
 }
-/* line 477, ../sass/create.scss */
+/* line 475, ../sass/create.scss */
 .grid__device .edit-add {
   display: none;
 }
-/* line 481, ../sass/create.scss */
+/* line 479, ../sass/create.scss */
 .grid__device:hover, .grid__device.active {
   overflow: visible;
 }
-/* line 483, ../sass/create.scss */
+/* line 481, ../sass/create.scss */
 .grid__device:hover .empty:hover .edit-add, .grid__device.active .empty:hover .edit-add {
   display: block;
 }
-/* line 487, ../sass/create.scss */
+/* line 485, ../sass/create.scss */
 .grid__device.preview {
   overflow: hidden;
 }
-/* line 489, ../sass/create.scss */
+/* line 487, ../sass/create.scss */
 .grid__device.preview .edit {
   display: none!important;
 }
-/* line 492, ../sass/create.scss */
+/* line 490, ../sass/create.scss */
 .grid__device.preview .edit-add {
   display: none!important;
 }
-/* line 496, ../sass/create.scss */
+/* line 494, ../sass/create.scss */
 .grid__device .layout div:hover .edit {
   display: block;
 }
 
-/* line 502, ../sass/create.scss */
+/* line 500, ../sass/create.scss */
 .edit,
 .layout .edit {
   width: 100%;
@@ -3120,13 +3118,13 @@ h3 {
   clear: both;
   visibility: hidden;
 }
-/* line 509, ../sass/create.scss */
+/* line 507, ../sass/create.scss */
 .edit i,
 .layout .edit i {
   cursor: pointer;
 }
 
-/* line 514, ../sass/create.scss */
+/* line 512, ../sass/create.scss */
 .edit-add {
   background: url('../img/icons-s3e79710a1d.png') 0 -356px no-repeat;
   width: 52px;
@@ -3140,17 +3138,17 @@ h3 {
   display: none;
   cursor: pointer;
 }
-/* line 524, ../sass/create.scss */
+/* line 522, ../sass/create.scss */
 .edit-add.active {
   display: block;
 }
 
-/* line 527, ../sass/create.scss */
+/* line 525, ../sass/create.scss */
 .layout .empty:hover .edit-add {
   display: block;
 }
 
-/* line 529, ../sass/create.scss */
+/* line 527, ../sass/create.scss */
 .edit-pencil {
   background: url('../img/icons-s3e79710a1d.png') -26px -201px no-repeat;
   width: 26px;
@@ -3166,7 +3164,7 @@ h3 {
   right: 35px;
 }
 
-/* line 537, ../sass/create.scss */
+/* line 535, ../sass/create.scss */
 .edit-delete {
   background: url('../img/icons-s3e79710a1d.png') 0 -175px no-repeat;
   width: 26px;
@@ -3182,7 +3180,7 @@ h3 {
   right: 4px;
 }
 
-/* line 545, ../sass/create.scss */
+/* line 543, ../sass/create.scss */
 .edit-move {
   background: url('../img/icons-s3e79710a1d.png') 0 -315px no-repeat;
   width: 41px;
@@ -3193,7 +3191,7 @@ h3 {
   right: 0;
 }
 
-/* line 553, ../sass/create.scss */
+/* line 551, ../sass/create.scss */
 .edit-plus {
   background: url('../img/icons-s3e79710a1d.png') -26px -175px no-repeat;
   width: 26px;
@@ -3205,7 +3203,7 @@ h3 {
   margin-bottom: 5px;
 }
 
-/* line 562, ../sass/create.scss */
+/* line 560, ../sass/create.scss */
 .edit-minus {
   background: url('../img/icons-s3e79710a1d.png') 0 -227px no-repeat;
   width: 26px;
@@ -3217,7 +3215,7 @@ h3 {
   margin-bottom: 5px;
 }
 
-/* line 571, ../sass/create.scss */
+/* line 569, ../sass/create.scss */
 .edit-ok {
   background: url('../img/icons-s3e79710a1d.png') 0 -201px no-repeat;
   width: 26px;
@@ -3229,58 +3227,7 @@ h3 {
   margin-bottom: 5px;
 }
 
-/* line 581, ../sass/create.scss */
-.layout1 {
-  margin-top: -1px;
-}
-/* line 37, ../sass/_base.scss */
-.layout1:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-/* line 584, ../sass/create.scss */
-.layout1 div {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow: hidden;
-  position: relative;
-  float: left;
-  width: 50%;
-  height: 137px;
-  border-right: 1px solid #61bfda;
-  border-bottom: 1px solid #61bfda;
-  margin: -1px -1px 0 0;
-}
-/* line 594, ../sass/create.scss */
-.layout1 div img {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 599, ../sass/create.scss */
-.layout1 div:nth-child(2n+2) {
-  border-right: 0;
-}
-/* line 603, ../sass/create.scss */
-.layout1 div:last-child, .layout1 div:nth-last-child(2) {
-  border-bottom: 0;
-}
-/* line 607, ../sass/create.scss */
-.layout1 .slot_small {
-  margin-left: 1px;
-  width: 100%;
-  border: 0;
-}
-/* line 611, ../sass/create.scss */
-.layout1 .slot_small div {
-  height: 70px;
-}
-
-/* line 617, ../sass/create.scss */
+/* line 578, ../sass/create.scss */
 .img_edit {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -3294,7 +3241,7 @@ h3 {
   height: 180px;
   margin: 65px 0 0 -63px;
 }
-/* line 625, ../sass/create.scss */
+/* line 586, ../sass/create.scss */
 .img_edit .in {
   position: relative;
   width: 140px;
@@ -3302,7 +3249,7 @@ h3 {
   margin: 20px 0 0 20px;
   overflow: hidden;
 }
-/* line 632, ../sass/create.scss */
+/* line 593, ../sass/create.scss */
 .img_edit .tail {
   position: absolute;
   left: 50%;
@@ -3315,14 +3262,14 @@ h3 {
   border-bottom: 10px solid #fff;
 }
 
-/* line 645, ../sass/create.scss */
+/* line 606, ../sass/create.scss */
 .img_upload {
   position: absolute;
   z-index: 100;
   width: 420px;
   margin: 70px 0 0 -190px;
 }
-/* line 650, ../sass/create.scss */
+/* line 611, ../sass/create.scss */
 .img_upload .tail {
   position: absolute;
   left: 50%;
@@ -3334,7 +3281,7 @@ h3 {
   border-right: 10px solid transparent;
   border-bottom: 10px solid #fff;
 }
-/* line 661, ../sass/create.scss */
+/* line 622, ../sass/create.scss */
 .img_upload .images_choose {
   margin: 0;
 }

@@ -1,0 +1,536 @@
+@import "base";
+
+.slot_bg {
+    background: #f3f3f3;
+}
+
+.black .slot_bg {
+    background: #363636;
+}
+
+.layout0 {
+    @include clr;
+    div {
+        @include box-sizing(border-box);
+        overflow: hidden;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 137px*4; 
+        margin: 0 -1px 0 0;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.layout1 {
+    @include clr;
+    div {
+        @include box-sizing(border-box);
+        overflow: hidden;
+        position: relative;
+        float: left;
+        width: 50%;
+        height: 137px; 
+        border-right: 1px solid #61bfda;
+        border-bottom: 1px solid #61bfda;
+        margin: 0 -1px 0 0;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:nth-child(2n+2) {
+            border-right: 0;
+        }
+        &:last-child,
+        &:nth-last-child(2) {
+            border-bottom: 0;
+        }
+    }
+    .slot_small {
+        margin-left: 1px;
+        width: 100%;
+        border: 0;
+        div {
+            height: 70px;
+        }
+    }
+}
+
+.layout2 {
+    @include clr;
+    position: relative;
+    .slot,
+    .slot {
+        height: 270px;
+        position: relative;
+    }
+    .slot:first-child {
+        border-bottom: 1px solid #61bfda;
+    }
+    .accent-circle {
+        @include border-radius(75px);
+        width: 150px;
+        height: 150px;
+        border: 1px solid #61bfda;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -75px;
+    }
+    .accent-square {
+        @include border-radius(25px);
+        width: 150px;
+        height: 150px;
+        border: 1px solid #61bfda;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -75px;
+    }
+}
+
+.layout3 {
+    div {
+        @include box-sizing(border-box);
+        overflow: hidden;
+        position: relative;
+        float: left;
+        width: 50%;
+        border-right: 1px solid #61bfda;
+        border-bottom: 1px solid #61bfda;
+        margin: 0 -1px 0 0;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .slot_top,
+    .slot_mid,
+    .slot_bot {
+        width: 100%;
+        border: 0;
+    }
+    .slot_top .slot,
+    .slot_bot .slot,
+    .slot_top div,
+    .slot_bot div {
+        width: 65%;
+    }
+    .slot_top div,
+    .slot_bot div {
+        height: 200px;
+        width: 35%;
+        &:last-child {
+            border-right: 0;
+        }
+    }
+    .slot_mid,
+    .slot_mid div {
+        height: 142px;
+        &:last-child {
+            border-right: 0;
+        }
+    }
+    .slot_bot div {
+        border-bottom: 0;
+        .multiple div:first-child {
+            border-bottom: 1px solid #61bfda;
+        }
+    }
+    .multiple {
+        margin-left: 1px;
+        width: 100%!important;
+        border: 0;
+        div {
+            width: 100%;
+            height: 50%!important;
+        }
+    }
+}
+
+.layout4 {
+    div {
+        @include box-sizing(border-box);
+        overflow: hidden;
+        position: relative;
+        float: left;
+        width: 50%;
+        border-right: 1px solid #61bfda;
+        border-bottom: 1px solid #61bfda;
+        margin: 0 -1px 0 0;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .slot_top,
+    .slot_mid,
+    .slot_bot {
+        width: 100%;
+        border: 0;
+    }
+    .slot_top .slot,
+    .slot_bot .slot,
+    .slot_top div,
+    .slot_bot div {
+        height: 160px;
+    }
+    .slot_top div,
+    .slot_bot div {
+        &:nth-child(2n+2) {
+            border-right: 0;
+        }
+    }
+    .slot_mid div {
+        height: 222px;
+        width: 100%;
+        border-right: 0;
+    }
+    .slot_bot div {
+        border-bottom: 0;
+    }
+    .slot_bot .multiple div:first-child,
+    .slot_bot .multiple div:nth-child(2) {
+        border-bottom: 1px solid #61bfda;
+    }
+    .multiple {
+        margin-left: 1px;
+        width: 100%!important;
+        border: 0;
+        div {
+            width: 50%;
+            height: 50%!important;
+        }
+    }
+}
+
+.layout5 {
+    div {
+        @include box-sizing(border-box);
+        overflow: hidden;
+        position: relative;
+        float: left;
+        width: 50%;
+        border-right: 1px solid #61bfda;
+        border-bottom: 1px solid #61bfda;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .single {
+            height: 154px;
+            width: 100%;
+        }
+        .multiple {
+            @include clr;
+            width: 100%;
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+        .multiple div {
+            height: 77px;
+            width: 50%;
+            float: left;
+            &:nth-child(2n+2) {
+                border-right: 0;
+            }
+            &:last-child,
+            &:nth-last-child(2) {
+                border-bottom: 0;
+            }
+        }
+    }
+    .col {
+        border: 0;
+        &:last-child {
+            .single {
+                border-right: 0;
+                &:last-child {
+                    border: 0;
+                }
+            }
+            .multiple {
+                border-right: 0;
+            }
+            .multiple div:last-child {
+                border-right: 0;
+            }
+        }
+    }
+}
+
+.layout6 {
+    div {
+        @include box-sizing(border-box);
+        overflow: hidden;
+        position: relative;
+        float: left;
+        width: 25%;
+        height: 90px;
+        border-right: 1px solid #61bfda;
+        border-bottom: 1px solid #61bfda;
+        &:nth-child(4n+4) {
+            border-right: 0;
+        }
+        &:last-child,
+        &:nth-last-child(2),
+        &:nth-last-child(3),
+        &:nth-last-child(4) {
+            border-bottom: 0;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.layout7 {
+    .block {
+        @include box-sizing(padding-box);
+        height: 180px;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        padding-top: 15px;
+    }
+    .circle {
+        @include border-radius(75px);
+        @include inline-block;
+        width: 150px;
+        height: 150px;
+        border: 1px solid #61bfda;
+        position: relative;
+    }
+    .multiple {
+        @include inline-block;
+        height: 150px;
+        .circle { 
+            @include border-radius(30px);
+            width: 60px;
+            height: 60px;
+            display: block;
+            &:last-child {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+/*devices*/
+
+.blank-iphone5 {
+    .grid__device {
+        width: 263px;
+        margin-left: 14px;
+    }
+    .layout0 div {
+        height: 135px*4;
+    }
+    .layout1 div {
+        height: 135px;
+    }
+    .layout1 .slot_small div {
+        height: 70px;
+    }
+}
+
+.blank-iphone4 {
+    .grid__device {
+        width: 263px;
+        margin-left: 14px;
+    }
+    .layout0 div {
+        height: 126px*4;
+    }
+    .layout1 div {
+        height: 126px;
+    }
+    .layout1 .slot_small div {
+        height: 65px;
+    }
+    .layout2 .slot {
+        height: 251px;
+    }
+    .layout3 .slot_top div,
+    .layout3 .slot_bot div {
+        height: 180px;
+    }
+    .layout4 .slot_top .slot,
+    .layout4 .slot_bot .slot,
+    .layout4 .slot_top div,
+    .layout4 .slot_bot div {
+        height: 150px;
+    }
+    .layout4 .slot_mid div {
+        height: 202px;
+    }
+    .layout5 div .single {
+        height: 135px;
+    }
+    .layout6 div {
+        height: 84px;
+    }
+    .layout7 .block {
+        height: 162px;
+    }
+    .layout7 .circle {
+
+    }
+    .layout7 .multiple .circle {
+        
+    }
+}
+
+.blank-ipad {
+    .grid__device {
+        width: 321px;
+        margin-left: 14px;
+    }
+    .layout0 div {
+        height: 118px*4;
+    }
+    .layout1 div {
+        height: 118px;
+    }
+    .layout1 .slot_small div {
+        height: 59px;
+    }
+    .layout2 .slot {
+        height: 233px;
+    }
+    .layout3 .slot_top div,
+    .layout3 .slot_bot div {
+        height: 164px;
+    }
+    .layout4 .slot_top .slot,
+    .layout4 .slot_bot .slot,
+    .layout4 .slot_top div,
+    .layout4 .slot_bot div {
+        height: 144px;
+    }
+    .layout4 .slot_mid div {
+        height: 179px;
+    }
+    .layout5 div .single {
+        height: 118px;
+    }
+    .layout6 div {
+        height: 78px;
+    }
+    .layout7 .block {
+        height: 156px;
+    }
+    .layout7 .circle {
+        @include border-radius(65);
+        width: 130px;
+        height: 130px;
+    }
+    .layout7 .multiple .circle {
+        @include border-radius(28);
+        width: 56px;
+        height: 56px;
+    }
+}
+
+.blank-ipad_mini {
+    .grid__device {
+        width: 291px;
+        margin-left: 14px;
+    }
+    .layout0 div {
+        height: 104px*4;
+    }
+    .layout1 div {
+        height: 104px;
+    }
+    .layout1 .slot_small div {
+        height: 52px;
+    }
+    .layout2 .slot {
+        height: 208px;
+    }
+    .layout3 .slot_top div,
+    .layout3 .slot_bot div {
+        height: 137px;
+    }
+    .layout4 .slot_top .slot,
+    .layout4 .slot_bot .slot,
+    .layout4 .slot_top div,
+    .layout4 .slot_bot div {
+        height: 130px;
+    }
+    .layout4 .slot_mid div {
+        height: 157px;
+    }
+    .layout5 div .single {
+        height: 92px;
+    }
+    .layout6 div {
+        height: 70px;
+    }
+    .layout7 .block {
+        height: 133px;
+    }
+    .layout7 .circle {
+        @include border-radius(55);
+        width: 110px;
+        height: 110px;
+    }
+    .layout7 .multiple .circle {
+        @include border-radius(25);
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.blank-galaxy {
+    .grid__device {
+        width: 271px;
+        margin-left: 14px;
+    }
+    .layout0 div {
+        height: 134px*4;
+    }
+    .layout1 div {
+        height: 134px;
+    }
+    .layout1 .slot_small div {
+        height: 67px;
+    }
+    .layout2 .slot {
+        height: 266px;
+    }
+    .layout3 .slot_top div,
+    .layout3 .slot_bot div {
+        height: 196px;
+    }
+    .layout4 .slot_top .slot,
+    .layout4 .slot_bot .slot,
+    .layout4 .slot_top div,
+    .layout4 .slot_bot div {
+        height: 167px;
+    }
+    .layout4 .slot_mid div {
+        height: 200px;
+    }
+    .layout5 div .single {
+        height: 151px;
+    }
+    .layout6 div {
+        height: 89px;
+    }
+    .layout7 .block {
+        height: 178px;
+    }
+}

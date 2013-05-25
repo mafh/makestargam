@@ -448,8 +448,6 @@
 }
 
 .grid__device {
-    width: 263px;
-    margin-left: 14px;
     @include border-radius(42px);
     overflow: hidden;
     .edit {
@@ -575,43 +573,6 @@
     right: 5px;
     bottom: 0;
     margin-bottom: 5px;
-}
-
-
-.layout1 {
-    @include clr;
-    margin-top: -1px;
-    div {
-        @include box-sizing(border-box);
-        overflow: hidden;
-        position: relative;
-        float: left;
-        width: 50%;
-        height: 137px; 
-        border-right: 1px solid #61bfda;
-        border-bottom: 1px solid #61bfda;
-        margin: -1px -1px 0 0;
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        &:nth-child(2n+2) {
-            border-right: 0;
-        }
-        &:last-child,
-        &:nth-last-child(2) {
-            border-bottom: 0;
-        }
-    }
-    .slot_small {
-        margin-left: 1px;
-        width: 100%;
-        border: 0;
-        div {
-            height: 70px;
-        }
-    }
 }
 
 .img_edit {
