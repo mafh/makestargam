@@ -420,7 +420,7 @@ h3 {
 /* line 249, ../sass/common.scss */
 .promo_top .promo_hand {
   position: absolute;
-  background-image: url(../img/promo_hand.orig.png);
+  background-image: url(../img/promo_hand.png);
   width: 583px;
   height: 547px;
   bottom: 0;
@@ -1515,7 +1515,7 @@ h3 {
   overflow: auto;
   top: 0;
   left: 0;
-  z-index: 60;
+  z-index: 90;
 }
 /* line 870, ../sass/common.scss */
 .popup_holder.popup_error .popup {
