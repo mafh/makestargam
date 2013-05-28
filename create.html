@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1; maximum-scale=1.0"/>
     <link rel="stylesheet" media="screen" href="fonts/proxima.css">
     <link rel="stylesheet" media="screen" href="css/screen.css">
-	<link rel="stylesheet" media="screen" href="css/layout.css">
+    <link rel="stylesheet" media="screen" href="css/layout.css">
 	<script type="text/javascript" src="js/html5.js"></script>
 	<script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <!--js-select-->
 	<script type="text/javascript" src="js-select/js-select.js"></script>
     <link rel="stylesheet" media="screen" href="js-select/js-select.css">
@@ -116,64 +117,43 @@
             <!--hover case-->
             <aside class="blank_block blank-iphone5">
                 <div class="grid__device">
+                    <div id="img_result" style="display: none;"><img src="img/img-f1.png"></div>
                     <div class="layout layout1">
-                        <div>
-                            <img src="img/user1.jpg" style="top: -10px; left: -30px;">
-                            <div class="edit">
-                                <i class="edit-pencil"></i>
-                                <i class="edit-delete"></i>
-                                <i class="edit-move"></i>
-                                <i class="edit-plus"></i>
-                                <i class="edit-minus"></i>
-                                <i class="edit-ok"></i>
-                            </div>
+                        <div class="unit">
+                            <i class="edit-add"></i><i class="edit-pencil"></i><i class="edit-delete"></i><i class="edit-move"></i><i class="edit-plus"></i><i class="edit-minus"></i><i class="edit-ok"></i>
+                            <img src="img/user1.jpg">
                         </div>
-                        <div>
+                        <div class="unit">
+                            <i class="edit-add"></i><i class="edit-pencil"></i><i class="edit-delete"></i><i class="edit-move"></i><i class="edit-plus"></i><i class="edit-minus"></i><i class="edit-ok"></i>
                             <img src="img/user2.jpg">
-                            <div class="edit">
-                                <i class="edit-pencil"></i>
-                                <i class="edit-delete"></i>
-                                <i class="edit-move"></i>
-                                <i class="edit-plus"></i>
-                                <i class="edit-minus"></i>
-                                <i class="edit-ok"></i>
-                            </div>
                         </div>
                         <div>
                             <div class="slot_small">
-                                <div>
-                                    <img src="img/user1.jpg" style="width: 100px;">
-                                    <div class="edit"><i class="edit-pencil"></i><i class="edit-delete"></i></div>
+                                <div class="unit">
+                                    <i class="edit-add"></i><i class="edit-pencil"></i><i class="edit-delete"></i>
+                                    <img src="img/user1.jpg">
                                 </div>
-                                <div class="empty"><i class="edit-add"></i></div>
-                                <div class="empty"><i class="edit-add"></i></div>
-                                <div class="empty"><i class="edit-add"></i></div>
+                                <div class="unit empty"><i class="edit-add"></i><i class="edit-pencil"></i><i class="edit-delete"></i></div>
+                                <div class="unit empty"><i class="edit-add"></i><i class="edit-pencil"></i><i class="edit-delete"></i></div>
+                                <div class="unit empty"><i class="edit-add"></i><i class="edit-pencil"></i><i class="edit-delete"></i></div>
                             </div>
                         </div>
-                        <div class="empty"><i class="edit-add"></i></div>
-                        <div>
+                        <div class="unit empty">
+                            <i class="edit-add"></i><i class="edit-pencil"></i><i class="edit-delete"></i><i class="edit-move"></i><i class="edit-plus"></i><i class="edit-minus"></i><i class="edit-ok"></i>
+                        </div>
+                        <div class="unit">
+                            <i class="edit-add"></i><i class="edit-pencil"></i><i class="edit-delete"></i><i class="edit-move"></i><i class="edit-plus"></i><i class="edit-minus"></i><i class="edit-ok"></i>
                             <img src="img/user4.jpg">
-                            <div class="edit">
-                                <i class="edit-pencil"></i>
-                                <i class="edit-delete"></i>
-                                <i class="edit-move"></i>
-                                <i class="edit-plus"></i>
-                                <i class="edit-minus"></i>
-                                <i class="edit-ok"></i>
-                            </div>
                         </div>
-                        <div class="empty"><i class="edit-add"></i></div>
-                        <div class="empty"><i class="edit-add"></i></div>
-                        <div>
-                            <img src="img/user3.jpg" style="top: -25px; left: -25px;">
-                            <div class="edit">
-                                <i class="edit-pencil"></i>
-                                <i class="edit-delete"></i>
-                                <i class="edit-move"></i>
-                                <i class="edit-plus"></i>
-                                <i class="edit-minus"></i>
-                                <i class="edit-ok"></i>
-                            </div>
+                        <div class="unit empty">
+                            <i class="edit-add"></i><i class="edit-pencil"></i><i class="edit-delete"></i><i class="edit-move"></i><i class="edit-plus"></i><i class="edit-minus"></i><i class="edit-ok"></i>
+                        </div>
+                        <div class="unit empty">
+                            <i class="edit-add"></i><i class="edit-pencil"></i><i class="edit-delete"></i><i class="edit-move"></i><i class="edit-plus"></i><i class="edit-minus"></i><i class="edit-ok"></i>
+                        </div>
+                        <div class="unit">
+                            <i class="edit-add"></i><i class="edit-pencil"></i><i class="edit-delete"></i><i class="edit-move"></i><i class="edit-plus"></i><i class="edit-minus"></i><i class="edit-ok"></i>
+                            <img src="img/user3.jpg">
                         </div>
                     </div>
                 </div>
@@ -287,11 +267,11 @@
                         <h1>Примените фильтр</h1>
                         <div class="options">
                             <ul class="images_filters">
-                                <li><i class="filter1"></i>Без фильтра</li>
-                                <li class="active"><i class="filter2"></i>Синий</li>
-                                <li><i class="filter3"></i>Желтый</li>
-                                <li><i class="filter4"></i>Волна</li>
-                                <li><i class="filter5"></i>Зеленый</li>
+                                <li class="active"><i class="filter1" data-filter="img/img-f1.png"></i>Без фильтра</li>
+                                <li><i class="filter2" data-filter="img/img-f2.png"></i>Синий</li>
+                                <li><i class="filter3" data-filter="img/img-f3.png"></i>Желтый</li>
+                                <li><i class="filter4" data-filter="img/img-f4.png"></i>Волна</li>
+                                <li><i class="filter5" data-filter="img/img-f5.png"></i>Зеленый</li>
                             </ul>
                             <footer><a href="#" class="button blue gostep4">Продолжить</a></footer>
                         </div>
@@ -328,7 +308,7 @@
     <b class="tail"></b>
     <div class="in">
         <img src="img/user1.jpg">
-        <div class="edit"><i class="edit-move"></i><i class="edit-plus"></i><i class="edit-minus"></i><i class="edit-ok"></i></div>
+        <i class="edit-move"></i><i class="edit-plus"></i><i class="edit-minus"></i><i class="edit-ok"></i>
     </div>
 </div>
 <!--/hover edit-->
@@ -346,6 +326,7 @@
             </ul>
             <div class="content">
                 <div class="in tab_content tt0">
+                    <i style="background-image: url('http://cs419018.vk.me/v419018744/61fe/N33E0Lv5NE8.jpg');" data-large="http://cs419018.vk.me/v419018744/61ff/h73gUugcm2U.jpg"></i>
                     <i style="background-image: url('http://cs411723.vk.me/v411723723/669c/XGeZ1xAoJjA.jpg');" data-large="http://cs411723.vk.me/v411723723/669c/XGeZ1xAoJjA.jpg"></i>
                     <i style="background-image: url('http://cs323127.vk.me/v323127986/644c/kjXayJxX5qA.jpg');" data-large="http://cs323127.vk.me/v323127986/644c/kjXayJxX5qA.jpg"></i>
                     <i style="background-image: url('http://cs323324.vk.me/u4063837/d_c6cbd895.jpg');"         data-large="http://cs323324.vk.me/u4063837/d_c6cbd895.jpg"></i>

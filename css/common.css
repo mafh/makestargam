@@ -1503,7 +1503,7 @@ h3 {
   opacity: 0.75;
   height: 100%;
   width: 100%;
-  z-index: 60;
+  z-index: 50;
 }
 
 /* line 861, ../sass/common.scss */
@@ -1515,7 +1515,7 @@ h3 {
   overflow: auto;
   top: 0;
   left: 0;
-  z-index: 90;
+  z-index: 50;
 }
 /* line 870, ../sass/common.scss */
 .popup_holder.popup_error .popup {
@@ -1545,6 +1545,9 @@ h3 {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   font-size: 14px;
   line-height: 1.8;
   position: relative;
@@ -1553,14 +1556,14 @@ h3 {
   margin-left: -390px;
   margin-bottom: 20px;
   top: 50%;
-  z-index: 70;
+  z-index: 50;
 }
-/* line 896, ../sass/common.scss */
+/* line 897, ../sass/common.scss */
 .popup .pop-in {
   padding: 0;
   min-height: 72px;
 }
-/* line 900, ../sass/common.scss */
+/* line 901, ../sass/common.scss */
 .popup .popup__close {
   background: url('../img/common-s7b16feaa36.png') -50px 0 no-repeat;
   width: 30px;
@@ -1571,26 +1574,26 @@ h3 {
   cursor: pointer;
   z-index: 20;
 }
-/* line 907, ../sass/common.scss */
+/* line 908, ../sass/common.scss */
 .popup .popup__close:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
 }
 
-/* line 912, ../sass/common.scss */
+/* line 913, ../sass/common.scss */
 .popup_top {
   position: relative;
   bottom: auto;
-  top: 10px;
+  top: 70px;
   margin-top: 0;
 }
 
-/* line 918, ../sass/common.scss */
+/* line 919, ../sass/common.scss */
 .popup_center {
   position: fixed;
 }
 
-/* line 922, ../sass/common.scss */
+/* line 923, ../sass/common.scss */
 .popup_error .popup {
   background: #fff;
 }

@@ -1503,7 +1503,7 @@ h3 {
   opacity: 0.75;
   height: 100%;
   width: 100%;
-  z-index: 60;
+  z-index: 50;
 }
 
 /* line 861, ../sass/common.scss */
@@ -1515,7 +1515,7 @@ h3 {
   overflow: auto;
   top: 0;
   left: 0;
-  z-index: 90;
+  z-index: 50;
 }
 /* line 870, ../sass/common.scss */
 .popup_holder.popup_error .popup {
@@ -1545,6 +1545,9 @@ h3 {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   font-size: 14px;
   line-height: 1.8;
   position: relative;
@@ -1553,14 +1556,14 @@ h3 {
   margin-left: -390px;
   margin-bottom: 20px;
   top: 50%;
-  z-index: 70;
+  z-index: 50;
 }
-/* line 896, ../sass/common.scss */
+/* line 897, ../sass/common.scss */
 .popup .pop-in {
   padding: 0;
   min-height: 72px;
 }
-/* line 900, ../sass/common.scss */
+/* line 901, ../sass/common.scss */
 .popup .popup__close {
   background: url('../img/common-s7b16feaa36.png') -50px 0 no-repeat;
   width: 30px;
@@ -1571,26 +1574,26 @@ h3 {
   cursor: pointer;
   z-index: 20;
 }
-/* line 907, ../sass/common.scss */
+/* line 908, ../sass/common.scss */
 .popup .popup__close:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
 }
 
-/* line 912, ../sass/common.scss */
+/* line 913, ../sass/common.scss */
 .popup_top {
   position: relative;
   bottom: auto;
-  top: 10px;
+  top: 70px;
   margin-top: 0;
 }
 
-/* line 918, ../sass/common.scss */
+/* line 919, ../sass/common.scss */
 .popup_center {
   position: fixed;
 }
 
-/* line 922, ../sass/common.scss */
+/* line 923, ../sass/common.scss */
 .popup_error .popup {
   background: #fff;
 }
@@ -3044,87 +3047,36 @@ h3 {
   border-radius: 42px;
   overflow: hidden;
 }
-/* line 453, ../sass/create.scss */
-.grid__device .edit {
-  display: none;
-}
-/* line 458, ../sass/create.scss */
-.grid__device .edit .edit-plus,
-.grid__device .edit .edit-minus,
-.grid__device .edit .edit-move,
-.grid__device .edit .edit-ok {
-  display: none;
-}
-/* line 461, ../sass/create.scss */
-.grid__device .edit.active {
-  display: block;
-}
-/* line 466, ../sass/create.scss */
-.grid__device .edit.active .edit-plus,
-.grid__device .edit.active .edit-minus,
-.grid__device .edit.active .edit-move,
-.grid__device .edit.active .edit-ok {
-  display: block;
-}
-/* line 470, ../sass/create.scss */
-.grid__device .edit.active .edit-pencil,
-.grid__device .edit.active .edit-delete {
-  display: none;
-}
-/* line 475, ../sass/create.scss */
-.grid__device .edit-add {
-  display: none;
-}
-/* line 479, ../sass/create.scss */
+/* line 454, ../sass/create.scss */
 .grid__device:hover, .grid__device.active {
   overflow: visible;
 }
-/* line 481, ../sass/create.scss */
+/* line 456, ../sass/create.scss */
 .grid__device:hover .empty:hover .edit-add, .grid__device.active .empty:hover .edit-add {
   display: block;
 }
-/* line 485, ../sass/create.scss */
+/* line 460, ../sass/create.scss */
 .grid__device.preview {
   overflow: hidden;
 }
-/* line 487, ../sass/create.scss */
-.grid__device.preview .edit {
+/* line 462, ../sass/create.scss */
+.grid__device.preview .unit i {
   display: none!important;
 }
-/* line 490, ../sass/create.scss */
+/* line 465, ../sass/create.scss */
 .grid__device.preview .edit-add {
   display: none!important;
 }
-/* line 494, ../sass/create.scss */
+/* line 468, ../sass/create.scss */
+.grid__device.preview .layout div {
+  border-color: transparent;
+}
+/* line 472, ../sass/create.scss */
 .grid__device .layout div:hover .edit {
   display: block;
 }
 
-/* line 500, ../sass/create.scss */
-.edit,
-.layout .edit {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 37, ../sass/_base.scss */
-.edit:after,
-.layout .edit:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-/* line 507, ../sass/create.scss */
-.edit i,
-.layout .edit i {
-  cursor: pointer;
-}
-
-/* line 512, ../sass/create.scss */
+/* line 477, ../sass/create.scss */
 .edit-add {
   background: url('../img/icons-s3e79710a1d.png') 0 -356px no-repeat;
   width: 52px;
@@ -3138,17 +3090,12 @@ h3 {
   display: none;
   cursor: pointer;
 }
-/* line 522, ../sass/create.scss */
+/* line 487, ../sass/create.scss */
 .edit-add.active {
   display: block;
 }
 
-/* line 525, ../sass/create.scss */
-.layout .empty:hover .edit-add {
-  display: block;
-}
-
-/* line 527, ../sass/create.scss */
+/* line 490, ../sass/create.scss */
 .edit-pencil {
   background: url('../img/icons-s3e79710a1d.png') -26px -201px no-repeat;
   width: 26px;
@@ -3164,7 +3111,7 @@ h3 {
   right: 35px;
 }
 
-/* line 535, ../sass/create.scss */
+/* line 498, ../sass/create.scss */
 .edit-delete {
   background: url('../img/icons-s3e79710a1d.png') 0 -175px no-repeat;
   width: 26px;
@@ -3180,7 +3127,7 @@ h3 {
   right: 4px;
 }
 
-/* line 543, ../sass/create.scss */
+/* line 506, ../sass/create.scss */
 .edit-move {
   background: url('../img/icons-s3e79710a1d.png') 0 -315px no-repeat;
   width: 41px;
@@ -3189,9 +3136,10 @@ h3 {
   position: absolute;
   top: 0;
   right: 0;
+  display: none;
 }
 
-/* line 551, ../sass/create.scss */
+/* line 515, ../sass/create.scss */
 .edit-plus {
   background: url('../img/icons-s3e79710a1d.png') -26px -175px no-repeat;
   width: 26px;
@@ -3203,7 +3151,7 @@ h3 {
   margin-bottom: 5px;
 }
 
-/* line 560, ../sass/create.scss */
+/* line 524, ../sass/create.scss */
 .edit-minus {
   background: url('../img/icons-s3e79710a1d.png') 0 -227px no-repeat;
   width: 26px;
@@ -3215,7 +3163,7 @@ h3 {
   margin-bottom: 5px;
 }
 
-/* line 569, ../sass/create.scss */
+/* line 533, ../sass/create.scss */
 .edit-ok {
   background: url('../img/icons-s3e79710a1d.png') 0 -201px no-repeat;
   width: 26px;
@@ -3227,7 +3175,47 @@ h3 {
   margin-bottom: 5px;
 }
 
-/* line 578, ../sass/create.scss */
+/* line 543, ../sass/create.scss */
+.layout i {
+  cursor: pointer;
+  display: none;
+  z-index: 10;
+}
+/* line 550, ../sass/create.scss */
+.layout .unit:hover .edit-pencil,
+.layout .unit:hover .edit-delete {
+  display: block;
+}
+/* line 556, ../sass/create.scss */
+.layout .unit.empty .edit-pencil,
+.layout .unit.empty .edit-delete {
+  display: none;
+}
+/* line 562, ../sass/create.scss */
+.layout .edit_mode_on .edit-pencil,
+.layout .edit_mode_on .edit-delete {
+  display: none!important;
+}
+/* line 567, ../sass/create.scss */
+.layout .edit_mode_on .edit-plus,
+.layout .edit_mode_on .edit-minus,
+.layout .edit_mode_on .edit-ok {
+  display: block;
+}
+/* line 576, ../sass/create.scss */
+.layout .edit_hide .edit-pencil,
+.layout .edit_hide .edit-delete,
+.layout .edit_hide .edit-plus,
+.layout .edit_hide .edit-minus,
+.layout .edit_hide .edit-ok {
+  display: none!important;
+}
+/* line 580, ../sass/create.scss */
+.layout .empty:hover .edit-add {
+  display: block;
+}
+
+/* line 583, ../sass/create.scss */
 .img_edit {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -3235,21 +3223,22 @@ h3 {
   -o-border-radius: 4px;
   border-radius: 4px;
   position: absolute;
-  z-index: 80;
+  z-index: 90;
   background: #fff;
   width: 180px;
   height: 180px;
   margin: 65px 0 0 -63px;
 }
-/* line 586, ../sass/create.scss */
+/* line 591, ../sass/create.scss */
 .img_edit .in {
   position: relative;
   width: 140px;
   height: 140px;
   margin: 20px 0 0 20px;
   overflow: hidden;
+  background: #f1f1f1;
 }
-/* line 593, ../sass/create.scss */
+/* line 599, ../sass/create.scss */
 .img_edit .tail {
   position: absolute;
   left: 50%;
@@ -3261,15 +3250,19 @@ h3 {
   border-right: 10px solid transparent;
   border-bottom: 10px solid #fff;
 }
+/* line 610, ../sass/create.scss */
+.img_edit i {
+  cursor: pointer;
+}
 
-/* line 606, ../sass/create.scss */
+/* line 615, ../sass/create.scss */
 .img_upload {
   position: absolute;
   z-index: 100;
   width: 420px;
   margin: 70px 0 0 -190px;
 }
-/* line 611, ../sass/create.scss */
+/* line 620, ../sass/create.scss */
 .img_upload .tail {
   position: absolute;
   left: 50%;
@@ -3281,7 +3274,7 @@ h3 {
   border-right: 10px solid transparent;
   border-bottom: 10px solid #fff;
 }
-/* line 622, ../sass/create.scss */
+/* line 631, ../sass/create.scss */
 .img_upload .images_choose {
   margin: 0;
 }
