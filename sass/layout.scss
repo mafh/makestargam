@@ -51,7 +51,7 @@
             border-bottom: 0;
         }
     }
-    .slot_small {
+    .multiple {
         margin-left: 1px;
         width: 100%;
         border: 0;
@@ -64,13 +64,20 @@
 .layout2 {
     @include clr;
     position: relative;
-    .slot,
     .slot {
         height: 270px;
         position: relative;
+        overflow: hidden;
     }
     .slot:first-child {
         border-bottom: 1px solid #61bfda;
+    }
+    .slot:nth-last-child(2) {
+        .pencil,
+        .delete {
+            top: 100%;
+            margin-top: -30px;
+        }
     }
     .accent-circle {
         @include border-radius(75px);
@@ -81,6 +88,14 @@
         right: 20px;
         top: 50%;
         margin-top: -75px;
+        overflow: hidden;
+        &:hover,
+        &.edit_mode_on {
+            @include border-radius(0);
+        }
+        &.empty {
+            @include border-radius(75px);
+        }
     }
     .accent-square {
         @include border-radius(25px);
@@ -91,6 +106,14 @@
         right: 20px;
         top: 50%;
         margin-top: -75px;
+        overflow: hidden;
+        &:hover,
+        &.edit_mode_on {
+            @include border-radius(0);
+        }
+        &.empty {
+            @include border-radius(25px);
+        }
     }
 }
 
@@ -311,6 +334,10 @@
         height: 150px;
         border: 1px solid #61bfda;
         position: relative;
+        overflow: hidden;
+        &:hover {
+            @include border-radius(0);
+        }
     }
     .multiple {
         @include inline-block;
@@ -320,6 +347,10 @@
             width: 60px;
             height: 60px;
             display: block;
+            overflow: hidden;
+            &:hover {
+                @include border-radius(0);
+            }
             &:last-child {
                 margin-top: 20px;
             }
@@ -340,7 +371,7 @@
     .layout1 div {
         height: 135px;
     }
-    .layout1 .slot_small div {
+    .layout1 .multiple div {
         height: 70px;
     }
 }
@@ -356,7 +387,7 @@
     .layout1 div {
         height: 126px;
     }
-    .layout1 .slot_small div {
+    .layout1 .multiple div {
         height: 65px;
     }
     .layout2 .slot {
@@ -393,7 +424,11 @@
 }
 
 .blank-ipad {
+    #img_result {
+        margin-left: 13px;
+    }
     .grid__device {
+        @include border-radius(20px);
         width: 321px;
         margin-left: 14px;
     }
@@ -403,7 +438,7 @@
     .layout1 div {
         height: 118px;
     }
-    .layout1 .slot_small div {
+    .layout1 .multiple div {
         height: 59px;
     }
     .layout2 .slot {
@@ -445,6 +480,7 @@
 
 .blank-ipad_mini {
     .grid__device {
+        @include border-radius(20px);
         width: 291px;
         margin-left: 14px;
     }
@@ -454,7 +490,7 @@
     .layout1 div {
         height: 104px;
     }
-    .layout1 .slot_small div {
+    .layout1 .multiple div {
         height: 52px;
     }
     .layout2 .slot {
@@ -505,7 +541,7 @@
     .layout1 div {
         height: 134px;
     }
-    .layout1 .slot_small div {
+    .layout1 .multiple div {
         height: 67px;
     }
     .layout2 .slot {

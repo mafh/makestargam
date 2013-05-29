@@ -453,7 +453,7 @@
     &:hover,
     &.active {
         overflow: visible;
-        .empty:hover .edit-add {
+        .empty:hover .add {
             display: block;
         }
     }
@@ -462,19 +462,16 @@
         .unit i {
             display: none!important;
         }
-        .edit-add {
+        .add {
             display: none!important;
         }
         .layout div {
             border-color: transparent;
         }
     }
-    .layout div:hover .edit {
-        display: block;
-    }
 }
 
-.edit-add {
+.add {
     @include sized-sprite($icons, "edit-add");
     position: absolute;
     top: 50%;
@@ -487,7 +484,7 @@
     &.active {display: block;}
 }
 
-.edit-pencil {
+.pencil {
     @include sized-sprite($icons, "edit-pencil");
     @include inline-block;
     position: absolute;
@@ -495,7 +492,7 @@
     right: 35px;
 }
 
-.edit-delete {
+.delete {
     @include sized-sprite($icons, "edit-delete");
     @include inline-block;
     position: absolute;
@@ -503,7 +500,7 @@
     right: 4px;
 }
 
-.edit-move {
+.move {
     @include sized-sprite($icons, "edit-move");
     display: block;
     position: absolute;
@@ -512,7 +509,7 @@
     display: none;
 }
 
-.edit-plus {
+.plus {
     @include sized-sprite($icons, "edit-plus");
     display: block;
     position: absolute;
@@ -521,7 +518,7 @@
     margin-bottom: 5px;
 }
 
-.edit-minus {
+.minus {
     @include sized-sprite($icons, "edit-minus");
     display: block;
     position: absolute;
@@ -530,7 +527,7 @@
     margin-bottom: 5px;
 }
 
-.edit-ok {
+.ok {
     @include sized-sprite($icons, "edit-ok");
     display: block;
     position: absolute;
@@ -540,44 +537,49 @@
 }
 
 .layout {
+    .unit {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
     i {
         cursor: pointer;
         display: none;
         z-index: 10;
     }
     .unit:hover {
-        .edit-pencil,
-        .edit-delete {
+        .pencil,
+        .delete {
             display: block;
         }
     }
     .unit.empty {
-        .edit-pencil,
-        .edit-delete {
+        .pencil,
+        .delete {
             display: none;
         }
     }
     .edit_mode_on {
-        .edit-pencil,
-        .edit-delete {
+        .pencil,
+        .delete {
             display: none!important;
         }
-        .edit-plus,
-        .edit-minus,
-        .edit-ok {
+        .plus,
+        .minus,
+        .ok {
             display: block; 
         }
     }
     .edit_hide {
-        .edit-pencil,
-        .edit-delete,
-        .edit-plus,
-        .edit-minus,
-        .edit-ok {
+        .pencil,
+        .delete,
+        .plus,
+        .minus,
+        .ok {
             display: none!important;
         }
     }
-    .empty:hover .edit-add {display: block;} 
+    .empty:hover .add {display: block;} 
 }
 
 .img_edit {
@@ -595,6 +597,9 @@
         margin: 20px 0 0 20px;
         overflow: hidden;
         background: #f1f1f1;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
     }
     .tail {
         position: absolute;
@@ -608,7 +613,8 @@
         border-bottom: 10px solid #fff;
     }
     i {
-        cursor: pointer
+        cursor: pointer;
+        z-index: 10;
     }
 }
 

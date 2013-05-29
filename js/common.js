@@ -391,28 +391,31 @@ $(document).ready(function() {
 
     if ($('.grid__device').exists()){
 
-        $('.img_edit img').draggable();
-
         function imgUploadClose(){
             $('.pop-in-cover-dark').fadeOut('fast');
             $('.img_edit').hide();
             $('.img_upload').hide();
         }
 
-        $('.edit-add').on("click", function(){
+//add img
+        $('.add').on("click", function(){
             var pos = $(this).offset();
             $(this).addClass('active');
             $('.pop-in-cover-dark').fadeIn('fast');
             $('.img_upload').css({'top' : pos.top, 'left': pos.left}).fadeIn('fast');
+            $('.unit').removeClass('edit_mode_on');
+            $('.unit').removeClass('edit_hide');
             
         });
 
-        $('.edit-delete').on("click", function(){
+//delete img
+        $('.delete').on("click", function(){
             $(this).parent().find('img').remove();
             $(this).parent().addClass('empty');
         });
 
-        $('.edit-pencil').on("click", function(){
+        //edit img
+        $('.pencil').on("click", function(){
             $('.grid__device .unit').removeClass('edit_mode_on');
             $(this).parent().addClass('edit_mode_on');
             $(this).parent().find('img').draggable({
@@ -426,77 +429,91 @@ $(document).ready(function() {
             });
         });
 
-        $('.edit-ok').on("mousedown", function(){
+//end edit
+        $('.ok').on("mousedown", function(){
             $(this).parent().removeClass('edit_mode_on');
             $('.grid__device img').draggable({ disabled: true });
-
             $(".layout .unit").each(function(){
                 var unit    = $(this);
                 var unit_w  = unit.width();
                 var unit_h  = unit.height();
                 var img     = $(this).find('img');
+                var img_src = img.attr('src');
                 if(img.is(':visible')) {
                     var img_w   = img.width();
                     var img_h   = img.width();
                     var pos     = img.position();
-                    console.log(pos.left+' '+pos.top+' '+unit_w+' '+unit_h);
+                    console.log(img_src+' '+pos.left+' '+pos.top+' '+unit_w+' '+unit_h);
+                    $('#result_form').append('<input id=\"images_\" name=\"images[]\" type=\"hidden\" value=\"' +img_src+ ',' +pos.left+ ',' +pos.top+ ',' +unit_w+ ',' +unit_h+ '\">')
                 } else {
                     console.log('null');
+                    $('#result_form').append('<input id=\"images_\" name=\"images[]\" type=\"hidden\" value=\"null">')
                 }
             });
             console.log('---------------------------------------------');
         });
 
-        $('.edit-plus').on("mouseup", function(){
-            var unit    = $(this).parent();
-            var unit_w  = unit.width();
-            var unit_h  = unit.height();
-            var img     = $(this).parent().find('img');
-            var img_w   = img.width();
-            var img_h   = img.width();
-            var pos     = img.position();
-
-            img_w = img_w+10;
-            img.css({'width':img_w});
-            //console.log(pos.left+' '+pos.top+' '+unit_w+' '+unit_h);
+//zoom plus
+        $('.plus').on("mouseup", function(){
+            var img = $(this).parent().find('img');
+            var w   = img.width();
+            w = w+10;
+            img.css('width',w);
         });
 
-        $('.edit-minus').on("mouseup", function(){
+//zoom minus
+        $('.minus').on("mouseup", function(){
             var img = $(this).parent().find('img');
             var w   = img.width();
             w = w-10;
             img.css('width',w);
         });
 
-
-        $('.slot_small .edit-pencil').on("click", function(){
-            var pos = $(this).parent().offset();
+//open img_edit
+        $('.multiple .pencil').on("click", function(){
+            var unit_pos = $(this).parent().offset();
             $('.pop-in-cover-dark').fadeIn('fast');
-            $('.img_edit').css({'top' : pos.top, 'left': pos.left}).fadeIn('fast');
+            $('.img_edit').css({'top' : unit_pos.top, 'left': unit_pos.left}).fadeIn('fast');
+            $(this).parent().addClass('edit_hide');
+            var orig   = $(this).parent().find('img');
+            var scr    = orig.attr('src');
+            var target = $('.img_edit .in');
+            target.append('<img src=\"'+ scr +'\">');
+            $('.img_edit img').draggable();
         });
 
+//close img_edit
+        $('.img_edit .ok').on("click", function(){
+            imgUploadClose();
+            $('.add').removeClass('active');
+            $('.unit').removeClass('edit_mode_on');
+            $('.unit').removeClass('edit_hide');
+            $('.img_edit .in img').remove();
+        });
+
+//close img_edit
         $('.pop-in-cover-dark').on("click", function(){
             $(this).fadeOut('fast');
             $('.img_edit').hide();
             $('.img_upload').hide();
-            $('.edit-add').removeClass('active');
+            $('.add').removeClass('active');
+            $('.unit').removeClass('edit_mode_on');
+            $('.unit').removeClass('edit_hide');
+            $('.img_edit .in img').remove();
         });
 
-        $('.img_edit .edit-ok').on("click", function(){
-            imgUploadClose();
-            $('.edit-add').removeClass('active');
-        });
-
+//append img to unit
         $('.images_choose .content i').on("click", function(){
             var large    = $(this).attr('data-large');
-            var target   = $('.grid__device .edit-add.active').parent();
+            var target   = $('.grid__device .add.active').parent();
             var target_h = target.height();
             target.append('<img src=\"'+ large +'\" style=\"width: '+ target_h +'px\">');
             target.removeClass('empty');
-            $('.edit-add.active').removeClass('active');
+            $('.add.active').removeClass('active');
             imgUploadClose();
         });
 
+//filter select
         $('.images_filters i').on("click", function(){
             var large    = $(this).attr('data-filter');
             var target   = $('#img_result');
