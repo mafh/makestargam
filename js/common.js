@@ -405,20 +405,24 @@ $(document).ready(function() {
                 var unit_h  = unit.height();
                 var num     = unit.attr('data-num');
                 var img     = $(this).find('img');
-                var img_src = img.attr('src');
                 if(img.is(':visible')) {
-                    var hiddenImg = img.clone().css({'width':'auto','height':'auto'}).appendTo('body');
-                    var orig_w = hiddenImg.width();
-                    var orig_h = hiddenImg.height();
-                    hiddenImg.remove();            
-                    this_w   = img.width();
-                    this_h   = img.width();
+                    var hidden = img.clone().css({'width':'auto','height':'auto'}).appendTo('body');
+                    var orig_w = hidden.width();
+                    var orig_h = hidden.height();
+                    hidden.remove();            
+                    var src  = img.attr('src');
+                    img_w    = img.width();
+                    img_h    = img.width();
+                    scale    = img_w/orig_w;
                     pos      = img.position();
-                    pos.left = -pos.left;
-                    pos.top  = -pos.top;
-                    perc_w   = unit_w/this_w*100;
-                    console.log(num+ ', left:' +pos.left+ ', top:' +pos.top+ ', origw:' +orig_w+ ', origh:' +orig_h+ ', this_w:' +this_w+ ', this_h:' +this_h+ ', ' +perc_w+'%,');
-                    $('#result_form').append('<input id=\"images_\" name=\"images[]\" type=\"hidden\" value=\"' +num+ '\\' +img_src+ '\\' +pos.left+ ',' +pos.top+ ',' +this_w+ ',' +this_h+ '\">')
+                    pos.left = -pos.left*scale;
+                    pos.top  = -pos.top*scale;
+                    if(img_w < unit_w) {var result_w =  img_w*scale + pos.left;;}
+                    else               {var result_w = unit_w*scale + pos.left;}
+                    if(img_h < unit_h) {var result_h =  img_h*scale + pos.left;;}
+                    else               {var result_h = unit_h*scale + pos.top;}
+                    console.log(num+ ', left:' +pos.left+ ', top:' +pos.top+ ', ' +result_w+', ' +result_h+', scale:' +scale);
+                    $('#result_form').append('<input id=\"images_\" name=\"images[]\" type=\"hidden\" value=\"' +num+ '\\' +src+ '\\' +pos.left+ ',' +pos.top+ ',' +result_w+ ',' +result_h+ '\">')
                 } else {
                     console.log('null');
                     $('#result_form').append('<input id=\"images_\" name=\"images[]\" type=\"hidden\" value=\"' +num+ '\\null">')
@@ -477,6 +481,7 @@ $(document).ready(function() {
             var w   = img.width();
             w = w+10;
             img.css('width',w);
+            formCreate();
         });
 
 //zoom minus
@@ -485,6 +490,7 @@ $(document).ready(function() {
             var w   = img.width();
             w = w-10;
             img.css('width',w);
+            formCreate();
         });
 
 //open img_edit
