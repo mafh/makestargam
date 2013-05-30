@@ -8,6 +8,26 @@
     background: #363636;
 }
 
+.layout-test {
+    @include clr;
+    div {
+        @include box-sizing(border-box);
+        overflow: hidden;
+        position: relative;
+        float: left;
+        width: 150px;
+        height: 150px; 
+        margin: 0 -1px 0 0;
+        border: 1px dotted #61bfda;
+        @include border-radius(0);
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
 .layout0 {
     @include clr;
     div {

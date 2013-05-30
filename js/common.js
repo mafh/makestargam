@@ -236,6 +236,7 @@ $(document).ready(function() {
     });
 
     $('.gostep3').on("click", function(){
+        formCreate();
         $('.step').hide();
         $('.grid__device').addClass('preview');
         $('.grid__device .layout').hide();
@@ -397,6 +398,39 @@ $(document).ready(function() {
             $('.img_upload').hide();
         }
 
+        function formCreate(){
+            $(".layout .unit").each(function(){
+                var unit    = $(this);
+                var unit_w  = unit.width();
+                var unit_h  = unit.height();
+                var num     = unit.attr('data-num');
+                var img     = $(this).find('img');
+                var img_src = img.attr('src');
+                if(img.is(':visible')) {
+                    var hiddenImg = img.clone().css({'width':'auto','height':'auto'}).appendTo('body');
+                    var orig_w = hiddenImg.width();
+                    var orig_h = hiddenImg.height();
+                    hiddenImg.remove();            
+                    this_w   = img.width();
+                    this_h   = img.width();
+                    pos      = img.position();
+                    pos.left = -pos.left;
+                    pos.top  = -pos.top;
+                    perc_w   = unit_w/this_w*100;
+                    console.log(num+ ', left:' +pos.left+ ', top:' +pos.top+ ', origw:' +orig_w+ ', origh:' +orig_h+ ', this_w:' +this_w+ ', this_h:' +this_h+ ', ' +perc_w+'%,');
+                    $('#result_form').append('<input id=\"images_\" name=\"images[]\" type=\"hidden\" value=\"' +num+ '\\' +img_src+ '\\' +pos.left+ ',' +pos.top+ ',' +this_w+ ',' +this_h+ '\">')
+                } else {
+                    console.log('null');
+                    $('#result_form').append('<input id=\"images_\" name=\"images[]\" type=\"hidden\" value=\"' +num+ '\\null">')
+                }
+            });
+            console.log('---------------------------------------------');
+        }
+
+        function formClear(){
+            $('#result_form input').remove();
+        }
+
 //add img
         $('.add').on("click", function(){
             var pos = $(this).offset();
@@ -414,8 +448,9 @@ $(document).ready(function() {
             $(this).parent().addClass('empty');
         });
 
-        //edit img
+//edit img
         $('.pencil').on("click", function(){
+            formClear();
             $('.grid__device .unit').removeClass('edit_mode_on');
             $(this).parent().addClass('edit_mode_on');
             $(this).parent().find('img').draggable({
@@ -429,28 +464,11 @@ $(document).ready(function() {
             });
         });
 
-//end edit
+//ok end edit
         $('.ok').on("mousedown", function(){
             $(this).parent().removeClass('edit_mode_on');
             $('.grid__device img').draggable({ disabled: true });
-            $(".layout .unit").each(function(){
-                var unit    = $(this);
-                var unit_w  = unit.width();
-                var unit_h  = unit.height();
-                var img     = $(this).find('img');
-                var img_src = img.attr('src');
-                if(img.is(':visible')) {
-                    var img_w   = img.width();
-                    var img_h   = img.width();
-                    var pos     = img.position();
-                    console.log(img_src+' '+pos.left+' '+pos.top+' '+unit_w+' '+unit_h);
-                    $('#result_form').append('<input id=\"images_\" name=\"images[]\" type=\"hidden\" value=\"' +img_src+ ',' +pos.left+ ',' +pos.top+ ',' +unit_w+ ',' +unit_h+ '\">')
-                } else {
-                    console.log('null');
-                    $('#result_form').append('<input id=\"images_\" name=\"images[]\" type=\"hidden\" value=\"null">')
-                }
-            });
-            console.log('---------------------------------------------');
+            formCreate();
         });
 
 //zoom plus
@@ -507,7 +525,7 @@ $(document).ready(function() {
             var large    = $(this).attr('data-large');
             var target   = $('.grid__device .add.active').parent();
             var target_h = target.height();
-            target.append('<img src=\"'+ large +'\" style=\"width: '+ target_h +'px\">');
+            target.append('<img src=\"'+ large +'\">');
             target.removeClass('empty');
             $('.add.active').removeClass('active');
             imgUploadClose();
