@@ -715,4 +715,25 @@ $(document).ready(function() {
         target.html('<img src=\"'+ large +'\">');
     })
 
+
+    $(document).on('click', '.button_autofill', function() {
+        var list = $('.images_choose .content i').toArray();
+        
+
+        $('.layout .unit').each(function(){
+            var w = $(this).width();
+            var h = $(this).height();
+            var elemlength = list.length;
+            var randomnum = Math.floor(Math.random()*elemlength);
+            var randomitem = list[randomnum];
+            var url = $(randomitem).attr('data-large');
+            if (w > h) {
+                $img = $('<img src=\"'+ url +'\">').width( w ).height('auto');
+            } else {
+                $img = $('<img src=\"'+ url +'\">').height( h ).width('auto');
+            }
+            $(this).append($img).removeClass('empty');
+        });
+    })
+
 });
