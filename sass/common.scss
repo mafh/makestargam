@@ -734,6 +734,13 @@ h3 {
     padding: 0 20px;
     position: relative;
     z-index: 10;
+    .loading {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -8px 0 0 -8px;
+        display: none;
+    }
     &.border {
         border: 1px solid #8c8c8c;
     }

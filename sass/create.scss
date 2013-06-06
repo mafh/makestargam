@@ -256,6 +256,12 @@
             margin: 8px;
             height: 240px - 16px;
             overflow: auto;
+            &.empty {
+                text-align: center;
+                .button {
+                    margin-top: 80px;
+                }
+            }
         }
         i {
             @include border-radius(5px);
@@ -274,10 +280,6 @@
                 border-color: #29bbeb;
                 cursor: default;
             }
-        }
-        p {
-            padding-top: 80px;
-            text-align: center;
         }
         .button {
             position: relative;
@@ -588,13 +590,12 @@
     z-index: 90;
     background: #fff;
     width: 180px;
-    height: 180px;
     margin: 65px 0 0 -63px;
     .in {
         position: relative;
         width: 140px;
         height: 140px;
-        margin: 20px 0 0 20px;
+        margin: 20px 0 20px 20px;
         overflow: hidden;
         background: #f1f1f1;
         -webkit-user-select: none;
