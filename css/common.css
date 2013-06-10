@@ -147,7 +147,7 @@ h3 {
 /* line 98, ../sass/common.scss */
 .top_content {
   position: fixed;
-  z-index: 90;
+  z-index: 50;
   width: 100%;
 }
 
@@ -1524,7 +1524,7 @@ h3 {
   overflow: auto;
   top: 0;
   left: 0;
-  z-index: 50;
+  z-index: 80;
 }
 /* line 877, ../sass/common.scss */
 .popup_holder.popup_error .popup {
@@ -1593,7 +1593,7 @@ h3 {
 .popup_top {
   position: relative;
   bottom: auto;
-  top: 70px;
+  top: 20px;
   margin-top: 0;
 }
 

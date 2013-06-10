@@ -105,7 +105,7 @@ $(document).ready(function() {
 
         $(window).resize(function(){
             w = win.height();
-            if (w >= p + 120){
+            if (w >= p + 20){
                 popup.addClass('popup_center').removeClass('popup_top');
                 popup.css('marginTop', (-1) * p /2);
             }
@@ -113,7 +113,7 @@ $(document).ready(function() {
                 popup.addClass('popup_top').css('marginTop', 0).removeClass('popup_center');
                 win.scroll(function(){
                 var wst = win.scrollTop();
-                    if (c < p){content.css('minHeight', p + 120);}
+                    if (c < p){content.css('minHeight', p + 20);}
                     if(wst + w >= p){ 
                         popup.removeClass('popup_top');
                     }
@@ -125,7 +125,7 @@ $(document).ready(function() {
             }
         });
 
-        if (w >= p + 120){
+        if (w >= p + 20){
             popup.addClass('popup_center').removeClass('popup_top');
             popup.css('marginTop', (-1) * p /2);
         }
@@ -133,7 +133,7 @@ $(document).ready(function() {
             popup.addClass('popup_top').css('marginTop', 0).removeClass('popup_center');
             win.scroll(function(){
             var wst = win.scrollTop();
-                if (c < p){content.css('minHeight', p  + 120);}
+                if (c < p){content.css('minHeight', p  + 20);}
                 if(wst + w >= p){ 
                     popup.removeClass('popup_top');
                 }
@@ -593,14 +593,6 @@ $(document).ready(function() {
         $('.pop-in-cover-dark').fadeIn('fast');
         $(this).parent().addClass('edit_hide');
         $('.img_edit').css({'top' : unit_pos.top, 'left': unit_pos.left}).fadeIn('fast');
-
-        /*
-        try {
-            target.find('img').draggable('destroy');
-        } catch (e) {
-            console.log('Tried to destroy draggable but there is no one.');
-        }
-        */
 
         //маленькая картинка
         var img        = $(this).parent().find('img');

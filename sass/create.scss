@@ -356,6 +356,16 @@
         position: absolute;
         background: transparent url('../img/mask-iphone5.png') 0 0 no-repeat;
     }
+    .camera {
+        display: block!important;
+        @include border-radius(20px);
+        width: 75px;
+        height: 36px;
+        left: 39px;
+        top: 19px;
+        background: #fff url('../img/blank-iphone5.png') -39px -19px no-repeat;
+        z-index: 50;
+    }
 }
 .blank-iphone4 {
     display: block;
@@ -417,6 +427,10 @@
         top: 142px;
         margin-left: - 290px/2;
     }
+    .camera {
+        position: absolute;
+        display: none;
+    }
 }
 
 .button.button_preview.active {
@@ -454,7 +468,6 @@
     overflow: hidden;
     &:hover,
     &.active {
-        overflow: visible;
         .empty:hover .add {
             display: block;
         }
@@ -490,16 +503,18 @@
     @include sized-sprite($icons, "edit-pencil");
     @include inline-block;
     position: absolute;
-    top: 5px;
-    right: 35px;
+    top: 50%;
+    left: 50%;
+    margin: -13px 0 0 -28px;
 }
 
 .delete {
     @include sized-sprite($icons, "edit-delete");
     @include inline-block;
     position: absolute;
-    top: 5px;
-    right: 4px;
+    top: 50%;
+    right: 50%;
+    margin: -13px -28px 0 0;
 }
 
 .move {
@@ -515,7 +530,7 @@
     @include sized-sprite($icons, "edit-plus");
     display: block;
     position: absolute;
-    left: 36px;
+    left: 46px;
     bottom: 0;
     margin-bottom: 5px;
 }
@@ -524,7 +539,7 @@
     @include sized-sprite($icons, "edit-minus");
     display: block;
     position: absolute;
-    left: 5px;
+    left: 15px;
     bottom: 0;
     margin-bottom: 5px;
 }
@@ -533,7 +548,7 @@
     @include sized-sprite($icons, "edit-ok");
     display: block;
     position: absolute;
-    right: 5px;
+    right: 15px;
     bottom: 0;
     margin-bottom: 5px;
 }
@@ -571,6 +586,9 @@
         .ok {
             display: block; 
         }
+        img {
+            cursor: move;
+        }
     }
     .edit_hide {
         .pencil,
@@ -601,6 +619,9 @@
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
+        img {
+            cursor: move;
+        }
     }
     .tail {
         position: absolute;
@@ -616,6 +637,21 @@
     i {
         cursor: pointer;
         z-index: 10;
+    }
+    &.flip {
+        .tail {
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            margin-left: -5px;
+            margin-bottom: -10px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #fff;
+            border-bottom: 0;
+        }
     }
 }
 
