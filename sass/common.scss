@@ -928,3 +928,50 @@ h3 {
 }
 
 .popup_error .popup {background: #fff;}
+
+.gotop {
+    display: none;
+}
+
+.gotop.active {
+    color: #000;
+    display: block;
+    @include opacity(0);
+    @include transition(opacity, 0.2s);
+    position: fixed;
+    font-size: 12px;
+    width: 100px;
+    height: 100%;
+    background: rgba(255,255,255,0.4);
+    top: 0;
+    left: 0;
+    z-index: 40;
+    &:hover {
+        @include opacity(100);
+    }
+    b {
+        @include inline-block;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 8px solid #000;
+        margin-right: 5px;
+    }
+    u {
+        @include inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    span {
+        @include border-radius(3px);
+        background: rgba(255,255,255,0.6);
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        display: block;
+        width: 80px;
+        left: 10px;
+        text-align: center;
+    }
+}

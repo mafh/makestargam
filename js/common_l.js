@@ -3,8 +3,7 @@ $(document).ready(function() {
 
 // function element exists
 	jQuery.fn.exists = function() {
-		return true; 
-        $(this).length;
+		return true; //$(this).length;
 	}
 
 //  topmenu devmenu
@@ -41,8 +40,8 @@ $(document).ready(function() {
         var n = $(this).parent().index()
         $(this).parent().siblings().removeClass('active');
         $(this).parent().addClass('active');
-        $(this).parent().parent().parent().find('.tab_content').hide();
-        $(this).parent().parent().parent().find('.tab_content.tt' + n).show();
+        $(this).parents().find('.tab_content').hide();
+        $(this).parents().find('.tab_content.tt' + n).show();
     })
 
     $(document).on('click', '.images_choose .button', function() {
@@ -78,12 +77,6 @@ $(document).ready(function() {
         return false;
     })
 
-    $(window).scroll(function(){
-        $('.top_login').slideUp(200);
-        $('.login_link').parent().removeClass('active');
-        console.log('atata');
-    });
-
 //  type_tabs
     $(document).on('click', '.type_tabs a', function() {
         $(this).parent().siblings().removeClass('active');
@@ -112,7 +105,7 @@ $(document).ready(function() {
 
         $(window).resize(function(){
             w = win.height();
-            if (w >= p + 20){
+            if (w >= p + 120){
                 popup.addClass('popup_center').removeClass('popup_top');
                 popup.css('marginTop', (-1) * p /2);
             }
@@ -120,7 +113,7 @@ $(document).ready(function() {
                 popup.addClass('popup_top').css('marginTop', 0).removeClass('popup_center');
                 win.scroll(function(){
                 var wst = win.scrollTop();
-                    if (c < p){content.css('minHeight', p + 20);}
+                    if (c < p){content.css('minHeight', p + 120);}
                     if(wst + w >= p){ 
                         popup.removeClass('popup_top');
                     }
@@ -132,7 +125,7 @@ $(document).ready(function() {
             }
         });
 
-        if (w >= p + 20){
+        if (w >= p + 120){
             popup.addClass('popup_center').removeClass('popup_top');
             popup.css('marginTop', (-1) * p /2);
         }
@@ -140,7 +133,7 @@ $(document).ready(function() {
             popup.addClass('popup_top').css('marginTop', 0).removeClass('popup_center');
             win.scroll(function(){
             var wst = win.scrollTop();
-                if (c < p){content.css('minHeight', p  + 20);}
+                if (c < p){content.css('minHeight', p  + 120);}
                 if(wst + w >= p){ 
                     popup.removeClass('popup_top');
                 }
@@ -179,11 +172,11 @@ $(document).ready(function() {
         return false;
     });
 
-    if ($('.popup_show').exists()){
-        $('.popup_show').fadeIn('fast');
-        $('.popup-wrap').fadeIn('fast');
-        initPopup();
-    }
+    //if ($('.popup_show').exists()){
+        //$('.popup_show').fadeIn('fast');
+        //$('.popup-wrap').fadeIn('fast');
+        //initPopup();
+    //}
 
 //  preview
     $(document).on('click', '.button_preview', function() {
@@ -210,46 +203,46 @@ $(document).ready(function() {
         $('.blank_block').show();
     }
 
-    $(document).on('click', '.gostep1', function() {
-        $('.step').hide();
-        $('.blank_block').hide();
+    //$(document).on('click', '.gostep1', function() {
+        //$('.step').hide();
+        //$('.blank_block').hide();
 
-        $('.step1').show();
-        initPopup();
-        return false;
-    });
+        //$('.step1').show();
+        //initPopup();
+        //return false;
+    //});
 
-    $(document).on('click', '.gostep2', function() {
-        $('.step').hide();
-        $('.grid__device').removeClass('preview');
-        $('.grid__device .layout').show();
-        $('#img_result').hide();
-        $('.step2').show();
-        $('.blank_block').fadeIn('fast').removeClass('finished');
-        initPopup();
-        return false;
-    });
+    //$(document).on('click', '.gostep2', function() {
+        //$('.step').hide();
+        //$('.grid__device').removeClass('preview');
+        //$('.grid__device .layout').show();
+        //$('#img_result').hide();
+        //$('.step2').show();
+        //$('.blank_block').fadeIn('fast').removeClass('finished');
+        //initPopup();
+        //return false;
+    //});
 
-    $(document).on('click', '.gostep3', function() {
-        formCreate();
-        $('.step').hide();
-        $('.grid__device').addClass('preview');
-        $('.grid__device .layout').hide();
-        $('#img_result').show();
-        $('.step3').show();
-        $('.blank_block').fadeIn('fast').removeClass('finished');
-        initPopup();
-        return false;
-    });
+    //$(document).on('click', '.gostep3', function() {
+        //formCreate();
+        //$('.step').hide();
+        //$('.grid__device').addClass('preview');
+        //$('.grid__device .layout').hide();
+        //$('#img_result').show();
+        //$('.step3').show();
+        //$('.blank_block').fadeIn('fast').removeClass('finished');
+        //initPopup();
+        //return false;
+    //});
 
-    $(document).on('click', '.gostep4', function() {
-        $('.step').hide();
+    //$(document).on('click', '.gostep4', function() {
+        //$('.step').hide();
 
-        $('.step4').show();
-        $('.blank_block').fadeIn('fast').addClass('finished');
-        initPopup();
-        return false;
-    });
+        //$('.step4').show();
+        //$('.blank_block').fadeIn('fast').addClass('finished');
+        //initPopup();
+        //return false;
+    //});
 
     if ($('.faq .q_list').exists()){
         var list = $('.q_list');
@@ -295,11 +288,7 @@ $(document).ready(function() {
             $('.top_content').removeClass('top_fixed');
             $('.page').css('padding-top', '58px');
         }
-        if ($(window).scrollTop() > 0) {
-            $('.gotop').addClass('active');
-        } else {
-            $('.gotop').removeClass('active');
-        }
+
     });
 
     function getItems() {
@@ -404,12 +393,12 @@ $(document).ready(function() {
                 var hidden = img.clone().css({'width':'auto','height':'auto'}).appendTo('body');
                 var orig_w = hidden.width();
                 var orig_h = hidden.height();
-                //console.log(orig_w, orig_h);
+                console.log(orig_w, orig_h);
                 hidden.remove();            
                 var src  = img.attr('src');
                 img_w    = img.width();
                 img_h    = img.height();
-                //console.log(orig_w, orig_h, img_w, img_h);
+                console.log(orig_w, orig_h, img_w, img_h);
                 var scale    = orig_w / img_w;
                 var pos      = img.position();
                 pos.left = -pos.left*scale;
@@ -435,15 +424,15 @@ $(document).ready(function() {
                 var w = Math.round(result_w);
                 var h = Math.round(result_h);
 
-                //console.log(num+ ', left:' +l+ ', top:' +t+ ', ' +w+', ' +h+', scale:' +scale);
+                console.log(num+ ', left:' +l+ ', top:' +t+ ', ' +w+', ' +h+', scale:' +scale);
                 
                 $('#step2').append('<input id=\"images_\" name=\"images[]\" class="result_img" type=\"hidden\" value=\"' + num + '\\' + src + '\\' + l + ',' + t + ',' + w + ',' + h + '\">')
             } else {
-                //console.log('null');
+                console.log('null');
                 $('#step2').append('<input id=\"images_\" name=\"images[]\" class="result_img" type=\"hidden\" value=\"' +num+ '\\null">')
             }
         });
-        //console.log('---------------------------------------------');
+        console.log('---------------------------------------------');
     }
 
     function formClear(){
@@ -520,10 +509,10 @@ $(document).ready(function() {
         var ph = $(this).parent().height();
 
         var img = $(this).parent().find('img');
-        var w   = img.width();
+        var w = img.width();
         var h = img.height();
         var r = w / h;
-        w = w+10;
+        w = w + 10;
         h = h + 10 * r;
 
         img.width(w).height(h);
@@ -556,11 +545,11 @@ $(document).ready(function() {
         var pw = $(this).parent().width();
         var ph = $(this).parent().height();
 
-        var img = $(this).parent().find('img');
-        var w   = img.width();
+        var img = $(this).parent().find('img');        
+        var w = img.width();
         var h = img.height();
         var r = w / h;
-        w = w-10;
+        w = w - 10;
         h = h - 10 * r;
         if (w < pw || h < ph) {
             return false;
@@ -591,88 +580,21 @@ $(document).ready(function() {
         formCreate();
     });
 
-//proceed button loading
-    $(document).on('click', '.create footer .button', function() {
-        $(this).find('span').css('visibility','hidden');
-        $(this).find('.loading').css('display','block');
-    });
-
 //open img_edit
     $(document).on('click', '.multiple .pencil', function() {
-        var unit = $(this).parent();
         var unit_pos = $(this).parent().offset();
         $('.pop-in-cover-dark').fadeIn('fast');
-        $(this).parent().addClass('edit_hide');
         $('.img_edit').css({'top' : unit_pos.top, 'left': unit_pos.left}).fadeIn('fast');
-
-        //маленькая картинка
-        var img        = $(this).parent().find('img');
-        var img_src    = img.attr('src');
-        img_w    = img.width();
-        img_h    = img.height();
-
-        var unit_w = unit.width();
-        var unit_h = unit.height();
-        var box_ratio  = unit_h/unit_w;
-
-        
+        $(this).parent().addClass('edit_hide');
+        var orig   = $(this).parent().find('img');
+        var scr    = orig.attr('src');
         var target = $('.img_edit .in');
-        var target_p = target.position();
-        var target_w = target.width();
-        var target_h = target.height(target_w*box_ratio);
-
-        var box_scale = target_w / unit_w;
-
-        var result_w = img_w*box_scale;
-        var result_h = img_h*box_scale;
-
-        //console.log(box_scale);
-        
-
-        $img = $('<img src=\"'+ img_src +'\">').width( result_w ).height( result_h );
-        target.append($img);
-
-
-        var x1 = (target_p.left + target_w) - img_w;
-        var y1 = (target_p.top  + target_h) - img_h;
-        var x2 = target_p.left;
-        var y2 = target_p.top;
-
-        $img.css({left: 0, top: 0});
-
-        $img.draggable({
-            containment: [x1, y1, x2, y2],
-            disabled: false
-        });
+        target.append('<img src=\"'+ scr +'\">');
+        $('.img_edit img').draggable();
     });
 
-// img_edit save
+//close img_edit
     $(document).on('click', '.img_edit .ok', function() {
-        var editor = $(this).parent();
-        var target = $('.layout .edit_hide');
-
-        var editor_w = editor.width();
-        var target_w = target.width();
-
-        var box_scale = target_w / editor_w;
-        console.log(box_scale);
-
-        var img = $(this).parent().find('img');
-        img_w    = img.width();
-        img_h    = img.height();
-        var result_w = img_w*box_scale;
-        var result_h = img_h*box_scale;
-
-        var t_img = target.find('img');
-
-        t_img.width( result_w );
-        t_img.height( result_h );
-
-        var pos  = t_img.position();
-        pos.left = -pos.left*box_scale;
-        pos.top  = -pos.top*box_scale;
-        console.log( pos.left , pos.top );
-
         imgUploadClose();
         $('.add').removeClass('active');
         $('.unit').removeClass('edit_mode_on');
@@ -716,27 +638,6 @@ $(document).ready(function() {
         var large    = $(this).attr('data-filter');
         var target   = $('#img_result');
         target.html('<img src=\"'+ large +'\">');
-    })
-
-
-    $(document).on('click', '.button_autofill', function() {
-        var list = $('.images_choose .content i').toArray();
-        
-
-        $('.layout .unit').each(function(){
-            var w = $(this).width();
-            var h = $(this).height();
-            var elemlength = list.length;
-            var randomnum = Math.floor(Math.random()*elemlength);
-            var randomitem = list[randomnum];
-            var url = $(randomitem).attr('data-large');
-            if (w > h) {
-                $img = $('<img src=\"'+ url +'\">').width( w ).height('auto');
-            } else {
-                $img = $('<img src=\"'+ url +'\">').height( h ).width('auto');
-            }
-            $(this).append($img).removeClass('empty');
-        });
     })
 
 });

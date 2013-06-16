@@ -1606,3 +1606,76 @@ h3 {
 .popup_error .popup {
   background: #fff;
 }
+
+/* line 932, ../sass/common.scss */
+.gotop {
+  display: none;
+}
+
+/* line 936, ../sass/common.scss */
+.gotop.active {
+  color: #000;
+  display: block;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  position: fixed;
+  font-size: 12px;
+  width: 100px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  top: 0;
+  left: 0;
+  z-index: 40;
+}
+/* line 949, ../sass/common.scss */
+.gotop.active:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10000);
+  opacity: 100;
+}
+/* line 952, ../sass/common.scss */
+.gotop.active b {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid #000;
+  margin-right: 5px;
+}
+/* line 961, ../sass/common.scss */
+.gotop.active u {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 966, ../sass/common.scss */
+.gotop.active span {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  display: block;
+  width: 80px;
+  left: 10px;
+  text-align: center;
+}
