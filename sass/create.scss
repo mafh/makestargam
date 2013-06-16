@@ -288,6 +288,7 @@
         #img_upload {
             position: absolute;
             right: 0;
+            top: 0;
             @include opacity(0);
         }
     }
