@@ -179,11 +179,13 @@ $(document).ready(function() {
         return false;
     });
 
+    /*
     if ($('.popup_show').exists()){
         $('.popup_show').fadeIn('fast');
         $('.popup-wrap').fadeIn('fast');
         initPopup();
     }
+    */
 
 //  preview
     $(document).on('click', '.button_preview', function() {
