@@ -81,7 +81,6 @@ $(document).ready(function() {
     $(window).scroll(function(){
         $('.top_login').slideUp(200);
         $('.login_link').parent().removeClass('active');
-        console.log('atata');
     });
 
 //  type_tabs
@@ -111,6 +110,9 @@ $(document).ready(function() {
         content.css('overflow','hidden');
 
         $(window).resize(function(){
+
+            imgUploadClose();
+
             w = win.height();
             if (w >= p + 20){
                 popup.addClass('popup_center').removeClass('popup_top');
@@ -179,6 +181,7 @@ $(document).ready(function() {
         return false;
     });
 
+//mafh
     /*
     if ($('.popup_show').exists()){
         $('.popup_show').fadeIn('fast');
@@ -392,6 +395,10 @@ $(document).ready(function() {
         $('.pop-in-cover-dark').fadeOut('fast');
         $('.img_edit').hide();
         $('.img_upload').hide();
+        $('.add').removeClass('active');
+        $('.unit').removeClass('edit_mode_on');
+        $('.unit').removeClass('edit_hide');
+        $('.img_edit .in img').remove();
     }
 
     function formCreate(){
@@ -457,9 +464,17 @@ $(document).ready(function() {
         var pos = $(this).offset();
         $(this).addClass('active');
         $('.pop-in-cover-dark').fadeIn('fast');
-        $('.img_upload').css({'top' : pos.top, 'left': pos.left}).fadeIn('fast');
         $('.unit').removeClass('edit_mode_on');
         $('.unit').removeClass('edit_hide');
+
+        var iu = $('.img_upload').height();
+        var bh = $(window).height();
+
+        if (bh > iu + pos.top + 70 + 20) {
+            $('.img_upload').css({'top' : pos.top, 'left': pos.left}).fadeIn('fast').addClass('pos_top').removeClass('pos_bot');
+        } else {
+            $('.img_upload').css({'top' : pos.top - iu, 'left': pos.left}).fadeIn('fast').addClass('pos_bot').removeClass('pos_top');
+        }
         
     });
 
@@ -606,6 +621,15 @@ $(document).ready(function() {
         $('.pop-in-cover-dark').fadeIn('fast');
         $(this).parent().addClass('edit_hide');
         $('.img_edit').css({'top' : unit_pos.top, 'left': unit_pos.left}).fadeIn('fast');
+
+        var iu = $('.img_edit').height();
+        var bh = $(window).height();
+
+        if (bh > iu + unit_pos.top + 65 + 20) {
+            $('.img_edit').css({'top' : unit_pos.top, 'left': unit_pos.left}).fadeIn('fast').addClass('pos_top').removeClass('pos_bot');
+        } else {
+            $('.img_edit').css({'top' : unit_pos.top - iu, 'left': unit_pos.left}).fadeIn('fast').addClass('pos_bot').removeClass('pos_top');
+        }
 
         //маленькая картинка
         var img        = $(this).parent().find('img');

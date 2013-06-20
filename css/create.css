@@ -724,7 +724,7 @@
   display: block;
   background: transparent url("../img/blank-ipad_mini.png") 0 0 no-repeat;
   width: 318px;
-  height: 453px;
+  height: 465px;
 }
 /* line 394, ../sass/create.scss */
 .blank-ipad_mini.black {
@@ -736,7 +736,7 @@
   display: block;
   background: transparent url("../img/blank-galaxy.png") 0 0 no-repeat;
   width: 298px;
-  height: 571px;
+  height: 573px;
 }
 /* line 403, ../sass/create.scss */
 .blank-galaxy.black {
@@ -1036,54 +1036,72 @@
 .img_edit .tail {
   position: absolute;
   left: 50%;
-  top: -10px;
   margin-left: -5px;
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid #fff;
 }
-/* line 638, ../sass/create.scss */
+/* line 636, ../sass/create.scss */
 .img_edit i {
   cursor: pointer;
   z-index: 10;
 }
-/* line 643, ../sass/create.scss */
-.img_edit.flip .tail {
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  margin-left: -5px;
-  margin-bottom: -10px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
+/* line 640, ../sass/create.scss */
+.img_edit.pos_top {
+  margin-top: 65px;
+}
+/* line 642, ../sass/create.scss */
+.img_edit.pos_top .tail {
+  top: -10px;
+  border-bottom: 10px solid #fff;
+}
+/* line 647, ../sass/create.scss */
+.img_edit.pos_bot {
+  margin-top: -15px;
+}
+/* line 649, ../sass/create.scss */
+.img_edit.pos_bot .tail {
+  bottom: -10px;
   border-top: 10px solid #fff;
-  border-bottom: 0;
 }
 
-/* line 659, ../sass/create.scss */
+/* line 656, ../sass/create.scss */
 .img_upload {
   position: absolute;
   z-index: 100;
   width: 420px;
-  margin: 70px 0 0 -190px;
+  margin: 0 0 0 -190px;
 }
-/* line 664, ../sass/create.scss */
+/* line 661, ../sass/create.scss */
 .img_upload .tail {
   position: absolute;
   left: 50%;
-  top: -10px;
   margin-left: -5px;
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid #fff;
 }
-/* line 675, ../sass/create.scss */
+/* line 670, ../sass/create.scss */
 .img_upload .images_choose {
   margin: 0;
+}
+/* line 673, ../sass/create.scss */
+.img_upload.pos_top {
+  margin-top: 70px;
+}
+/* line 675, ../sass/create.scss */
+.img_upload.pos_top .tail {
+  top: -10px;
+  border-bottom: 10px solid #fff;
+}
+/* line 680, ../sass/create.scss */
+.img_upload.pos_bot {
+  margin-top: -20px;
+}
+/* line 682, ../sass/create.scss */
+.img_upload.pos_bot .tail {
+  bottom: -10px;
+  border-top: 10px solid #fff;
 }
