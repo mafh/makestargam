@@ -12,6 +12,19 @@
     <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
     <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/slides.min.jquery.js"></script>
+    <script>
+        $(function(){
+            $('.slider.classic').slides({
+                preload: false,
+                //play:5000,
+                //start: 1,
+                next: 'more',
+                generateNextPrev: false,
+                generatePagination: false
+            });
+        });
+    </script>
 </head>
 <body>
 
@@ -67,9 +80,9 @@
             <div class="promo_hand"></div>
             <div class="work_with">
                 <ul>
-                    <li><i class="top-fb"></i></li>
-                    <li><i class="top-vk"></i></li>
-                    <li><i class="top-insta"></i></li>
+                    <li><a href="#"><i class="top-fb"></i></a></li>
+                    <li><a href="#"><i class="top-vk"></i></a></li>
+                    <li><a href="#"><i class="top-insta"></i></a></li>
                 </ul>
                 <p>Работает с Instagram, Facebook, ВКонтакте и загруженными фото</p>
             </div>
@@ -83,14 +96,13 @@
         </div>
     </section>
 
-    <section class="slider bg_black">
+    <section class="slider classic bg_black">
         <aside>
             <p><b>Готовые дизайны</b></p>
             <p>Для вас мы отбираем лучшие работы современных художников и фотографов</p>
         </aside>
-        <a href="#" class="more"><span>Еще</span><i></i></a>
-        <div class="wrap">
-            <div class="images_container">
+        <div class="slides_container">
+            <div class="slide">
                 <div class="case_item">
                     <div class="case">
                         <div class="case-img"><img src="img/case1.jpg" alt=""></div>
@@ -141,6 +153,40 @@
                         <div class="case-shadow"></div>
                     </div>
                 </div>
+            </div>
+            <div class="slide">
+                <div class="case_item">
+                    <div class="case">
+                        <div class="case-img"><img src="img/case1.jpg" alt=""></div>
+                        <div class="case-shadow"></div>
+                    </div>
+                    <div class="ribbon">
+                        <div class="in">
+                            <span>В. Светличный</span>
+                            <h3>Гомункул</h3>
+                        </div>
+                    </div>
+                    <p><span>Гомункул</span><br>1200 руб.</p>
+                    <p>&mdash;</p>
+                    <p>В. Светличный</p>
+                    <a href="#" class="button blue">1200 руб.</a>
+                </div>
+                <div class="case_item">
+                    <div class="case">
+                        <div class="case-img"><img src="img/case2.jpg" alt=""></div>
+                        <div class="case-shadow"></div>
+                    </div>
+                    <div class="ribbon">
+                        <div class="in">
+                            <span>В. Светличный</span>
+                            <h3>Having rest in Italy</h3>
+                        </div>
+                    </div>
+                    <p><span>Having rest in Italy</span><br>1200 руб.</p>
+                    <p>&mdash;</p>
+                    <p>Merdanchik</p>
+                    <a href="#" class="button blue">1200 руб.</a>
+                </div>
                 <div class="case_item">
                     <div class="case">
                         <div class="case-img"><img src="img/case3.jpg" alt=""></div>
@@ -159,92 +205,9 @@
                         <div class="case-shadow"></div>
                     </div>
                 </div>
-                <div class="case_item">
-                    <div class="case">
-                        <div class="case-img"><img src="img/case5.jpg" alt=""></div>
-                        <div class="case-shadow"></div>
-                    </div>
-                </div>
-                <div class="case_item">
-                    <div class="case">
-                        <div class="case-img"><img src="img/case5.jpg" alt=""></div>
-                        <div class="case-shadow"></div>
-                    </div>
-                </div>
-                <div class="case_item">
-                    <div class="case">
-                        <div class="case-img"><img src="img/case5.jpg" alt=""></div>
-                        <div class="case-shadow"></div>
-                    </div>
-                </div>
-                <div class="case_item">
-                    <div class="case">
-                        <div class="case-img"><img src="img/case5.jpg" alt=""></div>
-                        <div class="case-shadow"></div>
-                    </div>
-                </div>
-                <div class="case_item">
-                    <div class="case">
-                        <div class="case-img"><img src="img/case5.jpg" alt=""></div>
-                        <div class="case-shadow"></div>
-                    </div>
-                </div>
-                <div class="case_item">
-                    <div class="case">
-                        <div class="case-img"><img src="img/case5.jpg" alt=""></div>
-                        <div class="case-shadow"></div>
-                    </div>
-                </div>
-                <div class="case_item">
-                    <div class="case">
-                        <div class="case-img"><img src="img/case5.jpg" alt=""></div>
-                        <div class="case-shadow"></div>
-                    </div>
-                </div>
-                <div class="case_item">
-                    <div class="case">
-                        <div class="case-img"><img src="img/case5.jpg" alt=""></div>
-                        <div class="case-shadow"></div>
-                    </div>
-                </div>
-                <div class="case_item">
-                    <div class="case">
-                        <div class="case-img"><img src="img/case5.jpg" alt=""></div>
-                        <div class="case-shadow"></div>
-                    </div>
-                </div>
-                <div class="case_item">
-                    <div class="case">
-                        <div class="case-img"><img src="img/case5.jpg" alt=""></div>
-                        <div class="case-shadow"></div>
-                    </div>
-                </div>
-                <div class="case_item">
-                    <div class="case">
-                        <div class="case-img"><img src="img/case5.jpg" alt=""></div>
-                        <div class="case-shadow"></div>
-                    </div>
-                </div>
-                <div class="case_item">
-                    <div class="case">
-                        <div class="case-img"><img src="img/case5.jpg" alt=""></div>
-                        <div class="case-shadow"></div>
-                    </div>
-                </div>
-                <div class="case_item">
-                    <div class="case">
-                        <div class="case-img"><img src="img/case5.jpg" alt=""></div>
-                        <div class="case-shadow"></div>
-                    </div>
-                </div>
-                <div class="case_item">
-                    <div class="case">
-                        <div class="case-img"><img src="img/case5.jpg" alt=""></div>
-                        <div class="case-shadow"></div>
-                    </div>
-                </div>
             </div>
         </div>
+        <a href="#" class="more"><span>Еще</span><i></i></a>
     </section>
 
     <section class="promo promo_med">

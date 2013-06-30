@@ -335,7 +335,6 @@ h3 {
             @include inline-block;
             vertical-align: top;
         }
-        
     }
     .prev {
         @include border-radius(0 3px 3px 0);
@@ -384,7 +383,16 @@ h3 {
     &.bg_transparent {
         background: transparent;
     }
+    &.classic {
+        position: relative;
+        .slides_container {
+            width: 1100px;
+            height: 380px;
+            margin: 0 auto;
+        }
+    }
 }
+
 
 
 .technology {
@@ -730,7 +738,7 @@ h3 {
     font-family: "ProximaNova-Semibold", Arial, sans-serif;
     color: #fff;
     height: 36px;
-    line-height: 34px;
+    line-height: 36px;
     padding: 0 20px;
     position: relative;
     z-index: 10;
