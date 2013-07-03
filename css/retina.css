@@ -1,0 +1,295 @@
+@charset "IBM866";
+
+.narrativebig {
+  background: url(../img/retina/narrativebig.png);
+  background-size: cover;
+  width: 68px;
+  height: 56px;
+}
+
+.ico_logo {
+  background: url(../img/retina/ico_logo.png);
+  background-size: cover;
+  width: 49px;
+  height: 49px;
+}
+
+.ico_logo-dark {
+  background: url(../img/retina/ico_logo-dark.png);
+  background-size: cover;
+  width: 49px;
+  height: 49px;
+}
+
+.head_logo {
+    background: url(../img/retina/head_logo.png);
+    background-size: cover;
+    width: 184px;
+    height: 26px;
+}
+
+.footer_logo {
+    background: url(../img/retina/footer_logo.png);
+    background-size: cover;
+    width: 174px;
+    height: 82px;
+}
+
+.nav .s_arrow {
+    background: url(../img/retina/select-arrow.png);
+    background-size: cover;
+    width: 12px;
+    height: 12px;
+}
+
+.nav .active .s_arrow  {
+    background: url(../img/retina/select-arrow-active.png);
+    background-size: cover;
+    width: 12px;
+    height: 12px;
+}
+
+.nav .ico-cart {
+    background: url(../img/retina/ico-cart.png);
+    background-size: cover;
+    width: 15px;
+    height: 12px;
+}
+
+.top-fb {
+    background: url(../img/retina/top-fb.png);
+    background-size: cover;
+    width: 18px;
+    height: 18px;
+}
+
+.top-vk {
+    background: url(../img/retina/top-vk.png);
+    background-size: cover;
+    width: 18px;
+    height: 18px;
+}
+
+.top-insta {
+    background: url(../img/retina/top-insta.png);
+    background-size: cover;
+    width: 18px;
+    height: 18px;
+}
+
+.promo_top .promo_hand {
+    background: url(../img/retina/promo_hand.png);
+    background-size: cover;
+    width: 583px;
+    height: 547px;
+}
+
+.promo_med {
+    background: url(../img/retina/promobg2.jpg);
+    background-size: cover;
+}
+
+.ico.ico-headphones {
+    background-image: url(../img/retina/ico-headphones.png);
+    background-size: cover;
+}
+
+.ico.ico-foto {
+    background-image: url(../img/retina/ico-foto.png);
+    background-size: cover;
+}
+
+.ico.ico-iphone {
+    background-image: url(../img/retina/ico-iphone.png);
+    background-size: cover;
+}
+
+.ico.ico-ergo {
+    background-image: url(../img/retina/ico-ergo.png);
+    background-size: cover;
+}
+
+.ico.ico-brush {
+    background-image: url(../img/retina/ico-brush.png);
+    background-size: cover;
+}
+
+.dim-thumb_up {
+    background: url(../img/retina/dim-thumb_up.png);
+    background-size: cover;
+    width: 23px;
+    height: 24px;
+}
+
+.dim-card {
+    background: url(../img/retina/dim-card.png);
+    background-size: cover;
+    width: 26px;
+    height: 18px;
+}
+
+.dim-truck {
+    background: url(../img/retina/dim-truck.png);
+    background-size: cover;
+    width: 31px;
+    height: 22px;
+}
+
+.dim-expand {
+    background: url(../img/retina/dim-expand.png);
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+.dim-warranty {
+    background: url(../img/retina/dim-warranty.png);
+    background-size: cover;
+    width: 32px;
+    height: 30px;
+}
+
+.dim-payback {
+    background: url(../img/retina/dim-payback.png);
+    background-size: cover;
+    width: 30px;
+    height: 26px;
+}
+
+.dev-iphone5 {
+    background: url(../img/retina/dev-iphone5.png);
+    background-size: cover;
+    width: 44px;
+    height: 55px;
+}
+
+.dev-iphone4 {
+    background: url(../img/retina/dev-iphone4.png);
+    background-size: cover;
+    width: 44px;
+    height: 55px;
+}
+
+.dev-ipad_mini {
+    background: url(../img/retina/dev-ipad_mini.png);
+    background-size: cover;
+    width: 44px;
+    height: 55px;
+}
+
+.dev-ipad {
+    background: url(../img/retina/dev-ipad.png);
+    background-size: cover;
+    width: 44px;
+    height: 55px;
+}
+
+.dev-galaxy {
+    background: url(../img/retina/dev-galaxy.png);
+    background-size: cover;
+    width: 44px;
+    height: 55px;
+}
+
+.active .dev-iphone5 {
+    background: url(../img/retina/dev-iphone5-white.png);
+    background-size: cover;
+    width: 44px;
+    height: 55px;
+}
+
+.active .dev-iphone4 {
+    background: url(../img/retina/dev-iphone4-white.png);
+    background-size: cover;
+    width: 44px;
+    height: 55px;
+}
+
+.active .dev-ipad_mini {
+    background: url(../img/retina/dev-ipad_mini-white.png);
+    background-size: cover;
+    width: 44px;
+    height: 55px;
+}
+
+.active .dev-ipad {
+    background: url(../img/retina/dev-ipad-white.png);
+    background-size: cover;
+    width: 44px;
+    height: 55px;
+}
+
+.active .dev-galaxy {
+    background: url(../img/retina/dev-galaxy-white.png);
+    background-size: cover;
+    width: 44px;
+    height: 55px;
+}
+
+.technology .phone_camera {
+    background: url(../img/retina/phone_camera.png);
+    background-size: cover;
+    width: 206px;
+    height: 206px;
+}
+
+.technology .phone_jack {
+    background: url(../img/retina/phone_jack.png);
+    background-size: cover;
+    width: 206px;
+    height: 206px;
+}
+
+.technology .phone_top {
+    background: url(../img/retina/phone_top.png);
+    background-size: cover;
+    width: 271px;
+    height: 10px;
+}
+
+.technology {
+    background-image: url(../img/retina/tech-phone-bg.jpg);
+    background-size: 1400px 683px;
+}
+
+.slider .more i,
+.slider .next i {
+    background: url(../img/retina/slider-next-white.png);
+    background-size: cover;
+    width: 8px;
+    height: 13px;
+}
+
+.slider .prev i {
+    background: url(../img/retina/slider-prev-white.png);
+    background-size: cover;
+    width: 8px;
+    height: 13px;
+}
+
+.case .case-shadow {
+    background: url(../img/retina/case-shadow.png);
+    background-size: cover;
+    width: 136px;
+    height: 269px;
+}
+
+.js-sel__head .js-sel_arrow {
+    background: url(../img/retina/js-select.png);
+    background-size: cover;
+    width: 36px;
+    height: 36px;
+}
+
+.js-sel_tiny .js-sel_arrow {
+    background: url(../img/retina/js-select.png);
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+}
+
+.faq nav .q_list a.active,
+.faq .faq-nav .q_list a.active {
+    background-image: url(../img/retina/slider-next-white.png);
+    background-size: 8px 13px;
+}
