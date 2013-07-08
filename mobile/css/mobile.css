@@ -1,0 +1,1210 @@
+@import url(http://fonts.googleapis.com/css?family=Arimo);
+/* TRANSITION */
+/* line 6, ../sass/mobile.scss */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+}
+
+/* line 8, ../sass/mobile.scss */
+input:focus, textarea:focus {
+  outline: none;
+}
+
+/* line 10, ../sass/mobile.scss */
+body {
+  font-family: "ProximaNova-Regular", Arial, sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  min-width: 320px;
+  line-height: 1.2;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*resets*/
+/* line 22, ../sass/mobile.scss */
+a img, fieldset {
+  border: none;
+}
+
+/* line 25, ../sass/mobile.scss */
+a {
+  color: #888;
+  text-decoration: none;
+}
+
+/* line 30, ../sass/mobile.scss */
+h1 {
+  family: "ProximaNova-Regular", Arial, sans-serif;
+  font-weight: 200;
+  color: #000;
+  font-size: 30px;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+/* line 40, ../sass/mobile.scss */
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* line 41, ../sass/mobile.scss */
+input[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* line 42, ../sass/mobile.scss */
+header, footer, article, nav, section {
+  display: block;
+}
+
+/* line 43, ../sass/mobile.scss */
+input[disabled="disabled"] {
+  cursor: default;
+}
+
+/* line 45, ../sass/mobile.scss */
+.wrap {
+  max-width: 480px;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* line 52, ../sass/mobile.scss */
+.goback {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  padding: 0 10px 0 4px;
+  height: 32px;
+  line-height: 32px;
+  color: #888;
+}
+/* line 58, ../sass/mobile.scss */
+.goback i {
+  background: url('../img/common-s5c211afbd4.png') -29px 0 no-repeat;
+  width: 21px;
+  height: 20px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  margin-top: 6px;
+  margin-right: 5px;
+}
+/* line 65, ../sass/mobile.scss */
+.goback.done {
+  color: #29bbeb;
+}
+/* line 67, ../sass/mobile.scss */
+.goback.done i {
+  background: url('../img/common-s5c211afbd4.png') 0 -20px no-repeat;
+  width: 21px;
+  height: 20px;
+}
+
+/* line 73, ../sass/mobile.scss */
+header {
+  -webkit-box-sizing: padding-box;
+  -moz-box-sizing: padding-box;
+  box-sizing: padding-box;
+  background: #e6e6e6;
+  height: 44px;
+  position: relative;
+  cursor: default;
+  padding: 4px 5px 0;
+}
+/* line 36, ../sass/_base.scss */
+header:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 81, ../sass/mobile.scss */
+header .goback {
+  position: absolute;
+  top: 7px;
+  left: 5px;
+}
+/* line 86, ../sass/mobile.scss */
+header .button {
+  float: right;
+}
+/* line 89, ../sass/mobile.scss */
+header .button_label {
+  float: right;
+}
+
+/* line 95, ../sass/mobile.scss */
+.button {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  font-family: "ProximaNova-Semibold", Arial, sans-serif;
+  color: #fff;
+  height: 36px;
+  line-height: 34px;
+  padding: 0 10px;
+  position: relative;
+  z-index: 10;
+}
+/* line 106, ../sass/mobile.scss */
+.button.border {
+  border: 1px solid #8c8c8c;
+}
+/* line 109, ../sass/mobile.scss */
+.button.blue {
+  -webkit-box-shadow: inset 0 -2px 0 #239fc8;
+  -moz-box-shadow: inset 0 -2px 0 #239fc8;
+  box-shadow: inset 0 -2px 0 #239fc8;
+  border-color: transparent;
+  background: #29bbeb;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+/* line 115, ../sass/mobile.scss */
+.button.darkblue {
+  -webkit-box-shadow: inset 0 -2px 0 #1990b7;
+  -moz-box-shadow: inset 0 -2px 0 #1990b7;
+  box-shadow: inset 0 -2px 0 #1990b7;
+  border-color: transparent;
+  background: #1da9d7;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+/* line 121, ../sass/mobile.scss */
+.button.grey {
+  -webkit-box-shadow: inset 0 -2px 0 #9a9a9a;
+  -moz-box-shadow: inset 0 -2px 0 #9a9a9a;
+  box-shadow: inset 0 -2px 0 #9a9a9a;
+  border-color: transparent;
+  background: #b5b5b5;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+/* line 126, ../sass/mobile.scss */
+.button.grey.active {
+  -webkit-box-shadow: inset 0 2px 0 #239fc8;
+  -moz-box-shadow: inset 0 2px 0 #239fc8;
+  box-shadow: inset 0 2px 0 #239fc8;
+  background: #29bbeb;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+/* line 132, ../sass/mobile.scss */
+.button.tiny {
+  height: 32px;
+  line-height: 30px;
+}
+/* line 136, ../sass/mobile.scss */
+.button.left {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+  margin-right: 0!important;
+}
+/* line 140, ../sass/mobile.scss */
+.button.right {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  margin-left: 0!important;
+}
+
+/* line 146, ../sass/mobile.scss */
+.button_label {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background: #f1f1f1;
+  color: #6a6a6a;
+  height: 36px;
+  line-height: 34px;
+  padding: 0 15px 0 18px;
+  margin-left: -3px;
+  white-space: nowrap;
+  text-shadow: none;
+}
+/* line 157, ../sass/mobile.scss */
+.button_label.absolute {
+  position: absolute;
+}
+/* line 160, ../sass/mobile.scss */
+.button_label.white {
+  background: #fff;
+}
+
+/* line 165, ../sass/mobile.scss */
+.dev_menu {
+  background: #f1f1f1;
+}
+/* line 167, ../sass/mobile.scss */
+.dev_menu nav {
+  display: block;
+  text-align: center;
+}
+/* line 36, ../sass/_base.scss */
+.dev_menu nav:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 171, ../sass/mobile.scss */
+.dev_menu nav .in {
+  width: 270px;
+  margin: 0 auto;
+}
+/* line 175, ../sass/mobile.scss */
+.dev_menu nav .tab {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  height: 120px;
+  width: 90px;
+  text-align: center;
+  font-size: 12px;
+  color: #9f9f9f;
+  cursor: pointer;
+}
+/* line 184, ../sass/mobile.scss */
+.dev_menu nav .tab .inner {
+  height: 120px;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  margin-left: -1px;
+}
+/* line 189, ../sass/mobile.scss */
+.dev_menu nav .tab:first-child .inner {
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+}
+/* line 192, ../sass/mobile.scss */
+.dev_menu nav .tab.active {
+  background: #29bbeb;
+  border-color: #239fc8;
+  border-right: 0;
+  color: #fff;
+  cursor: default;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+/* line 199, ../sass/mobile.scss */
+.dev_menu nav .tab.active .inner {
+  border-right: 0;
+}
+/* line 201, ../sass/mobile.scss */
+.dev_menu nav .tab i {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  height: 55px;
+  width: 44px;
+  margin: 16px 0 13px;
+}
+/* line 208, ../sass/mobile.scss */
+.dev_menu nav:nth-child(even) {
+  background: #e9e9e9;
+}
+/* line 215, ../sass/mobile.scss */
+.dev_menu nav.grids .tab {
+  height: 110px;
+}
+/* line 217, ../sass/mobile.scss */
+.dev_menu nav.grids .tab .inner {
+  height: 100%;
+}
+/* line 218, ../sass/mobile.scss */
+.dev_menu nav.grids .tab i {
+  height: 44px;
+  width: 26px;
+  margin: 33px 0 0;
+}
+/* line 223, ../sass/mobile.scss */
+.dev_menu nav.grids .tab.active .inner {
+  background: #67cdef;
+}
+
+/* line 229, ../sass/mobile.scss */
+.color_choose {
+  width: 96px;
+  margin: 0 auto;
+  list-style: none;
+}
+/* line 36, ../sass/_base.scss */
+.color_choose:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 234, ../sass/mobile.scss */
+.color_choose li {
+  float: left;
+  background: #b5b5b5;
+  padding: 0 8px;
+}
+/* line 238, ../sass/mobile.scss */
+.color_choose li.active {
+  background: #29bbeb;
+}
+/* line 242, ../sass/mobile.scss */
+.color_choose a {
+  display: block;
+  margin: 4px 3px 2px;
+}
+
+/* line 248, ../sass/mobile.scss */
+.view_options {
+  padding: 5px;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+/* line 252, ../sass/mobile.scss */
+.view_options .button.button_preview {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 0 5px;
+}
+/* line 258, ../sass/mobile.scss */
+.view_options .button.button_shuffle {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 0 5px;
+}
+
+/* line 266, ../sass/mobile.scss */
+.blank_block {
+  -moz-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: 50;
+}
+/* line 36, ../sass/_base.scss */
+.blank_block:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 275, ../sass/mobile.scss */
+.blank_block.blank-iphone5, .blank_block.blank-iphone4 {
+  left: 50%;
+  margin-left: -147px;
+}
+/* line 279, ../sass/mobile.scss */
+.blank_block.blank-ipad {
+  left: 10px;
+}
+/* line 282, ../sass/mobile.scss */
+.blank_block.blank-galaxy {
+  left: 20px;
+}
+
+/* line 287, ../sass/mobile.scss */
+.blank-iphone5 {
+  display: block;
+  background: transparent url("../img/blank-iphone5.png") 0 0 no-repeat;
+  width: 290px;
+  height: 579px;
+  position: relative;
+}
+/* line 293, ../sass/mobile.scss */
+.blank-iphone5.black {
+  background: transparent url("../img/blank-iphone5-black.png") 0 0 no-repeat;
+}
+/* line 296, ../sass/mobile.scss */
+.blank-iphone5 .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: transparent url("../img/mask-iphone5.png") 0 0 no-repeat;
+}
+
+/* line 303, ../sass/mobile.scss */
+.blank-iphone4 {
+  display: block;
+  background: transparent url("../img/blank-iphone4.png") 0 0 no-repeat;
+  width: 290px;
+  height: 540px;
+}
+/* line 308, ../sass/mobile.scss */
+.blank-iphone4.black {
+  background: transparent url("../img/blank-iphone4-black.png") 0 0 no-repeat;
+}
+
+/* line 312, ../sass/mobile.scss */
+.blank-ipad {
+  display: block;
+  background: transparent url("../img/blank-ipad.png") 0 0 no-repeat;
+  width: 349px;
+  height: 505px;
+}
+/* line 317, ../sass/mobile.scss */
+.blank-ipad.black {
+  background: transparent url("../img/blank-ipad-black.png") 0 0 no-repeat;
+}
+
+/* line 321, ../sass/mobile.scss */
+.blank-ipad_mini {
+  display: block;
+  background: transparent url("../img/blank-ipad_mini.png") 0 0 no-repeat;
+  width: 318px;
+  height: 453px;
+}
+/* line 326, ../sass/mobile.scss */
+.blank-ipad_mini.black {
+  background: transparent url("../img/blank-ipad_mini-black.png") 0 0 no-repeat;
+}
+
+/* line 330, ../sass/mobile.scss */
+.blank-galaxy {
+  display: block;
+  background: transparent url("../img/blank-galaxy.png") 0 0 no-repeat;
+  width: 298px;
+  height: 571px;
+}
+/* line 335, ../sass/mobile.scss */
+.blank-galaxy.black {
+  background: transparent url("../img/blank-galaxy-black.png") 0 0 no-repeat;
+}
+
+/* line 340, ../sass/mobile.scss */
+.logo {
+  background: url('../img/icons-s31859cc009.png') 0 0 no-repeat;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -16px;
+}
+
+/* line 348, ../sass/mobile.scss */
+.dev-iphone5 {
+  background: url('../img/common-s5c211afbd4.png') 0 -721px no-repeat;
+  width: 44px;
+  height: 55px;
+}
+
+/* line 349, ../sass/mobile.scss */
+.dev-iphone4 {
+  background: url('../img/common-s5c211afbd4.png') 0 -446px no-repeat;
+  width: 44px;
+  height: 55px;
+}
+
+/* line 350, ../sass/mobile.scss */
+.dev-ipad_mini {
+  background: url('../img/common-s5c211afbd4.png') 0 -336px no-repeat;
+  width: 44px;
+  height: 55px;
+}
+
+/* line 351, ../sass/mobile.scss */
+.dev-ipad {
+  background: url('../img/common-s5c211afbd4.png') 0 -391px no-repeat;
+  width: 44px;
+  height: 55px;
+}
+
+/* line 352, ../sass/mobile.scss */
+.dev-galaxy {
+  background: url('../img/common-s5c211afbd4.png') 0 -666px no-repeat;
+  width: 44px;
+  height: 55px;
+}
+
+/* line 353, ../sass/mobile.scss */
+.active .dev-iphone5 {
+  background: url('../img/common-s5c211afbd4.png') 0 -501px no-repeat;
+  width: 44px;
+  height: 55px;
+}
+
+/* line 354, ../sass/mobile.scss */
+.active .dev-iphone4 {
+  background: url('../img/common-s5c211afbd4.png') 0 -226px no-repeat;
+  width: 44px;
+  height: 55px;
+}
+
+/* line 355, ../sass/mobile.scss */
+.active .dev-ipad_mini {
+  background: url('../img/common-s5c211afbd4.png') 0 -281px no-repeat;
+  width: 44px;
+  height: 55px;
+}
+
+/* line 356, ../sass/mobile.scss */
+.active .dev-ipad {
+  background: url('../img/common-s5c211afbd4.png') 0 -611px no-repeat;
+  width: 44px;
+  height: 55px;
+}
+
+/* line 357, ../sass/mobile.scss */
+.active .dev-galaxy {
+  background: url('../img/common-s5c211afbd4.png') 0 -556px no-repeat;
+  width: 44px;
+  height: 55px;
+}
+
+/* line 359, ../sass/mobile.scss */
+.grid1 {
+  background: url('../img/grids-sd9d4999688.png') 0 -958px no-repeat;
+  width: 26px;
+  height: 44px;
+}
+
+/* line 360, ../sass/mobile.scss */
+.grid2 {
+  background: url('../img/grids-sd9d4999688.png') 0 -766px no-repeat;
+  width: 26px;
+  height: 44px;
+}
+
+/* line 361, ../sass/mobile.scss */
+.grid3 {
+  background: url('../img/grids-sd9d4999688.png') 0 -128px no-repeat;
+  width: 26px;
+  height: 44px;
+}
+
+/* line 362, ../sass/mobile.scss */
+.grid4 {
+  background: url('../img/grids-sd9d4999688.png') 0 -510px no-repeat;
+  width: 24px;
+  height: 44px;
+}
+
+/* line 363, ../sass/mobile.scss */
+.grid5 {
+  background: url('../img/grids-sd9d4999688.png') 0 -256px no-repeat;
+  width: 24px;
+  height: 44px;
+}
+
+/* line 364, ../sass/mobile.scss */
+.grid6 {
+  background: url('../img/grids-sd9d4999688.png') 0 -574px no-repeat;
+  width: 24px;
+  height: 44px;
+}
+
+/* line 365, ../sass/mobile.scss */
+.grid7 {
+  background: url('../img/grids-sd9d4999688.png') 0 -894px no-repeat;
+  width: 26px;
+  height: 44px;
+}
+
+/* line 366, ../sass/mobile.scss */
+.grid8 {
+  background: url('../img/grids-sd9d4999688.png') 0 0 no-repeat;
+  width: 26px;
+  height: 44px;
+}
+
+/* line 367, ../sass/mobile.scss */
+.grid9 {
+  background: url('../img/grids-sd9d4999688.png') 0 -320px no-repeat;
+  width: 26px;
+  height: 42px;
+}
+
+/* line 368, ../sass/mobile.scss */
+.active .grid1 {
+  background: url('../img/grids-sd9d4999688.png') 0 -1086px no-repeat;
+  width: 26px;
+  height: 44px;
+}
+
+/* line 369, ../sass/mobile.scss */
+.active .grid2 {
+  background: url('../img/grids-sd9d4999688.png') 0 -830px no-repeat;
+  width: 26px;
+  height: 44px;
+}
+
+/* line 370, ../sass/mobile.scss */
+.active .grid3 {
+  background: url('../img/grids-sd9d4999688.png') 0 -192px no-repeat;
+  width: 26px;
+  height: 44px;
+}
+
+/* line 371, ../sass/mobile.scss */
+.active .grid4 {
+  background: url('../img/grids-sd9d4999688.png') 0 -702px no-repeat;
+  width: 24px;
+  height: 44px;
+}
+
+/* line 372, ../sass/mobile.scss */
+.active .grid5 {
+  background: url('../img/grids-sd9d4999688.png') 0 -446px no-repeat;
+  width: 24px;
+  height: 44px;
+}
+
+/* line 373, ../sass/mobile.scss */
+.active .grid6 {
+  background: url('../img/grids-sd9d4999688.png') 0 -638px no-repeat;
+  width: 24px;
+  height: 44px;
+}
+
+/* line 374, ../sass/mobile.scss */
+.active .grid7 {
+  background: url('../img/grids-sd9d4999688.png') 0 -1022px no-repeat;
+  width: 26px;
+  height: 44px;
+}
+
+/* line 375, ../sass/mobile.scss */
+.active .grid8 {
+  background: url('../img/grids-sd9d4999688.png') 0 -64px no-repeat;
+  width: 26px;
+  height: 44px;
+}
+
+/* line 376, ../sass/mobile.scss */
+.active .grid9 {
+  background: url('../img/grids-sd9d4999688.png') 0 -382px no-repeat;
+  width: 26px;
+  height: 44px;
+}
+
+/* line 378, ../sass/mobile.scss */
+.ico-preview {
+  background: url('../img/common-s5c211afbd4.png') 0 0 no-repeat;
+  width: 29px;
+  height: 16px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 382, ../sass/mobile.scss */
+.ico-shuffle {
+  background: url('../img/common-s5c211afbd4.png') -21px -20px no-repeat;
+  width: 26px;
+  height: 21px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 387, ../sass/mobile.scss */
+.cc_iphone_white {
+  background: url('../img/common-s5c211afbd4.png') 0 -80px no-repeat;
+  width: 24px;
+  height: 42px;
+}
+
+/* line 388, ../sass/mobile.scss */
+.cc_iphone_black {
+  background: url('../img/common-s5c211afbd4.png') -24px -80px no-repeat;
+  width: 24px;
+  height: 42px;
+}
+
+/* line 389, ../sass/mobile.scss */
+.cc_ipad_white {
+  background: url('../img/common-s5c211afbd4.png') 0 -833px no-repeat;
+  width: 46px;
+  height: 57px;
+}
+
+/* line 390, ../sass/mobile.scss */
+.cc_ipad_black {
+  background: url('../img/common-s5c211afbd4.png') 0 -776px no-repeat;
+  width: 46px;
+  height: 57px;
+}
+
+/* line 394, ../sass/mobile.scss */
+.edit,
+.layout .edit {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 36, ../sass/_base.scss */
+.edit:after,
+.layout .edit:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 401, ../sass/mobile.scss */
+.edit i,
+.layout .edit i {
+  cursor: pointer;
+}
+
+/* line 406, ../sass/mobile.scss */
+.add {
+  background: url('../img/common-s5c211afbd4.png') 0 -174px no-repeat;
+  width: 52px;
+  height: 52px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -26px 0 0 -26px;
+}
+
+/* line 415, ../sass/mobile.scss */
+.pencil {
+  background: url('../img/common-s5c211afbd4.png') 0 -122px no-repeat;
+  width: 52px;
+  height: 52px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -26px 0 0 -26px;
+}
+
+/* line 424, ../sass/mobile.scss */
+.delete {
+  background: url('../img/common-s5c211afbd4.png') 0 -41px no-repeat;
+  width: 39px;
+  height: 39px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  cursor: pointer;
+}
+
+/* line 430, ../sass/mobile.scss */
+.grid__device {
+  -webkit-border-radius: 42px;
+  -moz-border-radius: 42px;
+  -ms-border-radius: 42px;
+  -o-border-radius: 42px;
+  border-radius: 42px;
+  position: relative;
+  width: 263px;
+  margin-left: 14px;
+  overflow: hidden;
+}
+/* line 436, ../sass/mobile.scss */
+.grid__device .edit {
+  display: none;
+  border: 0!important;
+}
+/* line 441, ../sass/mobile.scss */
+.grid__device.preview .edit {
+  display: none!important;
+}
+/* line 444, ../sass/mobile.scss */
+.grid__device.preview .layout div {
+  border-color: transparent;
+}
+/* line 448, ../sass/mobile.scss */
+.grid__device .layout div.active .edit {
+  display: block;
+}
+
+/* line 454, ../sass/mobile.scss */
+.layout .unit {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+/* line 459, ../sass/mobile.scss */
+.layout i {
+  cursor: pointer;
+  display: none;
+  z-index: 10;
+}
+/* line 466, ../sass/mobile.scss */
+.layout .unit:hover .pencil,
+.layout .unit:hover .delete {
+  display: block;
+}
+/* line 472, ../sass/mobile.scss */
+.layout .unit.empty .pencil,
+.layout .unit.empty .delete {
+  display: none;
+}
+/* line 478, ../sass/mobile.scss */
+.layout .edit_mode_on .pencil,
+.layout .edit_mode_on .delete {
+  display: none!important;
+}
+/* line 483, ../sass/mobile.scss */
+.layout .edit_mode_on .plus,
+.layout .edit_mode_on .minus,
+.layout .edit_mode_on .ok {
+  display: block;
+}
+/* line 486, ../sass/mobile.scss */
+.layout .edit_mode_on img {
+  cursor: move;
+}
+/* line 495, ../sass/mobile.scss */
+.layout .edit_hide .pencil,
+.layout .edit_hide .delete,
+.layout .edit_hide .plus,
+.layout .edit_hide .minus,
+.layout .edit_hide .ok {
+  display: none!important;
+}
+/* line 499, ../sass/mobile.scss */
+.layout .empty:hover .add {
+  display: block;
+}
+
+/* line 502, ../sass/mobile.scss */
+.images_filters {
+  list-style: none;
+  text-align: center;
+  margin: 5px 0;
+}
+/* line 506, ../sass/mobile.scss */
+.images_filters li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 509, ../sass/mobile.scss */
+.images_filters i {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 2px solid #fff;
+  display: block;
+  width: 54px;
+  height: 54px;
+  background-image: url("../img/filters.jpg");
+  margin: 0 2px;
+  overflow: hidden;
+}
+/* line 521, ../sass/mobile.scss */
+.images_filters i.filter1 {
+  background-position: 0 0;
+}
+/* line 522, ../sass/mobile.scss */
+.images_filters i.filter2 {
+  background-position: -65px 0;
+}
+/* line 523, ../sass/mobile.scss */
+.images_filters i.filter3 {
+  background-position: -130px 0;
+}
+/* line 524, ../sass/mobile.scss */
+.images_filters i.filter4 {
+  background-position: -195px 0;
+}
+/* line 525, ../sass/mobile.scss */
+.images_filters i.filter5 {
+  background-position: -260px 0;
+}
+/* line 527, ../sass/mobile.scss */
+.images_filters .active i {
+  border-color: #29bbeb;
+  cursor: default;
+}
+
+/* line 533, ../sass/mobile.scss */
+.nofilter {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  border-radius: 14px;
+  padding: 0 10px 0;
+  background: #e8e8e8;
+  height: 28px;
+  line-height: 26px;
+  color: #888;
+}
+
+/* line 543, ../sass/mobile.scss */
+.tab-fb {
+  background: url('../img/icons-s31859cc009.png') 0 -61px no-repeat;
+  width: 31px;
+  height: 31px;
+}
+
+/* line 544, ../sass/mobile.scss */
+.tab-vk {
+  background: url('../img/icons-s31859cc009.png') 0 -185px no-repeat;
+  width: 31px;
+  height: 31px;
+}
+
+/* line 545, ../sass/mobile.scss */
+.tab-insta {
+  background: url('../img/icons-s31859cc009.png') 0 -30px no-repeat;
+  width: 31px;
+  height: 31px;
+}
+
+/* line 546, ../sass/mobile.scss */
+.tab-browse {
+  background: url('../img/icons-s31859cc009.png') 0 -216px no-repeat;
+  width: 31px;
+  height: 31px;
+}
+
+/* line 548, ../sass/mobile.scss */
+.active .tab-fb {
+  background: url('../img/icons-s31859cc009.png') 0 -123px no-repeat;
+  width: 31px;
+  height: 31px;
+}
+
+/* line 549, ../sass/mobile.scss */
+.active .tab-vk {
+  background: url('../img/icons-s31859cc009.png') 0 -154px no-repeat;
+  width: 31px;
+  height: 31px;
+}
+
+/* line 550, ../sass/mobile.scss */
+.active .tab-insta {
+  background: url('../img/icons-s31859cc009.png') 0 -92px no-repeat;
+  width: 31px;
+  height: 31px;
+}
+
+/* line 552, ../sass/mobile.scss */
+.images_choose {
+  min-height: 150px;
+  overflow: hidden;
+}
+/* line 555, ../sass/mobile.scss */
+.images_choose .header {
+  border-bottom: 2px solid #d9d9d9;
+}
+/* line 36, ../sass/_base.scss */
+.images_choose .header:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 558, ../sass/mobile.scss */
+.images_choose .header .button {
+  float: right;
+  margin: 4px 4px 0 0;
+}
+/* line 36, ../sass/_base.scss */
+.images_choose .tabs:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 565, ../sass/mobile.scss */
+.images_choose .tabs li {
+  list-style: none;
+  float: left;
+  font-family: "ProximaNova-Semibold", Arial, sans-serif;
+  padding: 8px 12px 6px;
+  border-right: 1px solid #d9d9d9;
+}
+/* line 571, ../sass/mobile.scss */
+.images_choose .tabs li a {
+  color: #777;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+/* line 577, ../sass/mobile.scss */
+.images_choose .tabs li i {
+  display: block;
+}
+/* line 580, ../sass/mobile.scss */
+.images_choose .tabs li.active {
+  -webkit-box-shadow: inset 0 2px 0 #9a9a9a;
+  -moz-box-shadow: inset 0 2px 0 #9a9a9a;
+  box-shadow: inset 0 2px 0 #9a9a9a;
+  background: #b5b5b5;
+  border-color: #b5b5b5;
+}
+/* line 585, ../sass/mobile.scss */
+.images_choose .tabs li:last-child {
+  border-right: 0;
+}
+/* line 588, ../sass/mobile.scss */
+.images_choose .tabs li input {
+  position: absolute;
+  left: 300px;
+  top: 300px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  cursor: pointer;
+}
+/* line 36, ../sass/_base.scss */
+.images_choose .content:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 599, ../sass/mobile.scss */
+.images_choose .content .in {
+  margin: 8px;
+  height: 224px;
+  overflow: auto;
+}
+/* line 604, ../sass/mobile.scss */
+.images_choose .content i {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 2px solid #fff;
+  display: block;
+  float: left;
+  width: 69px;
+  height: 69px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 8px 8px 0;
+  overflow: hidden;
+}
+/* line 617, ../sass/mobile.scss */
+.images_choose .content i.active {
+  border-color: #29bbeb;
+  cursor: default;
+}
+/* line 622, ../sass/mobile.scss */
+.images_choose .content p {
+  padding-top: 80px;
+  text-align: center;
+}
+/* line 626, ../sass/mobile.scss */
+.images_choose .content .button {
+  position: relative;
+  overflow: hidden;
+}
+/* line 630, ../sass/mobile.scss */
+.images_choose .content #img_upload {
+  position: absolute;
+  right: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* line 638, ../sass/mobile.scss */
+.img_edit {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 80;
+  padding: 20px;
+  background: #fff;
+  margin: 30px 0 0 -55px;
+}
+/* line 645, ../sass/mobile.scss */
+.img_edit .tail {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  margin-top: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #fff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}

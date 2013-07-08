@@ -1,0 +1,1074 @@
+/* TRANSITION */
+/* line 3, ../sass/layout.scss */
+.slot_bg {
+  background: #f3f3f3;
+}
+
+/* line 7, ../sass/layout.scss */
+.black .slot_bg {
+  background: #363636;
+}
+
+/* line 36, ../sass/_base.scss */
+.layout0:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 13, ../sass/layout.scss */
+.layout0 div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  margin: 0 -1px 0 0;
+}
+/* line 19, ../sass/layout.scss */
+.layout0 div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 36, ../sass/_base.scss */
+.layout1:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 29, ../sass/layout.scss */
+.layout1 div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 137px;
+  border-right: 1px solid #61bfda;
+  border-bottom: 1px solid #61bfda;
+  margin: 0 -1px 0 0;
+}
+/* line 39, ../sass/layout.scss */
+.layout1 div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 44, ../sass/layout.scss */
+.layout1 div:nth-child(2n+2) {
+  border-right: 0;
+}
+/* line 48, ../sass/layout.scss */
+.layout1 div:last-child, .layout1 div:nth-last-child(2) {
+  border-bottom: 0;
+}
+/* line 52, ../sass/layout.scss */
+.layout1 .multiple {
+  margin-left: 1px;
+  width: 100%;
+  border: 0;
+}
+/* line 56, ../sass/layout.scss */
+.layout1 .multiple div {
+  height: 70px;
+}
+
+/* line 62, ../sass/layout.scss */
+.layout2 {
+  position: relative;
+}
+/* line 36, ../sass/_base.scss */
+.layout2:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 65, ../sass/layout.scss */
+.layout2 .slot {
+  height: 270px;
+  position: relative;
+  overflow: hidden;
+}
+/* line 70, ../sass/layout.scss */
+.layout2 .slot:first-child {
+  border-bottom: 1px solid #61bfda;
+}
+/* line 75, ../sass/layout.scss */
+.layout2 .slot:nth-last-child(2) .pencil,
+.layout2 .slot:nth-last-child(2) .delete {
+  top: 100%;
+  margin-top: -30px;
+}
+/* line 80, ../sass/layout.scss */
+.layout2 .accent-circle {
+  -webkit-border-radius: 44px;
+  -moz-border-radius: 44px;
+  -ms-border-radius: 44px;
+  -o-border-radius: 44px;
+  border-radius: 44px;
+  width: 88px;
+  height: 88px;
+  border: 1px solid #61bfda;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  margin-top: -44px;
+  overflow: hidden;
+}
+/* line 91, ../sass/layout.scss */
+.layout2 .accent-circle:hover, .layout2 .accent-circle.edit_mode_on {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+/* line 92, ../sass/layout.scss */
+.layout2 .accent-circle.empty {
+  -webkit-border-radius: 44px;
+  -moz-border-radius: 44px;
+  -ms-border-radius: 44px;
+  -o-border-radius: 44px;
+  border-radius: 44px;
+}
+/* line 94, ../sass/layout.scss */
+.layout2 .accent-square {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  width: 88px;
+  height: 88px;
+  border: 1px solid #61bfda;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  margin-top: -44px;
+  overflow: hidden;
+}
+/* line 105, ../sass/layout.scss */
+.layout2 .accent-square:hover, .layout2 .accent-square.edit_mode_on {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+/* line 106, ../sass/layout.scss */
+.layout2 .accent-square.empty {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+}
+
+/* line 111, ../sass/layout.scss */
+.layout3 div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 50%;
+  border-right: 1px solid #61bfda;
+  border-bottom: 1px solid #61bfda;
+  margin: 0 -1px 0 0;
+}
+/* line 120, ../sass/layout.scss */
+.layout3 div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 128, ../sass/layout.scss */
+.layout3 .slot_top,
+.layout3 .slot_mid,
+.layout3 .slot_bot {
+  width: 100%;
+  border: 0;
+}
+/* line 133, ../sass/layout.scss */
+.layout3 .slot_top .slot,
+.layout3 .slot_bot .slot {
+  height: 178px;
+  width: 197px;
+}
+/* line 138, ../sass/layout.scss */
+.layout3 .slot_top div,
+.layout3 .slot_bot div {
+  height: 178px;
+  width: 66px;
+}
+/* line 141, ../sass/layout.scss */
+.layout3 .slot_top div:last-child,
+.layout3 .slot_bot div:last-child {
+  border-right: 0;
+}
+/* line 146, ../sass/layout.scss */
+.layout3 .slot_mid,
+.layout3 .slot_mid div {
+  height: 178px;
+}
+/* line 148, ../sass/layout.scss */
+.layout3 .slot_mid:last-child,
+.layout3 .slot_mid div:last-child {
+  border-right: 0;
+}
+/* line 152, ../sass/layout.scss */
+.layout3 .slot_bot div {
+  border-bottom: 0;
+}
+/* line 154, ../sass/layout.scss */
+.layout3 .slot_bot div .multiple div:first-child {
+  border-bottom: 1px solid #61bfda;
+}
+/* line 158, ../sass/layout.scss */
+.layout3 .multiple {
+  margin-left: 1px;
+  width: 100%!important;
+  border: 0;
+}
+/* line 163, ../sass/layout.scss */
+.layout3 .multiple div {
+  width: 100%;
+  height: 50%!important;
+}
+
+/* line 171, ../sass/layout.scss */
+.layout4 div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 131px;
+  border-right: 1px solid #61bfda;
+  border-bottom: 1px solid #61bfda;
+}
+/* line 179, ../sass/layout.scss */
+.layout4 div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 184, ../sass/layout.scss */
+.layout4 div .single {
+  width: 100%;
+  height: 153px;
+}
+/* line 188, ../sass/layout.scss */
+.layout4 div .multiple {
+  width: 100%;
+}
+/* line 36, ../sass/_base.scss */
+.layout4 div .multiple:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 191, ../sass/layout.scss */
+.layout4 div .multiple:last-child {
+  border-bottom: 0;
+}
+/* line 195, ../sass/layout.scss */
+.layout4 div .multiple div {
+  width: 65px;
+  height: 76px;
+  float: left;
+}
+/* line 199, ../sass/layout.scss */
+.layout4 div .multiple div:nth-child(2n+2) {
+  border-right: 0;
+}
+/* line 203, ../sass/layout.scss */
+.layout4 div .multiple div:last-child, .layout4 div .multiple div:nth-last-child(2) {
+  border-bottom: 0;
+}
+/* line 208, ../sass/layout.scss */
+.layout4 .col {
+  border: 0;
+}
+/* line 211, ../sass/layout.scss */
+.layout4 .col:last-child .single {
+  border-right: 0;
+}
+/* line 213, ../sass/layout.scss */
+.layout4 .col:last-child .single:last-child {
+  border: 0;
+}
+/* line 217, ../sass/layout.scss */
+.layout4 .col:last-child .multiple {
+  border-right: 0;
+}
+/* line 220, ../sass/layout.scss */
+.layout4 .col:last-child .multiple div:last-child {
+  border-right: 0;
+}
+
+/* line 228, ../sass/layout.scss */
+.layout5 div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 50%;
+  border-right: 1px solid #61bfda;
+  border-bottom: 1px solid #61bfda;
+  margin: 0 -1px 0 0;
+}
+/* line 237, ../sass/layout.scss */
+.layout5 div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 245, ../sass/layout.scss */
+.layout5 .slot_top,
+.layout5 .slot_mid,
+.layout5 .slot_bot {
+  width: 100%;
+  border: 0;
+}
+/* line 252, ../sass/layout.scss */
+.layout5 .slot_top .slot,
+.layout5 .slot_bot .slot,
+.layout5 .slot_top div,
+.layout5 .slot_bot div {
+  height: 178px;
+}
+/* line 257, ../sass/layout.scss */
+.layout5 .slot_top div:nth-child(2n+2),
+.layout5 .slot_bot div:nth-child(2n+2) {
+  border-right: 0;
+}
+/* line 261, ../sass/layout.scss */
+.layout5 .slot_mid div {
+  height: 178px;
+  width: 100%;
+  border-right: 0;
+}
+/* line 266, ../sass/layout.scss */
+.layout5 .slot_bot div {
+  border-bottom: 0;
+}
+/* line 270, ../sass/layout.scss */
+.layout5 .slot_bot .multiple div:first-child,
+.layout5 .slot_bot .multiple div:nth-child(2) {
+  border-bottom: 1px solid #61bfda;
+}
+/* line 273, ../sass/layout.scss */
+.layout5 .multiple {
+  margin-left: 1px;
+  width: 100%!important;
+  border: 0;
+}
+/* line 277, ../sass/layout.scss */
+.layout5 .multiple div {
+  width: 50%;
+  height: 50%!important;
+}
+
+/* line 285, ../sass/layout.scss */
+.layout6 div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 25%;
+  width: 66px;
+  height: 89px;
+  border-right: 1px solid #61bfda;
+  border-bottom: 1px solid #61bfda;
+}
+/* line 295, ../sass/layout.scss */
+.layout6 div:nth-child(4n+4) {
+  border-right: 0;
+}
+/* line 301, ../sass/layout.scss */
+.layout6 div:last-child, .layout6 div:nth-last-child(2), .layout6 div:nth-last-child(3), .layout6 div:nth-last-child(4) {
+  border-bottom: 0;
+}
+/* line 304, ../sass/layout.scss */
+.layout6 div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 313, ../sass/layout.scss */
+.layout7 .block {
+  -webkit-box-sizing: padding-box;
+  -moz-box-sizing: padding-box;
+  box-sizing: padding-box;
+  height: 180px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding-top: 15px;
+}
+/* line 321, ../sass/layout.scss */
+.layout7 .circle {
+  -webkit-border-radius: 67px;
+  -moz-border-radius: 67px;
+  -ms-border-radius: 67px;
+  -o-border-radius: 67px;
+  border-radius: 67px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  width: 134px;
+  height: 134px;
+  border: 1px solid #61bfda;
+  position: relative;
+  overflow: hidden;
+}
+/* line 330, ../sass/layout.scss */
+.layout7 .circle:hover {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+/* line 334, ../sass/layout.scss */
+.layout7 .multiple {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  height: 150px;
+}
+/* line 337, ../sass/layout.scss */
+.layout7 .multiple .circle {
+  -webkit-border-radius: 33px;
+  -moz-border-radius: 33px;
+  -ms-border-radius: 33px;
+  -o-border-radius: 33px;
+  border-radius: 33px;
+  width: 66px;
+  height: 66px;
+  display: block;
+  overflow: hidden;
+}
+/* line 343, ../sass/layout.scss */
+.layout7 .multiple .circle:hover {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+/* line 346, ../sass/layout.scss */
+.layout7 .multiple .circle:last-child {
+  margin-top: 20px;
+}
+
+/*devices*/
+/* line 356, ../sass/layout.scss */
+.blank-iphone5 .grid__device {
+  width: 263px;
+  margin-left: 14px;
+}
+/* line 360, ../sass/layout.scss */
+.blank-iphone5 .layout0 div {
+  width: 100%;
+  height: 534px;
+}
+/* line 364, ../sass/layout.scss */
+.blank-iphone5 .layout1 div {
+  width: 132px;
+  height: 134px;
+}
+/* line 369, ../sass/layout.scss */
+.blank-iphone5 .layout2 .slot {
+  width: 263px;
+  height: 267px;
+}
+/* line 373, ../sass/layout.scss */
+.blank-iphone5 .layout2 .accent-circle {
+  -webkit-border-radius: 44px;
+  -moz-border-radius: 44px;
+  -ms-border-radius: 44px;
+  -o-border-radius: 44px;
+  border-radius: 44px;
+  width: 88px;
+  height: 88px;
+  margin-top: -44px;
+}
+/* line 379, ../sass/layout.scss */
+.blank-iphone5 .layout2 .accent-square {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  width: 88px;
+  height: 88px;
+  margin-top: -44px;
+}
+/* line 389, ../sass/layout.scss */
+.blank-iphone5 .layout3 .slot_top .slot,
+.blank-iphone5 .layout3 .slot_bot .slot {
+  width: 197px;
+  height: 178px;
+}
+/* line 394, ../sass/layout.scss */
+.blank-iphone5 .layout3 .slot_top div,
+.blank-iphone5 .layout3 .slot_bot div {
+  width: 66px;
+  height: 178px;
+}
+/* line 399, ../sass/layout.scss */
+.blank-iphone5 .layout3 .slot_mid,
+.blank-iphone5 .layout3 .slot_mid div {
+  height: 178px;
+}
+/* line 404, ../sass/layout.scss */
+.blank-iphone5 .layout4 div {
+  width: 131px;
+}
+/* line 407, ../sass/layout.scss */
+.blank-iphone5 .layout4 .single {
+  height: 153px;
+}
+/* line 410, ../sass/layout.scss */
+.blank-iphone5 .layout4 .multiple div {
+  width: 65px;
+  height: 76px;
+}
+/* line 420, ../sass/layout.scss */
+.blank-iphone5 .layout5 .slot_top .slot,
+.blank-iphone5 .layout5 .slot_bot .slot,
+.blank-iphone5 .layout5 .slot_top div,
+.blank-iphone5 .layout5 .slot_bot div,
+.blank-iphone5 .layout5 .slot_mid div {
+  height: 178px;
+}
+/* line 425, ../sass/layout.scss */
+.blank-iphone5 .layout6 div {
+  width: 65px;
+  height: 89px;
+}
+/* line 431, ../sass/layout.scss */
+.blank-iphone5 .layout7 .block {
+  height: 180px;
+  padding-top: 15px;
+}
+/* line 435, ../sass/layout.scss */
+.blank-iphone5 .layout7 .circle {
+  -webkit-border-radius: 67px;
+  -moz-border-radius: 67px;
+  -ms-border-radius: 67px;
+  -o-border-radius: 67px;
+  border-radius: 67px;
+  width: 134px;
+  height: 134px;
+  margin-top: 10px;
+}
+/* line 441, ../sass/layout.scss */
+.blank-iphone5 .layout7 .multiple {
+  height: 134px;
+}
+/* line 443, ../sass/layout.scss */
+.blank-iphone5 .layout7 .multiple .circle {
+  -webkit-border-radius: 33px;
+  -moz-border-radius: 33px;
+  -ms-border-radius: 33px;
+  -o-border-radius: 33px;
+  border-radius: 33px;
+  width: 66px;
+  height: 66px;
+  margin-top: 0;
+}
+/* line 448, ../sass/layout.scss */
+.blank-iphone5 .layout7 .multiple .circle:last-child {
+  margin-top: 8px;
+}
+
+/* line 455, ../sass/layout.scss */
+.blank-iphone4 .grid__device {
+  width: 263px;
+  margin-left: 14px;
+}
+/* line 459, ../sass/layout.scss */
+.blank-iphone4 .layout0 div {
+  width: 100%;
+  height: 499px;
+}
+/* line 463, ../sass/layout.scss */
+.blank-iphone4 .layout1 div {
+  width: 132px;
+  height: 125px;
+}
+/* line 468, ../sass/layout.scss */
+.blank-iphone4 .layout2 .slot {
+  width: 263px;
+  height: 250px;
+}
+/* line 472, ../sass/layout.scss */
+.blank-iphone4 .layout2 .accent-circle {
+  -webkit-border-radius: 44px;
+  -moz-border-radius: 44px;
+  -ms-border-radius: 44px;
+  -o-border-radius: 44px;
+  border-radius: 44px;
+  width: 88px;
+  height: 88px;
+  margin-top: -44px;
+}
+/* line 478, ../sass/layout.scss */
+.blank-iphone4 .layout2 .accent-square {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  width: 88px;
+  height: 88px;
+  margin-top: -44px;
+}
+/* line 488, ../sass/layout.scss */
+.blank-iphone4 .layout3 .slot_top .slot,
+.blank-iphone4 .layout3 .slot_bot .slot {
+  width: 197px;
+  height: 166px;
+}
+/* line 493, ../sass/layout.scss */
+.blank-iphone4 .layout3 .slot_top div,
+.blank-iphone4 .layout3 .slot_bot div {
+  width: 66px;
+  height: 166px;
+}
+/* line 498, ../sass/layout.scss */
+.blank-iphone4 .layout3 .slot_mid,
+.blank-iphone4 .layout3 .slot_mid div {
+  height: 166px;
+}
+/* line 503, ../sass/layout.scss */
+.blank-iphone4 .layout4 div {
+  width: 131px;
+}
+/* line 506, ../sass/layout.scss */
+.blank-iphone4 .layout4 .single {
+  height: 143px;
+}
+/* line 509, ../sass/layout.scss */
+.blank-iphone4 .layout4 .multiple div {
+  width: 65px;
+  height: 71px;
+}
+/* line 519, ../sass/layout.scss */
+.blank-iphone4 .layout5 .slot_top .slot,
+.blank-iphone4 .layout5 .slot_bot .slot,
+.blank-iphone4 .layout5 .slot_top div,
+.blank-iphone4 .layout5 .slot_bot div,
+.blank-iphone4 .layout5 .slot_mid div {
+  height: 166px;
+}
+/* line 524, ../sass/layout.scss */
+.blank-iphone4 .layout6 div {
+  width: 65px;
+  height: 83px;
+}
+/* line 530, ../sass/layout.scss */
+.blank-iphone4 .layout7 .block {
+  height: 160px;
+  padding-top: 15px;
+}
+/* line 534, ../sass/layout.scss */
+.blank-iphone4 .layout7 .circle {
+  -webkit-border-radius: 62px;
+  -moz-border-radius: 62px;
+  -ms-border-radius: 62px;
+  -o-border-radius: 62px;
+  border-radius: 62px;
+  width: 125px;
+  height: 125px;
+  margin-top: 10px;
+}
+/* line 540, ../sass/layout.scss */
+.blank-iphone4 .layout7 .multiple {
+  height: 132px;
+}
+/* line 542, ../sass/layout.scss */
+.blank-iphone4 .layout7 .multiple .circle {
+  -webkit-border-radius: 33px;
+  -moz-border-radius: 33px;
+  -ms-border-radius: 33px;
+  -o-border-radius: 33px;
+  border-radius: 33px;
+  width: 66px;
+  height: 66px;
+  margin-top: 0;
+}
+/* line 547, ../sass/layout.scss */
+.blank-iphone4 .layout7 .multiple .circle:last-child {
+  margin-top: 8px;
+}
+
+/* line 554, ../sass/layout.scss */
+.blank-ipad #img_result {
+  margin-left: 13px;
+}
+/* line 557, ../sass/layout.scss */
+.blank-ipad .grid__device {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  width: 321px;
+  margin-left: 14px;
+}
+/* line 565, ../sass/layout.scss */
+.blank-ipad .layout0 div {
+  width: 100%;
+  height: 421px;
+}
+/* line 569, ../sass/layout.scss */
+.blank-ipad .layout1 div {
+  width: 161px;
+  height: 105px;
+}
+/* line 574, ../sass/layout.scss */
+.blank-ipad .layout2 .slot {
+  width: 321px;
+  height: 211px;
+}
+/* line 578, ../sass/layout.scss */
+.blank-ipad .layout2 .accent-circle {
+  -webkit-border-radius: 53px;
+  -moz-border-radius: 53px;
+  -ms-border-radius: 53px;
+  -o-border-radius: 53px;
+  border-radius: 53px;
+  width: 107px;
+  height: 107px;
+  margin-top: -53px;
+}
+/* line 584, ../sass/layout.scss */
+.blank-ipad .layout2 .accent-square {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  width: 107px;
+  height: 107px;
+  margin-top: -53px;
+}
+/* line 594, ../sass/layout.scss */
+.blank-ipad .layout3 .slot_top .slot,
+.blank-ipad .layout3 .slot_bot .slot {
+  width: 241px;
+  height: 140px;
+}
+/* line 599, ../sass/layout.scss */
+.blank-ipad .layout3 .slot_top div,
+.blank-ipad .layout3 .slot_bot div {
+  width: 80px;
+  height: 140px;
+}
+/* line 604, ../sass/layout.scss */
+.blank-ipad .layout3 .slot_mid,
+.blank-ipad .layout3 .slot_mid div {
+  height: 140px;
+}
+/* line 609, ../sass/layout.scss */
+.blank-ipad .layout4 div {
+  width: 160px;
+}
+/* line 612, ../sass/layout.scss */
+.blank-ipad .layout4 .single {
+  height: 120px;
+}
+/* line 615, ../sass/layout.scss */
+.blank-ipad .layout4 .multiple div {
+  width: 79px;
+  height: 60px;
+}
+/* line 625, ../sass/layout.scss */
+.blank-ipad .layout5 .slot_top .slot,
+.blank-ipad .layout5 .slot_bot .slot,
+.blank-ipad .layout5 .slot_top div,
+.blank-ipad .layout5 .slot_bot div,
+.blank-ipad .layout5 .slot_mid div {
+  height: 140px;
+}
+/* line 630, ../sass/layout.scss */
+.blank-ipad .layout6 div {
+  width: 80px;
+  height: 70px;
+}
+/* line 636, ../sass/layout.scss */
+.blank-ipad .layout7 .block {
+  height: 165px;
+  padding-top: 0;
+  margin-top: -20px;
+}
+/* line 641, ../sass/layout.scss */
+.blank-ipad .layout7 .circle {
+  -webkit-border-radius: 53px;
+  -moz-border-radius: 53px;
+  -ms-border-radius: 53px;
+  -o-border-radius: 53px;
+  border-radius: 53px;
+  width: 105px;
+  height: 105px;
+  margin-top: 30px;
+}
+/* line 647, ../sass/layout.scss */
+.blank-ipad .layout7 .multiple {
+  height: 134px;
+}
+/* line 649, ../sass/layout.scss */
+.blank-ipad .layout7 .multiple .circle {
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  border-radius: 40px;
+  width: 80px;
+  height: 80px;
+  margin: 0;
+}
+/* line 654, ../sass/layout.scss */
+.blank-ipad .layout7 .multiple .circle:last-child {
+  margin-top: 5px;
+}
+
+/* line 661, ../sass/layout.scss */
+.blank-ipad_mini .grid__device {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  width: 291px;
+  margin-left: 14px;
+}
+/* line 666, ../sass/layout.scss */
+.blank-ipad_mini .layout0 div {
+  width: 100%;
+  height: 426px;
+}
+/* line 670, ../sass/layout.scss */
+.blank-ipad_mini .layout1 div {
+  width: 146px;
+  height: 107px;
+}
+/* line 675, ../sass/layout.scss */
+.blank-ipad_mini .layout2 .slot {
+  width: 291px;
+  height: 213px;
+}
+/* line 679, ../sass/layout.scss */
+.blank-ipad_mini .layout2 .accent-circle {
+  -webkit-border-radius: 48px;
+  -moz-border-radius: 48px;
+  -ms-border-radius: 48px;
+  -o-border-radius: 48px;
+  border-radius: 48px;
+  width: 97px;
+  height: 97px;
+  margin-top: -48px;
+}
+/* line 685, ../sass/layout.scss */
+.blank-ipad_mini .layout2 .accent-square {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  width: 97px;
+  height: 97px;
+  margin-top: -48px;
+}
+/* line 695, ../sass/layout.scss */
+.blank-ipad_mini .layout3 .slot_top .slot,
+.blank-ipad_mini .layout3 .slot_bot .slot {
+  width: 218px;
+  height: 142px;
+}
+/* line 700, ../sass/layout.scss */
+.blank-ipad_mini .layout3 .slot_top div,
+.blank-ipad_mini .layout3 .slot_bot div {
+  width: 73px;
+  height: 142px;
+}
+/* line 705, ../sass/layout.scss */
+.blank-ipad_mini .layout3 .slot_mid,
+.blank-ipad_mini .layout3 .slot_mid div {
+  height: 142px;
+}
+/* line 710, ../sass/layout.scss */
+.blank-ipad_mini .layout4 div {
+  width: 145px;
+}
+/* line 713, ../sass/layout.scss */
+.blank-ipad_mini .layout4 .single {
+  height: 122px;
+}
+/* line 716, ../sass/layout.scss */
+.blank-ipad_mini .layout4 .multiple div {
+  width: 72px;
+  height: 61px;
+}
+/* line 726, ../sass/layout.scss */
+.blank-ipad_mini .layout5 .slot_top .slot,
+.blank-ipad_mini .layout5 .slot_bot .slot,
+.blank-ipad_mini .layout5 .slot_top div,
+.blank-ipad_mini .layout5 .slot_bot div,
+.blank-ipad_mini .layout5 .slot_mid div {
+  height: 142px;
+}
+/* line 731, ../sass/layout.scss */
+.blank-ipad_mini .layout6 div {
+  width: 72px;
+  height: 71px;
+}
+/* line 737, ../sass/layout.scss */
+.blank-ipad_mini .layout7 .block {
+  height: 165px;
+  padding-top: 0;
+  margin-top: -20px;
+}
+/* line 742, ../sass/layout.scss */
+.blank-ipad_mini .layout7 .circle {
+  -webkit-border-radius: 54px;
+  -moz-border-radius: 54px;
+  -ms-border-radius: 54px;
+  -o-border-radius: 54px;
+  border-radius: 54px;
+  width: 107px;
+  height: 107px;
+  margin-top: 30px;
+}
+/* line 748, ../sass/layout.scss */
+.blank-ipad_mini .layout7 .multiple {
+  height: 141px;
+}
+/* line 750, ../sass/layout.scss */
+.blank-ipad_mini .layout7 .multiple .circle {
+  -webkit-border-radius: 37px;
+  -moz-border-radius: 37px;
+  -ms-border-radius: 37px;
+  -o-border-radius: 37px;
+  border-radius: 37px;
+  width: 73px;
+  height: 73px;
+  margin: 0;
+}
+/* line 755, ../sass/layout.scss */
+.blank-ipad_mini .layout7 .multiple .circle:last-child {
+  margin-top: 5px;
+}
+
+/* line 762, ../sass/layout.scss */
+.blank-galaxy .grid__device {
+  width: 271px;
+  margin-left: 14px;
+}
+/* line 766, ../sass/layout.scss */
+.blank-galaxy .layout0 div {
+  width: 100%;
+  height: 534px;
+}
+/* line 770, ../sass/layout.scss */
+.blank-galaxy .layout1 div {
+  width: 132px;
+  height: 134px;
+}
+/* line 775, ../sass/layout.scss */
+.blank-galaxy .layout2 .slot {
+  width: 263px;
+  height: 267px;
+}
+/* line 779, ../sass/layout.scss */
+.blank-galaxy .layout2 .accent-circle {
+  -webkit-border-radius: 44px;
+  -moz-border-radius: 44px;
+  -ms-border-radius: 44px;
+  -o-border-radius: 44px;
+  border-radius: 44px;
+  width: 88px;
+  height: 88px;
+  margin-top: -44px;
+}
+/* line 785, ../sass/layout.scss */
+.blank-galaxy .layout2 .accent-square {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  width: 88px;
+  height: 88px;
+  margin-top: -44px;
+}
+/* line 795, ../sass/layout.scss */
+.blank-galaxy .layout3 .slot_top .slot,
+.blank-galaxy .layout3 .slot_bot .slot {
+  width: 197px;
+  height: 178px;
+}
+/* line 800, ../sass/layout.scss */
+.blank-galaxy .layout3 .slot_top div,
+.blank-galaxy .layout3 .slot_bot div {
+  width: 66px;
+  height: 178px;
+}
+/* line 805, ../sass/layout.scss */
+.blank-galaxy .layout3 .slot_mid,
+.blank-galaxy .layout3 .slot_mid div {
+  height: 178px;
+}
+/* line 809, ../sass/layout.scss */
+.blank-galaxy .layout4 div .single {
+  height: 151px;
+}
+/* line 815, ../sass/layout.scss */
+.blank-galaxy .layout5 .slot_top .slot,
+.blank-galaxy .layout5 .slot_bot .slot,
+.blank-galaxy .layout5 .slot_top div,
+.blank-galaxy .layout5 .slot_bot div {
+  height: 167px;
+}
+/* line 818, ../sass/layout.scss */
+.blank-galaxy .layout5 .slot_mid div {
+  height: 200px;
+}
+/* line 821, ../sass/layout.scss */
+.blank-galaxy .layout6 div {
+  height: 89px;
+}
+/* line 824, ../sass/layout.scss */
+.blank-galaxy .layout7 .block {
+  height: 178px;
+}

@@ -1,0 +1,827 @@
+@import "base";
+
+.slot_bg {
+    background: #f3f3f3;
+}
+
+.black .slot_bg {
+    background: #363636;
+}
+
+.layout0 {
+    @include clr;
+    div {
+        @include box-sizing(border-box);
+        overflow: hidden;
+        position: relative;
+        float: left;
+        margin: 0 -1px 0 0;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.layout1 {
+    @include clr;
+    div {
+        @include box-sizing(border-box);
+        overflow: hidden;
+        position: relative;
+        float: left;
+        width: 50%;
+        height: 137px; 
+        border-right: 1px solid #61bfda;
+        border-bottom: 1px solid #61bfda;
+        margin: 0 -1px 0 0;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:nth-child(2n+2) {
+            border-right: 0;
+        }
+        &:last-child,
+        &:nth-last-child(2) {
+            border-bottom: 0;
+        }
+    }
+    .multiple {
+        margin-left: 1px;
+        width: 100%;
+        border: 0;
+        div {
+            height: 70px;
+        }
+    }
+}
+
+.layout2 {
+    @include clr;
+    position: relative;
+    .slot {
+        height: 270px;
+        position: relative;
+        overflow: hidden;
+    }
+    .slot:first-child {
+        border-bottom: 1px solid #61bfda;
+    }
+    .slot:nth-last-child(2) {
+        .pencil,
+        .delete {
+            top: 100%;
+            margin-top: -30px;
+        }
+    }
+    .accent-circle {
+        @include border-radius(44px);
+        width: 88px;
+        height: 88px;
+        border: 1px solid #61bfda;
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        margin-top: -44px;
+        overflow: hidden;
+        &:hover,
+        &.edit_mode_on {@include border-radius(0)}
+        &.empty {@include border-radius(44px)}
+    }
+    .accent-square {
+        @include border-radius(12px);
+        width: 88px;
+        height: 88px;
+        border: 1px solid #61bfda;
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        margin-top: -44px;
+        overflow: hidden;
+        &:hover,
+        &.edit_mode_on {@include border-radius(0)}
+        &.empty {@include border-radius(12px)}
+    }
+}
+
+.layout3 {
+    div {
+        @include box-sizing(border-box);
+        overflow: hidden;
+        position: relative;
+        float: left;
+        width: 50%;
+        border-right: 1px solid #61bfda;
+        border-bottom: 1px solid #61bfda;
+        margin: 0 -1px 0 0;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .slot_top,
+    .slot_mid,
+    .slot_bot {
+        width: 100%;
+        border: 0;
+    }
+    .slot_top .slot,
+    .slot_bot .slot {
+        height: 178px;
+        width: 197px;
+    }
+    .slot_top div,
+    .slot_bot div {
+        height: 178px;
+        width: 66px;
+        &:last-child {
+            border-right: 0;
+        }
+    }
+    .slot_mid,
+    .slot_mid div {
+        height: 178px;
+        &:last-child {
+            border-right: 0;
+        }
+    }
+    .slot_bot div {
+        border-bottom: 0;
+        .multiple div:first-child {
+            border-bottom: 1px solid #61bfda;
+        }
+    }
+    .multiple {
+        margin-left: 1px;
+        width: 100%!important;
+        border: 0;
+    }
+    .multiple div {
+        width: 100%;
+        height: 50%!important;
+    }
+}
+
+
+.layout4 {
+    div {
+        @include box-sizing(border-box);
+        overflow: hidden;
+        position: relative;
+        float: left;
+        width: 131px;
+        border-right: 1px solid #61bfda;
+        border-bottom: 1px solid #61bfda;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .single {
+            width: 100%;
+            height: 153px;
+        }
+        .multiple {
+            @include clr;
+            width: 100%;
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+        .multiple div {
+            width: 65px;
+            height: 76px;
+            float: left;
+            &:nth-child(2n+2) {
+                border-right: 0;
+            }
+            &:last-child,
+            &:nth-last-child(2) {
+                border-bottom: 0;
+            }
+        }
+    }
+    .col {
+        border: 0;
+        &:last-child {
+            .single {
+                border-right: 0;
+                &:last-child {
+                    border: 0;
+                }
+            }
+            .multiple {
+                border-right: 0;
+            }
+            .multiple div:last-child {
+                border-right: 0;
+            }
+        }
+    }
+}
+
+.layout5 {
+    div {
+        @include box-sizing(border-box);
+        overflow: hidden;
+        position: relative;
+        float: left;
+        width: 50%;
+        border-right: 1px solid #61bfda;
+        border-bottom: 1px solid #61bfda;
+        margin: 0 -1px 0 0;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .slot_top,
+    .slot_mid,
+    .slot_bot {
+        width: 100%;
+        border: 0;
+    }
+    .slot_top .slot,
+    .slot_bot .slot,
+    .slot_top div,
+    .slot_bot div {
+        height: 178px;
+    }
+    .slot_top div,
+    .slot_bot div {
+        &:nth-child(2n+2) {
+            border-right: 0;
+        }
+    }
+    .slot_mid div {
+        height: 178px;
+        width: 100%;
+        border-right: 0;
+    }
+    .slot_bot div {
+        border-bottom: 0;
+    }
+    .slot_bot .multiple div:first-child,
+    .slot_bot .multiple div:nth-child(2) {
+        border-bottom: 1px solid #61bfda;
+    }
+    .multiple {
+        margin-left: 1px;
+        width: 100%!important;
+        border: 0;
+        div {
+            width: 50%;
+            height: 50%!important;
+        }
+    }
+}
+
+.layout6 {
+    div {
+        @include box-sizing(border-box);
+        overflow: hidden;
+        position: relative;
+        float: left;
+        width: 25%;
+        width: 66px;
+        height: 89px;
+        border-right: 1px solid #61bfda;
+        border-bottom: 1px solid #61bfda;
+        &:nth-child(4n+4) {
+            border-right: 0;
+        }
+        &:last-child,
+        &:nth-last-child(2),
+        &:nth-last-child(3),
+        &:nth-last-child(4) {
+            border-bottom: 0;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.layout7 {
+    .block {
+        @include box-sizing(padding-box);
+        height: 180px;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        padding-top: 15px;
+    }
+    .circle {
+        @include border-radius(67px);
+        @include inline-block;
+        vertical-align: top;
+        width: 134px;
+        height: 134px;
+        border: 1px solid #61bfda;
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            @include border-radius(0);
+        }
+    }
+    .multiple {
+        @include inline-block;
+        height: 150px;
+        .circle { 
+            @include border-radius(33px);
+            width: 66px;
+            height: 66px;
+            display: block;
+            overflow: hidden;
+            &:hover {
+                @include border-radius(0);
+            }
+            &:last-child {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+/*devices*/
+
+.blank-iphone5 {
+    .grid__device {
+        width: 263px;
+        margin-left: 14px;
+    }
+    .layout0 div {
+        width: 100%;
+        height: 534px;
+    }
+    .layout1 div {
+        width: 132px;
+        height: 134px;
+    }
+    .layout2 {
+        .slot {
+            width: 263px;
+            height: 267px;
+        }
+        .accent-circle {
+            @include border-radius(44px);
+            width: 88px;
+            height: 88px;
+            margin-top: -44px;
+        }
+        .accent-square {
+            @include border-radius(12px);
+            width: 88px;
+            height: 88px;
+            margin-top: -44px;
+        }
+
+    }
+    .layout3 {
+        .slot_top .slot,
+        .slot_bot .slot {
+            width: 197px;
+            height: 178px;
+        }
+        .slot_top div,
+        .slot_bot div {
+            width: 66px;
+            height: 178px;
+        }
+        .slot_mid,
+        .slot_mid div {
+            height: 178px;
+        }
+    }
+    .layout4 {
+        div {
+            width: 131px;
+        }
+        .single {
+            height: 153px;
+        }
+        .multiple div {
+            width: 65px;
+            height: 76px;
+        }
+    }
+    .layout5 {
+        .slot_top .slot,
+        .slot_bot .slot,
+        .slot_top div,
+        .slot_bot div,
+        .slot_mid div {
+            height: 178px;
+        }
+    }
+    .layout6 {
+        div {
+            width: 65px;
+            height: 89px;
+        }
+    }
+    .layout7 {
+        .block {
+            height: 180px;
+            padding-top: 15px;
+        }
+        .circle {
+            @include border-radius(67px);
+            width: 134px;
+            height: 134px;
+            margin-top: 10px;
+        }
+        .multiple {
+            height: 134px;
+            .circle { 
+                @include border-radius(33px);
+                width: 66px;
+                height: 66px;
+                margin-top: 0;
+                &:last-child {margin-top: 8px}
+            }
+        }
+    }
+}
+
+.blank-iphone4 {
+    .grid__device {
+        width: 263px;
+        margin-left: 14px;
+    }
+    .layout0 div {
+        width: 100%;
+        height: 499px;
+    }
+    .layout1 div {
+        width: 132px;
+        height: 125px;
+    }
+    .layout2 {
+        .slot {
+            width: 263px;
+            height: 250px;
+        }
+        .accent-circle {
+            @include border-radius(44px);
+            width: 88px;
+            height: 88px;
+            margin-top: -44px;
+        }
+        .accent-square {
+            @include border-radius(12px);
+            width: 88px;
+            height: 88px;
+            margin-top: -44px;
+        }
+
+    }
+    .layout3 {
+        .slot_top .slot,
+        .slot_bot .slot {
+            width: 197px;
+            height: 166px;
+        }
+        .slot_top div,
+        .slot_bot div {
+            width: 66px;
+            height: 166px;
+        }
+        .slot_mid,
+        .slot_mid div {
+            height: 166px;
+        }
+    }
+    .layout4 {
+        div {
+            width: 131px;
+        }
+        .single {
+            height: 143px;
+        }
+        .multiple div {
+            width: 65px;
+            height: 71px;
+        }
+    }
+    .layout5 {
+        .slot_top .slot,
+        .slot_bot .slot,
+        .slot_top div,
+        .slot_bot div,
+        .slot_mid div {
+            height: 166px;
+        }
+    }
+    .layout6 {
+        div {
+            width: 65px;
+            height: 83px;
+        }
+    }
+    .layout7 {
+        .block {
+            height: 160px;
+            padding-top: 15px;
+        }
+        .circle {
+            @include border-radius(62px);
+            width: 125px;
+            height: 125px;
+            margin-top: 10px;
+        }
+        .multiple {
+            height: 132px;
+            .circle { 
+                @include border-radius(33px);
+                width: 66px;
+                height: 66px;
+                margin-top: 0;
+                &:last-child {margin-top: 8px}
+            }
+        }
+    }
+}
+
+.blank-ipad {
+    #img_result {
+        margin-left: 13px;
+    }
+    .grid__device {
+        @include border-radius(20px);
+        width: 321px;
+        margin-left: 14px;
+    }
+    .layout {
+        //margin-top: 25px;
+    }
+    .layout0 div {
+        width: 100%;
+        height: 421px;
+    }
+    .layout1 div {
+        width: 161px;
+        height: 105px;
+    }
+    .layout2 {
+        .slot {
+            width: 321px;
+            height: 211px;
+        }
+        .accent-circle {
+            @include border-radius(53px);
+            width: 107px;
+            height: 107px;
+            margin-top: -53px;
+        }
+        .accent-square {
+            @include border-radius(12px);
+            width: 107px;
+            height: 107px;
+            margin-top: -53px;
+        }
+
+    }
+    .layout3 {
+        .slot_top .slot,
+        .slot_bot .slot {
+            width: 241px;
+            height: 140px;
+        }
+        .slot_top div,
+        .slot_bot div {
+            width: 80px;
+            height: 140px;
+        }
+        .slot_mid,
+        .slot_mid div {
+            height: 140px;
+        }
+    }
+    .layout4 {
+        div {
+            width: 160px;
+        }
+        .single {
+            height: 120px;
+        }
+        .multiple div {
+            width: 79px;
+            height: 60px;
+        }
+    }
+    .layout5 {
+        .slot_top .slot,
+        .slot_bot .slot,
+        .slot_top div,
+        .slot_bot div,
+        .slot_mid div {
+            height: 140px;
+        }
+    }
+    .layout6 {
+        div {
+            width: 80px;
+            height: 70px;
+        }
+    }
+    .layout7 {
+        .block {
+            height: 165px;
+            padding-top: 0;
+            margin-top: -20px;
+        }
+        .circle {
+            @include border-radius(53px);
+            width: 105px;
+            height: 105px;
+            margin-top: 30px;
+        }
+        .multiple {
+            height: 134px;
+            .circle { 
+                @include border-radius(40px);
+                width: 80px;
+                height: 80px;
+                margin: 0;
+                &:last-child {margin-top: 5px}
+            }
+        }
+    }
+}
+
+.blank-ipad_mini {
+    .grid__device {
+        @include border-radius(20px);
+        width: 291px;
+        margin-left: 14px;
+    }
+    .layout0 div {
+        width: 100%;
+        height: 426px;
+    }
+    .layout1 div {
+        width: 146px;
+        height: 107px;
+    }
+    .layout2 {
+        .slot {
+            width: 291px;
+            height: 213px;
+        }
+        .accent-circle {
+            @include border-radius(48px);
+            width: 97px;
+            height: 97px;
+            margin-top: -48px;
+        }
+        .accent-square {
+            @include border-radius(12px);
+            width: 97px;
+            height: 97px;
+            margin-top: -48px;
+        }
+
+    }
+    .layout3 {
+        .slot_top .slot,
+        .slot_bot .slot {
+            width: 218px;
+            height: 142px;
+        }
+        .slot_top div,
+        .slot_bot div {
+            width: 73px;
+            height: 142px;
+        }
+        .slot_mid,
+        .slot_mid div {
+            height: 142px;
+        }
+    }
+    .layout4 {
+        div {
+            width: 145px;
+        }
+        .single {
+            height: 122px;
+        }
+        .multiple div {
+            width: 72px;
+            height: 61px;
+        }
+    }
+    .layout5 {
+        .slot_top .slot,
+        .slot_bot .slot,
+        .slot_top div,
+        .slot_bot div,
+        .slot_mid div {
+            height: 142px;
+        }
+    }
+    .layout6 {
+        div {
+            width: 72px;
+            height: 71px;
+        }
+    }
+    .layout7 {
+        .block {
+            height: 165px;
+            padding-top: 0;
+            margin-top: -20px;
+        }
+        .circle {
+            @include border-radius(54px);
+            width: 107px;
+            height: 107px;
+            margin-top: 30px;
+        }
+        .multiple {
+            height: 141px;
+            .circle { 
+                @include border-radius(37px);
+                width: 73px;
+                height: 73px;
+                margin: 0;
+                &:last-child {margin-top: 5px}
+            }
+        }
+    }
+}
+
+.blank-galaxy {
+    .grid__device {
+        width: 271px;
+        margin-left: 14px;
+    }
+    .layout0 div {
+        width: 100%;
+        height: 534px;
+    }
+    .layout1 div {
+        width: 132px;
+        height: 134px;
+    }
+    .layout2 {
+        .slot {
+            width: 263px;
+            height: 267px;
+        }
+        .accent-circle {
+            @include border-radius(44px);
+            width: 88px;
+            height: 88px;
+            margin-top: -44px;
+        }
+        .accent-square {
+            @include border-radius(12px);
+            width: 88px;
+            height: 88px;
+            margin-top: -44px;
+        }
+
+    }
+    .layout3 {
+        .slot_top .slot,
+        .slot_bot .slot {
+            width: 197px;
+            height: 178px;
+        }
+        .slot_top div,
+        .slot_bot div {
+            width: 66px;
+            height: 178px;
+        }
+        .slot_mid,
+        .slot_mid div {
+            height: 178px;
+        }
+    }
+    .layout4 div .single {
+        height: 151px;
+    }
+    .layout5 .slot_top .slot,
+    .layout5 .slot_bot .slot,
+    .layout5 .slot_top div,
+    .layout5 .slot_bot div {
+        height: 167px;
+    }
+    .layout5 .slot_mid div {
+        height: 200px;
+    }
+    .layout6 div {
+        height: 89px;
+    }
+    .layout7 .block {
+        height: 178px;
+    }
+}

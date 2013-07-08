@@ -1,0 +1,656 @@
+
+@import "base";
+
+@import url(http://fonts.googleapis.com/css?family=Arimo);
+
+*{margin: 0;padding: 0;-webkit-text-size-adjust: none}
+
+input:focus,textarea:focus{outline: none}
+
+body{
+    font: {
+        family: "ProximaNova-Regular", Arial, sans-serif;
+        weight: 200;
+        size: 14px;
+        }
+        min-width: 320px;
+    line-height:1.2;
+    background:#fff;
+    -webkit-font-smoothing: antialiased;
+}
+/*resets*/
+a img,fieldset{
+    border:none;
+    }
+a{
+    color:#888;
+    text-decoration:none;
+}
+
+h1 {
+    family: "ProximaNova-Regular", Arial, sans-serif;
+    font-weight: 200;
+    color: #000;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+
+button::-moz-focus-inner {padding:0; border:0}
+input[type="submit"]::-moz-focus-inner {padding: 0;border: 0 }
+header,footer,article,nav,section{ display: block}
+input[disabled="disabled"] {cursor: default}
+
+.wrap {
+    max-width: 480px;
+    min-width: 320px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.goback {
+    @include inline-block;
+    padding: 0 10px 0 4px;
+    height: 32px;
+    line-height: 32px;
+    color: #888;
+    i {
+        @include sized-sprite($common, "back");
+        @include inline-block;
+        vertical-align: top;
+        margin-top: 6px;
+        margin-right: 5px;
+    }
+    &.done {
+        color: #29bbeb; 
+        i {
+            @include sized-sprite($common, "back-blue");
+        }
+    }
+}
+
+header {
+    @include clr;
+    @include box-sizing(padding-box);
+    background: #e6e6e6;
+    height: 44px;
+    position: relative;
+    cursor: default;
+    padding: 4px 5px 0;
+    .goback {
+        position: absolute;
+        top: 7px;
+        left: 5px;
+    }
+    .button {
+        float: right;
+    }
+    .button_label {
+        float: right;
+    }
+}
+
+ 
+.button {
+    @include box-sizing(border-box);
+    @include border-radius(3px);
+    @include inline-block;
+    font-family: "ProximaNova-Semibold", Arial, sans-serif;
+    color: #fff;
+    height: 36px;
+    line-height: 34px;
+    padding: 0 10px;
+    position: relative;
+    z-index: 10;
+    &.border {
+        border: 1px solid #8c8c8c;
+    }
+    &.blue {
+        @include box-shadow(inset 0 -2px 0 #239fc8);
+        border-color: transparent;
+        background: #29bbeb;
+        text-shadow:0 1px 0 rgba(0,0,0,0.1);
+    }
+    &.darkblue {
+        @include box-shadow(inset 0 -2px 0 #1990b7);
+        border-color: transparent;
+        background: #1da9d7;
+        text-shadow:0 1px 0 rgba(0,0,0,0.1);
+    }
+    &.grey {
+        @include box-shadow(inset 0 -2px 0 #9a9a9a);
+        border-color: transparent;
+        background: #b5b5b5;
+        text-shadow:0 1px 0 rgba(0,0,0,0.1);
+        &.active {
+            @include box-shadow(inset 0 2px 0 #239fc8);
+            background: #29bbeb;
+            text-shadow:0 1px 0 rgba(0,0,0,0.1);
+        }
+    }
+    &.tiny {
+        height: 32px;
+        line-height: 30px;
+    }
+    &.left {
+        @include border-radius(3px 0 0 3px);
+        margin-right: 0!important;
+    }
+    &.right {
+        @include border-radius(0 3px 3px 0);
+        margin-left: 0!important;
+    }
+}
+
+.button_label {
+    @include border-radius(3px 0 0 3px);
+    @include inline-block;
+    background: #f1f1f1;
+    color: #6a6a6a;
+    height: 36px;
+    line-height: 34px;
+    padding: 0 15px 0 18px;
+    margin-left: -3px;
+    white-space: nowrap;
+    text-shadow: none;
+    &.absolute {
+        position: absolute;
+    }
+    &.white {
+        background: #fff;
+    }
+}
+
+.dev_menu {
+    background: #f1f1f1;
+    nav {
+        @include clr;
+        display: block;
+        text-align: center;
+        .in {
+            width: 270px;
+            margin: 0 auto;
+        }
+        .tab {
+            @include box-sizing(border-box);
+            float: left;
+            height: 120px;
+            width: 90px;
+            text-align: center; 
+            font-size: 12px;
+            color: #9f9f9f;
+            cursor: pointer;
+            .inner {
+                height: 120px;
+                border-right: 1px solid rgba(0,0,0,0.08); 
+                margin-left: -1px;
+            }
+            &:first-child .inner {
+                border-left: 1px solid rgba(0,0,0,0.08);
+            }
+            &.active {
+                background: #29bbeb;
+                border-color: #239fc8;
+                border-right: 0;
+                color: #fff;
+                cursor: default;
+                text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+                .inner {border-right: 0;}
+            }
+            i {
+                @include inline-block;
+                height: 55px;
+                width: 44px;
+                margin: 16px 0 13px;
+            }
+        }
+        &:nth-child(even) {
+            background: #e9e9e9;
+        }
+    }
+
+    nav {
+        &.grids {
+            .tab {
+                height: 110px;
+                .inner {height: 100%;}
+                i {
+                    height: 44px;
+                    width: 26px;
+                    margin: 33px 0 0;
+                }
+                &.active .inner {background: #67cdef;}
+            }
+        }
+    }
+}
+
+.color_choose {
+    @include clr;
+    width: 96px;
+    margin: 0 auto;
+    list-style: none;
+    li {
+        float: left;
+        background: #b5b5b5;
+        padding: 0 8px;
+        &.active {
+            background: #29bbeb;
+        }
+    }
+    a {
+        display: block;
+        margin: 4px 3px 2px;
+    }
+}
+
+.view_options {
+    padding: 5px;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    .button.button_preview {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        padding: 0 5px;
+    }
+    .button.button_shuffle {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        padding: 0 5px;
+    }
+}
+
+.blank_block {
+    @include transition(all, 0.5s, ease-out);
+    @include clr;
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 50;
+    &.blank-iphone5,
+    &.blank-iphone4 {
+        left: 50%;
+        margin-left: -147px;
+    }
+    &.blank-ipad {
+        left: 10px;
+    }
+    &.blank-galaxy {
+        left: 20px;
+    }
+}
+
+.blank-iphone5 {
+    display: block;
+    background: transparent url('../img/blank-iphone5.png') 0 0 no-repeat;
+    width: 290px;
+    height: 579px;
+    position: relative;
+    &.black {
+        background: transparent url('../img/blank-iphone5-black.png') 0 0 no-repeat;
+    }
+    .mask {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: transparent url('../img/mask-iphone5.png') 0 0 no-repeat;
+    }
+}
+.blank-iphone4 {
+    display: block;
+    background: transparent url('../img/blank-iphone4.png') 0 0 no-repeat;
+    width: 290px;
+    height: 540px;
+    &.black {
+        background: transparent url('../img/blank-iphone4-black.png') 0 0 no-repeat;
+    }
+}
+.blank-ipad {
+    display: block;
+    background: transparent url('../img/blank-ipad.png') 0 0 no-repeat;
+    width: 349px;
+    height: 505px;
+    &.black {
+        background: transparent url('../img/blank-ipad-black.png') 0 0 no-repeat;
+    }
+}
+.blank-ipad_mini {
+    display: block;
+    background: transparent url('../img/blank-ipad_mini.png') 0 0 no-repeat;
+    width: 318px;
+    height: 453px;
+    &.black {
+        background: transparent url('../img/blank-ipad_mini-black.png') 0 0 no-repeat;
+    }
+}
+.blank-galaxy {
+    display: block;
+    background: transparent url('../img/blank-galaxy.png') 0 0 no-repeat;
+    width: 298px;
+    height: 571px;
+    &.black {
+        background: transparent url('../img/blank-galaxy-black.png') 0 0 no-repeat;
+    }
+}
+
+.logo {
+    @include sized-sprite($icons, "logo");
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    margin-left: -16px;
+}
+
+.dev-iphone5 {@include sized-sprite($common, "dev-iphone5")}
+.dev-iphone4 {@include sized-sprite($common, "dev-iphone4")}
+.dev-ipad_mini {@include sized-sprite($common, "dev-ipad_mini")}
+.dev-ipad {@include sized-sprite($common, "dev-ipad")}
+.dev-galaxy {@include sized-sprite($common, "dev-galaxy")}
+.active .dev-iphone5 {@include sized-sprite($common, "dev-iphone5-white")}
+.active .dev-iphone4 {@include sized-sprite($common, "dev-iphone4-white")}
+.active .dev-ipad_mini {@include sized-sprite($common, "dev-ipad_mini-white")}
+.active .dev-ipad {@include sized-sprite($common, "dev-ipad-white")}
+.active .dev-galaxy {@include sized-sprite($common, "dev-galaxy-white")}
+
+.grid1 {@include sized-sprite($grid, "grid1");}
+.grid2 {@include sized-sprite($grid, "grid2");}
+.grid3 {@include sized-sprite($grid, "grid3");}
+.grid4 {@include sized-sprite($grid, "grid4");}
+.grid5 {@include sized-sprite($grid, "grid5");}
+.grid6 {@include sized-sprite($grid, "grid6");}
+.grid7 {@include sized-sprite($grid, "grid7");}
+.grid8 {@include sized-sprite($grid, "grid8");}
+.grid9 {@include sized-sprite($grid, "grid9");}
+.active .grid1 {@include sized-sprite($grid, "grid1-white");}
+.active .grid2 {@include sized-sprite($grid, "grid2-white");}
+.active .grid3 {@include sized-sprite($grid, "grid3-white");}
+.active .grid4 {@include sized-sprite($grid, "grid4-white");}
+.active .grid5 {@include sized-sprite($grid, "grid5-white");}
+.active .grid6 {@include sized-sprite($grid, "grid6-white");}
+.active .grid7 {@include sized-sprite($grid, "grid7-white");}
+.active .grid8 {@include sized-sprite($grid, "grid8-white");}
+.active .grid9 {@include sized-sprite($grid, "grid9-white");}
+
+.ico-preview {
+    @include sized-sprite($common, "ico-preview");
+    @include inline-block;
+}
+.ico-shuffle {
+    @include sized-sprite($common, "ico-shuffle");
+    @include inline-block;
+}
+
+.cc_iphone_white {@include sized-sprite($common, "cc_iphone_white");}
+.cc_iphone_black {@include sized-sprite($common, "cc_iphone_black");}
+.cc_ipad_white   {@include sized-sprite($common, "cc_ipad_white");}
+.cc_ipad_black   {@include sized-sprite($common, "cc_ipad_black");}
+
+
+.edit,
+.layout .edit {
+    @include clr;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    i {
+        cursor: pointer;
+    }
+}
+
+.add {
+    @include sized-sprite($common, "edit-add");
+    @include inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -26px 0 0 -26px;
+}
+
+.pencil {
+    @include sized-sprite($common, "edit-pencil");
+    @include inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -26px 0 0 -26px;
+}
+
+.delete {
+    @include sized-sprite($common, "edit-delete");
+    @include inline-block;
+    cursor: pointer;
+}
+
+.grid__device {
+    @include border-radius(42px);
+    position: relative;
+    width: 263px;
+    margin-left: 14px;
+    overflow: hidden;
+    .edit {
+        display: none;
+        border: 0!important;
+    }
+    &.preview {
+        .edit {
+            display: none!important;
+        }
+        .layout div {
+            border-color: transparent;
+        }
+    }
+    .layout div.active .edit {
+        display: block;
+    }
+}
+
+.layout {
+    .unit {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+    i {
+        cursor: pointer;
+        display: none;
+        z-index: 10;
+    }
+    .unit:hover {
+        .pencil,
+        .delete {
+            display: block;
+        }
+    }
+    .unit.empty {
+        .pencil,
+        .delete {
+            display: none;
+        }
+    }
+    .edit_mode_on {
+        .pencil,
+        .delete {
+            display: none!important;
+        }
+        .plus,
+        .minus,
+        .ok {
+            display: block; 
+        }
+        img {
+            cursor: move;
+        }
+    }
+    .edit_hide {
+        .pencil,
+        .delete,
+        .plus,
+        .minus,
+        .ok {
+            display: none!important;
+        }
+    }
+    .empty:hover .add {display: block;} 
+}
+
+.images_filters {
+    list-style:none;
+    text-align: center;
+    margin:5px 0;
+    li {
+        @include inline-block;
+    }
+    i {
+        @include border-radius(5px);
+        @include box-sizing(border-box);
+        cursor: pointer;
+        border: 2px solid #fff;
+        display: block;
+        width: 54px;
+        height: 54px;
+        background-image: url('../img/filters.jpg');
+        //background-size: 54px*5 54px;
+        margin: 0 2px;
+        overflow: hidden;
+        &.filter1 {background-position: 0 0;}
+        &.filter2 {background-position: -65px*1 0;}
+        &.filter3 {background-position: -65px*2 0;}
+        &.filter4 {background-position: -65px*3 0;}
+        &.filter5 {background-position: -65px*4 0;}
+    }
+    .active i {
+        border-color: #29bbeb;
+        cursor: default;
+    }
+}
+
+.nofilter {
+    @include inline-block;
+    @include border-radius(14px);
+    padding: 0 10px 0;
+    background: #e8e8e8;
+    height: 28px;
+    line-height: 26px;
+    color: #888;
+}
+
+.tab-fb {@include sized-sprite($icons, "ico-fb");}
+.tab-vk {@include sized-sprite($icons, "ico-vk");}
+.tab-insta  {@include sized-sprite($icons, "ico-insta");}
+.tab-browse {@include sized-sprite($icons, "ico-browse");}
+
+.active .tab-fb {@include sized-sprite($icons, "ico-fb-act");}
+.active .tab-vk {@include sized-sprite($icons, "ico-vk-act");}
+.active .tab-insta {@include sized-sprite($icons, "ico-insta-act");}
+
+.images_choose {
+    min-height: 150px;
+    overflow: hidden;
+    .header {
+        @include clr;
+        border-bottom: 2px solid #d9d9d9;
+        .button {
+            float: right;
+            margin: 4px 4px 0 0;
+        }
+    }
+    .tabs {
+        @include clr;
+        li {
+            list-style: none;
+            float: left;
+            font-family: "ProximaNova-Semibold", Arial, sans-serif;
+            padding: 8px 12px 6px;
+            border-right: 1px solid #d9d9d9;
+            a {
+                color: #777;
+                position: relative;
+                overflow: hidden; 
+                display: block;
+            }
+            i {
+                display: block;
+            }
+            &.active {
+                @include box-shadow(inset 0 2px 0 #9a9a9a);
+                background: #b5b5b5;
+                border-color: #b5b5b5;
+            }
+            &:last-child {
+                border-right: 0;
+            }
+            input {
+                position: absolute;
+                left: 300px;
+                top: 300px;
+                @include opacity(0);
+                cursor: pointer;
+            }
+        }
+    }
+    .content {
+        @include clr;
+        .in {
+            margin: 8px;
+            height: 240px - 16px;
+            overflow: auto;
+        }
+        i {
+            @include border-radius(5px);
+            @include box-sizing(border-box);
+            cursor: pointer;
+            border: 2px solid #fff;
+            display: block;
+            float: left;
+            width: 65px + 4px;
+            height: 65px + 4px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 8px 8px 0;
+            overflow: hidden;
+            &.active {
+                border-color: #29bbeb;
+                cursor: default;
+            }
+        }
+        p {
+            padding-top: 80px;
+            text-align: center;
+        }
+        .button {
+            position: relative;
+            overflow: hidden;
+        }
+        #img_upload {
+            position: absolute;
+            right: 0;
+            @include opacity(0);
+        }
+    }
+}
+
+.img_edit {
+    @include border-radius(4px);
+    position: absolute;
+    z-index: 80;
+    padding: 20px;
+    background: #fff;
+    margin: 30px 0 0 -55px;
+    .tail {
+        position: absolute;
+        right: -10px;
+        top: 50%;
+        margin-top: -10px; 
+        width: 0;
+        height: 0;
+        border-left: 10px solid #fff;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+}
