@@ -268,7 +268,7 @@ header {
     @include clr;
     display: none;
     position: absolute;
-    top: 10px;
+    margin-top: 10px;
     left: 0;
     z-index: 50;
     &.blank-iphone5,
@@ -277,10 +277,16 @@ header {
         margin-left: -147px;
     }
     &.blank-ipad {
-        left: 10px;
+        left: 50%;
+        margin-left: -176px;
+    }
+    &.blank-ipad_mini {
+        left: 50%;
+        margin-left: -161px;
     }
     &.blank-galaxy {
-        left: 20px;
+        left: 50%;
+        margin-left: -147px;
     }
 }
 
