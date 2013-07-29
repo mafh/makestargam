@@ -311,12 +311,12 @@
 
 .layout7 {
     .block {
-        @include box-sizing(padding-box);
-        height: 180px;
+        //@include box-sizing(padding-box);
+        height: 175px;
         width: 100%;
         position: relative;
         text-align: center;
-        padding-top: 15px;
+        padding-top: 0;
     }
     .circle {
         @include border-radius(67px);
@@ -429,14 +429,14 @@
     }
     .layout7 {
         .block {
-            height: 180px;
+            height: 165px;
             padding-top: 15px;
         }
         .circle {
             @include border-radius(67px);
             width: 134px;
             height: 134px;
-            margin-top: 10px;
+            margin-top: 5px;
         }
         .multiple {
             height: 134px;
@@ -528,8 +528,8 @@
     }
     .layout7 {
         .block {
-            height: 160px;
-            padding-top: 15px;
+            height: 157px;
+            padding-top: 10px;
         }
         .circle {
             @include border-radius(62px);
@@ -634,22 +634,22 @@
     }
     .layout7 {
         .block {
-            height: 165px;
-            padding-top: 0;
-            margin-top: -20px;
+            height: 119px;
+            padding-top: 14px;
+            margin-top: 0;
         }
         .circle {
             @include border-radius(53px);
             width: 105px;
             height: 105px;
-            margin-top: 30px;
+            margin-top: 8px;
         }
         .multiple {
             height: 134px;
             .circle { 
-                @include border-radius(40px);
-                width: 80px;
-                height: 80px;
+                @include border-radius(27px);
+                width: 54px;
+                height: 54px;
                 margin: 0;
                 &:last-child {margin-top: 5px}
             }
@@ -735,22 +735,22 @@
     }
     .layout7 {
         .block {
-            height: 165px;
-            padding-top: 0;
-            margin-top: -20px;
+            height: 129px;
+            padding-top: 8px;
+            margin-top: 0;
         }
         .circle {
             @include border-radius(54px);
             width: 107px;
             height: 107px;
-            margin-top: 30px;
+            margin-top: 8px;
         }
         .multiple {
             height: 141px;
             .circle { 
-                @include border-radius(37px);
-                width: 73px;
-                height: 73px;
+                @include border-radius(30px);
+                width: 60px;
+                height: 60px;
                 margin: 0;
                 &:last-child {margin-top: 5px}
             }
@@ -822,6 +822,7 @@
         height: 89px;
     }
     .layout7 .block {
-        height: 178px;
+        height: 167px;
+        padding-top: 10px;
     }
 }
