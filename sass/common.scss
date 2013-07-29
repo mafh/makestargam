@@ -757,12 +757,18 @@ h3 {
         border-color: transparent;
         background: #29bbeb;
         text-shadow:0 1px 0 rgba(0,0,0,0.1);
+        &:active {
+            background: #239fc8;
+        }
     }
     &.darkblue {
         @include box-shadow(inset 0 -2px 0 #1990b7);
         border-color: transparent;
         background: #1da9d7;
         text-shadow:0 1px 0 rgba(0,0,0,0.1);
+        &:active {
+            background: #1990b7;
+        }
     }
     &.grey {
         @include box-shadow(inset 0 -2px 0 #9a9a9a);
@@ -774,10 +780,19 @@ h3 {
             background: #29bbeb;
             text-shadow:0 1px 0 rgba(0,0,0,0.1);
         }
+        &:active {
+            background: #9a9a9a;
+        }
     }
     &.tiny {
         height: 32px;
         line-height: 30px;
+    }
+    &.big {
+        font-size: 20px;
+        height: 44px;
+        line-height: 44px;
+        padding: 0 25px;
     }
     &.left {
         @include border-radius(3px 0 0 3px);
