@@ -218,13 +218,13 @@
                             </ul>
                             <div class="images_choose">
                                 <ul class="tabs">
-                                    <li class="active"><a href="#"><i class="tab-insta"></i>Instagram</a></li>
+                                    <li><a href="#"><i class="tab-insta"></i>Instagram</a></li>
                                     <li><a href="#"><i class="tab-fb"></i>Facebook</a></li>
                                     <li><a href="#"><i class="tab-vk"></i>VK</a></li>
-                                    <li><a href="#">Загрузить</a></li>
+                                    <li class="active"><a href="#">Загрузить</a></li>
                                 </ul>
                                 <div class="content">
-                                    <div class="in tab_content tt0">
+                                    <div class="in tab_content tt0"  style="display: none;">
                                         <i style="background-image: url('http://cs411723.vk.me/v411723723/669c/XGeZ1xAoJjA.jpg');" data-large="http://cs411723.vk.me/v411723723/669c/XGeZ1xAoJjA.jpg"></i>
                                         <i style="background-image: url('http://cs323127.vk.me/v323127986/644c/kjXayJxX5qA.jpg');" data-large="http://cs323127.vk.me/v323127986/644c/kjXayJxX5qA.jpg"></i>
                                         <i style="background-image: url('http://cs323324.vk.me/u4063837/d_c6cbd895.jpg');"         data-large="http://cs323324.vk.me/u4063837/d_c6cbd895.jpg"></i>
@@ -237,12 +237,22 @@
                                             <a href="#" class="button blue">Войти</a>
                                         </p>
                                     </div>
-                                    <div class="in tab_content tt3 empty" style="display: none;">
-                                        <form method="post" enctype="multipart/form-data" data-remote="true" action="/u" accept-charset="UTF-8">
-                                            <div style="margin:0;padding:0;position: absolute;z-index: -1;">
-                                                <input type="hidden" value="✓" name="utf8"><input type="hidden" value="i9/+A5aX9RE07OwGFvKuymWb0vjwfFG8f5V9DVIslsI=" name="authenticity_token">
+                                    <div class="in tab_content tt3" style="1display: none;">
+                                        <p>
+                                            <a class="button blue" href="#">
+                                                <span>Загрузить</span>
+                                                <input id="img_upload" multiple="multiple" name="image" type="file">
+                                            </a>
+                                        </p>
+                                        <i style="background-image: url(http://www.makestagram.ru/uploads/00/00/00/00/2g/thumb_1965829b6997d078.jpg);" class="ui-draggable"></i>
+                                        <i style="background-image: url(http://www.makestagram.ru/uploads/00/00/00/00/2g/thumb_1965829b6997d078.jpg);" class="ui-draggable"></i>
+                                        <i style="background-image: url(http://www.makestagram.ru/uploads/00/00/00/00/2g/thumb_1965829b6997d078.jpg);" class="ui-draggable"></i>
+                                        <i style="background-image: url(http://www.makestagram.ru/uploads/00/00/00/00/2g/thumb_1965829b6997d078.jpg);" class="ui-draggable"></i>
+                                        <form accept-charset="UTF-8" action="/u" data-remote="true" enctype="multipart/form-data" method="post">
+                                            <div style="margin:0;padding:0;display:inline">
+                                                <input name="utf8" type="hidden" value="✓">
+                                                <input name="authenticity_token" type="hidden" value="MjwUWYYPw5jp+kp5PEZIvKBAjVl0nUjUIe5Mm0EcNdg=">
                                             </div>
-                                            <a href="#" class="button blue"><span>Загрузить</span><input type="file" name="image" id="img_upload"></a>
                                         </form>
                                     </div>
                                 </div>

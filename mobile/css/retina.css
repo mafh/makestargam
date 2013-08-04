@@ -1,0 +1,154 @@
+@charset "IBM866";
+
+.logo {
+  background: url(../img/retina/logo.png);
+  background-size: cover;
+}
+
+.dev-iphone5 {
+  background: url(../img/retina/dev-iphone5.png);
+  background-size: cover;
+}
+
+.dev-iphone4 {
+  background: url(../img/retina/dev-iphone4.png);
+  background-size: cover;
+}
+
+.dev-ipad_mini {
+  background: url(../img/retina/dev-ipad_mini.png);
+  background-size: cover;
+}
+
+.dev-ipad {
+  background: url(../img/retina/dev-ipad.png);
+  background-size: cover;
+}
+
+.dev-galaxy {
+  background: url(../img/retina/dev-galaxy.png);
+  background-size: cover;
+}
+
+.active .dev-iphone5 {
+  background: url(../img/retina/dev-iphone5-white.png);
+  background-size: cover;
+}
+
+.active .dev-iphone4 {
+  background: url(../img/retina/dev-iphone4-white.png);
+  background-size: cover;
+}
+
+.active .dev-ipad_mini {
+  background: url(../img/retina/dev-ipad_mini-white.png);
+  background-size: cover;
+}
+
+.active .dev-ipad {
+  background: url(../img/retina/dev-ipad-white.png);
+  background-size: cover;
+}
+
+.active .dev-galaxy {
+  background: url(../img/retina/dev-galaxy-white.png);
+  background-size: cover;
+}
+
+.goback i {
+    background: url(../img/retina/back.png);
+    background-size: cover;
+}
+
+.grid1 {
+    background: url(../img/retina/grid1.png);
+    background-size: cover;
+}
+.grid2 {
+    background: url(../img/retina/grid2.png);
+    background-size: cover;
+}
+.grid3 {
+    background: url(../img/retina/grid3.png);
+    background-size: cover;
+}
+.grid4 {
+    background: url(../img/retina/grid4.png);
+    background-size: cover;
+}
+.grid5 {
+    background: url(../img/retina/grid5.png);
+    background-size: cover;
+}
+.grid6 {
+    background: url(../img/retina/grid6.png);
+    background-size: cover;
+}
+.grid7 {
+    background: url(../img/retina/grid7.png);
+    background-size: cover;
+}
+.grid8 {
+    background: url(../img/retina/grid8.png);
+    background-size: cover;
+}
+.grid9 {
+    background: url(../img/retina/grid9.png);
+    background-size: cover;
+}
+.active .grid1 {
+    background: url(../img/retina/grid1-white.png);
+    background-size: cover;
+}
+.active .grid2 {
+    background: url(../img/retina/grid2-white.png);
+    background-size: cover;
+}
+.active .grid3 {
+    background: url(../img/retina/grid3-white.png);
+    background-size: cover;
+}
+.active .grid4 {
+    background: url(../img/retina/grid4-white.png);
+    background-size: cover;
+}
+.active .grid5 {
+    background: url(../img/retina/grid5-white.png);
+    background-size: cover;
+}
+.active .grid6 {
+    background: url(../img/retina/grid6-white.png);
+    background-size: cover;
+}
+.active .grid7 {
+    background: url(../img/retina/grid7-white.png);
+    background-size: cover;
+}
+.active .grid8 {
+    background: url(../img/retina/grid8-white.png);
+    background-size: cover;
+}
+.active .grid9 {
+    background: url(../img/retina/grid9-white.png);
+    background-size: cover;
+}
+
+.ico-preview {
+    background: url(../img/retina/ico-preview.png);
+    background-size: cover;
+}
+
+.ico-shuffle {
+    background: url(../img/retina/ico-shuffle.png);
+    background-size: cover;
+}
+
+.cc_iphone_white {
+    background: url(../img/retina/cc_iphone_white.png);
+    background-size: cover;
+}
+
+.cc_iphone_black {
+    background: url(../img/retina/cc_iphone_black.png);
+    background-size: cover;
+}

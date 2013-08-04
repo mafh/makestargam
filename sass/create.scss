@@ -289,6 +289,9 @@
                     margin-top: 80px;
                 }
             }
+            p {
+                padding: 5px 0 12px 2px;
+            }
         }
         i {
             @include border-radius(5px);
