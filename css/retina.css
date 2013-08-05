@@ -62,6 +62,12 @@
     width: 18px;
     height: 18px;
 }
+.top-fb:hover {
+    background: url(../img/retina/top-fb-active.png);
+    background-size: cover;
+    width: 18px;
+    height: 18px;
+}
 
 .top-vk {
     background: url(../img/retina/top-vk.png);
@@ -69,9 +75,21 @@
     width: 18px;
     height: 18px;
 }
+.top-vk:hover {
+    background: url(../img/retina/top-vk-active.png);
+    background-size: cover;
+    width: 18px;
+    height: 18px;
+}
 
 .top-insta {
     background: url(../img/retina/top-insta.png);
+    background-size: cover;
+    width: 18px;
+    height: 18px;
+}
+.top-insta:hover {
+    background: url(../img/retina/top-insta-active.png);
     background-size: cover;
     width: 18px;
     height: 18px;

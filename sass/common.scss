@@ -280,6 +280,9 @@ h3 {
 .top-fb {@include sized-sprite($icons, "top-fb");}
 .top-vk {@include sized-sprite($icons, "top-vk");}
 .top-insta {@include sized-sprite($icons, "top-insta");}
+.top-fb:hover {@include sized-sprite($icons, "top-fb-active");}
+.top-vk:hover {@include sized-sprite($icons, "top-vk-active");}
+.top-insta:hover {@include sized-sprite($icons, "top-insta-active");}
 
 .tab-fb {@include sized-sprite($icons, "grey-fb");}
 .tab-vk {@include sized-sprite($icons, "grey-vk");}
