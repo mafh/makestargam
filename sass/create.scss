@@ -742,3 +742,97 @@
         margin: -8px 0 0 -8px;
     }
 }
+
+.help-texts {
+    width:100%;
+    height:100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.help-text-title {
+    position: absolute;
+    top:20px;
+    left: 0;
+    z-index:999;
+    width:100%;
+    text-align: center;
+    h1 {
+        font-family: 'Bad Script', cursive; 
+        color: #fff;
+        max-width:400px;
+        margin: 0 auto;
+        font-size:30px;
+    }
+}
+
+.helper-text-p {
+    position: absolute;
+    top:0;
+    left: 50%;
+    z-index:999;
+    max-width:300px;
+    p {
+        font-family: 'Bad Script',
+        cursive; 
+        color: #fff;
+        font-size:16px;
+    }
+    .arrow {
+        display: block;
+        background: transparent url('../img/ht-arrow-1.png') 0 0 no-repeat;
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        &.arrow-1 {
+            background: transparent url('../img/ht-arrow-1.png') 0 0 no-repeat;
+            bottom: -18px;
+            right: -32px;
+        }
+        &.arrow-2 {
+            background: transparent url('../img/ht-arrow-2.png') 0 0 no-repeat;
+            top: -18px;
+            right: -32px;
+        }
+        &.arrow-3 {
+            background: transparent url('../img/ht-arrow-3.png') 0 0 no-repeat;
+            bottom: -18px;
+            left: -32px;
+        }
+        &.arrow-4 {
+            background: transparent url('../img/ht-arrow-4.png') 0 0 no-repeat;
+            top: -18px;
+            left: -32px;
+        }
+    }
+}
+
+.help-text-close {
+    position: absolute;
+    top:700px;
+    left: 0;
+    z-index:999;
+    width:100%;
+    h2 {
+        font-family: 'Bad Script', cursive;
+        color: #fff;
+        width:400px;
+        text-align:center;
+        margin: 0 auto;
+        font-size:22px;
+    }
+}
+
+.help-text-close-btn {
+    position:absolute;
+    display:block;
+    width:27px;
+    height:28px;
+    cursor:pointer;
+    background-image:url('../img/help-text-close.png');
+    z-index:999;
+    top:25px; 
+    right:70px;
+}

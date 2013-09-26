@@ -902,7 +902,7 @@
 
 /* line 525, ../sass/create.scss */
 .add {
-  background: url('../img/icons-s3e79710a1d.png') 0 -356px no-repeat;
+  background: url('../img/icons-s342a9f348c.png') 0 -372px no-repeat;
   width: 52px;
   height: 52px;
   position: absolute;
@@ -921,7 +921,7 @@
 
 /* line 538, ../sass/create.scss */
 .pencil {
-  background: url('../img/icons-s3e79710a1d.png') -26px -201px no-repeat;
+  background: url('../img/icons-s342a9f348c.png') 0 -243px no-repeat;
   width: 26px;
   height: 26px;
   display: -moz-inline-stack;
@@ -938,7 +938,7 @@
 
 /* line 547, ../sass/create.scss */
 .delete {
-  background: url('../img/icons-s3e79710a1d.png') 0 -175px no-repeat;
+  background: url('../img/icons-s342a9f348c.png') -25px -191px no-repeat;
   width: 26px;
   height: 26px;
   display: -moz-inline-stack;
@@ -955,7 +955,7 @@
 
 /* line 556, ../sass/create.scss */
 .move {
-  background: url('../img/icons-s3e79710a1d.png') 0 -315px no-repeat;
+  background: url('../img/icons-s342a9f348c.png') 0 -331px no-repeat;
   width: 41px;
   height: 41px;
   display: block;
@@ -967,7 +967,7 @@
 
 /* line 565, ../sass/create.scss */
 .plus {
-  background: url('../img/icons-s3e79710a1d.png') -26px -175px no-repeat;
+  background: url('../img/icons-s342a9f348c.png') -26px -217px no-repeat;
   width: 26px;
   height: 26px;
   display: block;
@@ -979,7 +979,7 @@
 
 /* line 574, ../sass/create.scss */
 .minus {
-  background: url('../img/icons-s3e79710a1d.png') 0 -227px no-repeat;
+  background: url('../img/icons-s342a9f348c.png') -24px -165px no-repeat;
   width: 26px;
   height: 26px;
   display: block;
@@ -991,7 +991,7 @@
 
 /* line 583, ../sass/create.scss */
 .ok {
-  background: url('../img/icons-s3e79710a1d.png') 0 -201px no-repeat;
+  background: url('../img/icons-s342a9f348c.png') 0 -217px no-repeat;
   width: 26px;
   height: 26px;
   display: block;
@@ -1179,4 +1179,110 @@
   top: 50%;
   left: 50%;
   margin: -8px 0 0 -8px;
+}
+
+/* line 746, ../sass/create.scss */
+.help-texts {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+/* line 755, ../sass/create.scss */
+.help-text-title {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  text-align: center;
+}
+/* line 762, ../sass/create.scss */
+.help-text-title h1 {
+  font-family: 'Bad Script', cursive;
+  color: #fff;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 30px;
+}
+
+/* line 771, ../sass/create.scss */
+.helper-text-p {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 999;
+  max-width: 300px;
+}
+/* line 777, ../sass/create.scss */
+.helper-text-p p {
+  font-family: "Bad Script", cursive;
+  color: #fff;
+  font-size: 16px;
+}
+/* line 783, ../sass/create.scss */
+.helper-text-p .arrow {
+  display: block;
+  background: transparent url("../img/ht-arrow-1.png") 0 0 no-repeat;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+}
+/* line 789, ../sass/create.scss */
+.helper-text-p .arrow.arrow-1 {
+  background: transparent url("../img/ht-arrow-1.png") 0 0 no-repeat;
+  bottom: -18px;
+  right: -32px;
+}
+/* line 794, ../sass/create.scss */
+.helper-text-p .arrow.arrow-2 {
+  background: transparent url("../img/ht-arrow-2.png") 0 0 no-repeat;
+  top: -18px;
+  right: -32px;
+}
+/* line 799, ../sass/create.scss */
+.helper-text-p .arrow.arrow-3 {
+  background: transparent url("../img/ht-arrow-3.png") 0 0 no-repeat;
+  bottom: -18px;
+  left: -32px;
+}
+/* line 804, ../sass/create.scss */
+.helper-text-p .arrow.arrow-4 {
+  background: transparent url("../img/ht-arrow-4.png") 0 0 no-repeat;
+  top: -18px;
+  left: -32px;
+}
+
+/* line 812, ../sass/create.scss */
+.help-text-close {
+  position: absolute;
+  top: 700px;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+/* line 818, ../sass/create.scss */
+.help-text-close h2 {
+  font-family: 'Bad Script', cursive;
+  color: #fff;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 22px;
+}
+
+/* line 828, ../sass/create.scss */
+.help-text-close-btn {
+  position: absolute;
+  display: block;
+  width: 27px;
+  height: 28px;
+  cursor: pointer;
+  background-image: url("../img/help-text-close.png");
+  z-index: 999;
+  top: 25px;
+  right: 70px;
 }
